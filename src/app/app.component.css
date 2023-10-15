@@ -57,6 +57,11 @@ body {
     font-size: 17px;
     font-family: 'OpenSansClassic';
   }
+
+  .svg-icon {
+    height: 3rem !important;
+    width: 3rem !important;
+  }
   
   .topnav a:hover {
     color: gold;

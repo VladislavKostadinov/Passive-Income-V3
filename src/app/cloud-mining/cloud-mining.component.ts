@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-cloud-mining',
@@ -12,5 +13,11 @@ export class CloudMiningComponent {
   f2hash: string = "../../assets/images/f2hash.webp";
   umbrella: string = '../../assets/images/umbrella_mining.jpg'
 
+  constructor(private snackBar: MatSnackBar) {
 
+  }
+
+  // test() {
+  //   this.snackBar.open('Message archived', 'Undo');
+  // }
 }
