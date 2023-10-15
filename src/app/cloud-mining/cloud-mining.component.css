@@ -1,0 +1,124 @@
+@media only screen and (max-width: 480px) {
+    .faucetImg {
+        width: 15rem !important;
+   }
+}
+
+
+.cloudMiningDescription {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 3rem;
+    font-family: 'TilliumLR';
+}
+
+.cloudImg {
+    width: 25rem;
+    margin: 1rem auto;
+    border: 5px solid #555;
+}
+
+.cloudDef {
+    color: lightcoral;
+    text-align: center;
+    font-family: 'TilliumLR';
+}
+
+
+.cloudH   {
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: goldenrod;
+    margin-top: 6rem;
+}
+
+.cloudHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.myCloudsH {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.myCloudsH, .beWarnedCloudH {
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: goldenrod;
+    margin-top: 3rem;
+}
+
+.myCloudsH:hover, .cloudH:hover, .sideHustlesH:hover {
+    color: gold;
+}
+
+.beWarnedCloudH:hover {
+    color: crimson
+}
+
+.myClouds {
+    text-align: center;
+    font-family: 'TilliumLR';
+    color: lightcoral;
+    padding: 0 3rem;
+}
+
+.fFacet {
+    text-decoration: underline;
+    color: red;
+}
+
+.gCloud {
+    color: gold;
+}
+
+.beWarnedCloudH {
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: red;
+    margin-top: 2rem;
+}
+.beWarnedCloud {
+    text-align: center;
+    font-family: 'TilliumLR';
+    color: red;
+    padding: 0 3rem;
+}
+
+.myCloudHustles {
+    background-image: url('../../assets/backgrounds/darkdenim3.png');
+}
+
+.sideCloudH {
+    margin-top: 2rem;
+    color: goldenrod;
+    font-family: 'OpenSansClassic';
+}
+
+.sideCloudH:hover {
+    color: gold;
+}
+
+.sideCloudCards {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem auto;
+    padding-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+
+.cardLogo {
+    width: 50%;
+}
+
+.f2hashlogo {
+    width: 100% !important;
+}
+
+.cardBtns {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,90 @@
+
+@font-face {
+    font-family: 'OpenSansClassic'; /*a name to be used later*/
+    src: url('../../src/assets/fonts/OpenSans-VariableFont_wdth.ttf');
+}
+
+@media only screen and (max-width: 870px) {
+    .welcomeMsg {
+        font-size: 15px;
+    }
+    .topnav a {
+        font-size: 13px !important;
+    }
+  } 
+@media only screen and (max-width: 659px) {
+    .welcomeMsg {
+        font-size: 12px;
+    }
+    .topnav a {
+        font-size: 8px !important;
+    }
+  } 
+@media only screen and (max-width: 420px) {
+    .welcomeMsg {
+        font-size: 7px;
+    }
+  } 
+
+
+body {
+    margin: 0;
+    position: fixed !important;
+    top:0; left:0;
+    width: 100%;
+}
+
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../../src/assets/backgrounds/darkdenim3.png);
+}
+
+.topnav {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .topnav a {
+
+    float: left;
+    color: rgb(206, 85, 71);;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'OpenSansClassic';
+  }
+  
+  .topnav a:hover {
+    color: gold;
+  }
+
+  .topNav2 a:hover {
+    color: violet !important;
+  }
+  
+  .topnav a.active {
+    color: blueviolet
+  }
+  .topnav a.active:hover {
+    color: cyan;
+    text-decoration: underline;
+  }
+  .topNavMain a.active:hover {
+    color: darkred;
+    text-decoration: underline;
+  }
+
+.active {
+    max-height: 2rem;
+}
+
+.welcomeMsg {
+    color: lightcoral;
+    text-align: center;
+    font-family: 'OpenSansClassic';
+}
+

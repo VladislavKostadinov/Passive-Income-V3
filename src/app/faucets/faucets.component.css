@@ -1,0 +1,130 @@
+@media only screen and (max-width: 480px) {
+    .faucetImg {
+        width: 15rem !important;
+   }
+}
+
+body {
+    overflow: hidden;
+}
+.faucetDescript {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+
+.faucetImg {
+    width: 25rem;
+    margin: 1rem auto;
+    border: 5px solid #555;
+}
+
+.faucetDef {
+    color: lightcoral;
+    text-align: center;
+    font-family: 'TilliumLR';
+}
+
+
+.faucetH   {
+    text-align: center;
+    font-family: 'TilliumLR';
+    color: goldenrod;
+    margin-top: 5rem;
+}
+
+
+
+.myFaucetsH, .sideHustlesH {
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: goldenrod;
+}
+
+.myFaucetsH:hover, .faucetH:hover, .otherIncomeH:hover, .sideHustlesH:hover {
+    color: gold;
+}
+
+.myFaucets {
+    text-align: center;
+    font-family: 'TilliumLR';
+    color: lightcoral;
+    padding: 0 3rem;
+}
+
+.fFacet {
+    color: red;
+}
+
+.otherIncomeH {
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: goldenrod;
+    margin-top: 2rem;
+}
+.otherPassiveIncome {
+    text-align: center;
+    font-family: 'TilliumLR';
+    color: lightcoral;
+    padding: 0 3rem;
+}
+
+.mySideHustles {
+    background-image: url('../../assets/backgrounds/darkdenim3.png');
+}
+
+.sideHustlesH {
+    margin-top: 2rem;
+}
+
+.sideHustlesCards {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem auto;
+}
+
+.faucetEnd {
+    color: lightcoral;
+    text-align: center;
+    font-family: 'TilliumLR';
+    margin-top: -1.5rem;
+    padding: 0 1.5rem;
+}
+
+.honeyGainLogo {
+    width: 5rem;
+}
+
+.moneySMSLogo {
+    width: 10rem;
+}
+
+.swagLogo {
+    border-radius: 15% ;
+}
+
+.teaser {
+    width: 8rem;
+    border-radius: 15%;
+}
+
+.adbc {
+    border-radius: 15%;
+}
+
+.hustleCardInv {
+    font-size: 13px;
+    font-family: "TilliumLR";
+
+}
+
+/* .investValue {
+    color: green !important;
+} */
+
+.cardRow {
+    text-decoration: underline;
+    padding-right: 0.3rem;
+    color: green !important;
+}

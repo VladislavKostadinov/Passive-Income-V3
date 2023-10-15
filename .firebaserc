@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "cryptoblog-929c6"
+  },
+  "targets": {
+    "cryptoblog-929c6": {
+      "hosting": {
+        "passiveIncome": [
+          "cryptoblog-929c6"
+        ]
+      }
+    }
+  }
+}
