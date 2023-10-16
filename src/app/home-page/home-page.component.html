@@ -306,7 +306,7 @@
                   </div> 
                  </div> 
                 <br>
-                <div class="submit-btn" (click)="emailref.errors?.pattern ? null : subsribe()">SUBMIT</div>
+                <div class="submit-btn" (click)="emailref.errors?.pattern ? subsribeFailed() : subsribe()">SUBMIT</div>
               </div>
             
         </div>

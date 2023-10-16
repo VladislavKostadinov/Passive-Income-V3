@@ -33,11 +33,6 @@ constructor(private db: AngularFireDatabase, private snackBar: MatSnackBar) {
       if (data) {
         this.listOfSubs = data;
         this.numberOfSubs = data.length
-        console.log("Change")
-        for (let x in data) {
-        }
-      } else {
-
       }
     }
   );
@@ -56,21 +51,24 @@ constructor(private db: AngularFireDatabase, private snackBar: MatSnackBar) {
 }
 
 subsribe() {
-  if (this.listOfSubs.length > 0) {
-    for (let sub in this.listOfSubs) {
-      if (this.listOfSubs[sub]['email'] == this.email) {
-        console.log((this.listOfSubs[sub]['email'] == this.email))
-        this.snackBar.open("You've already subscribed with this e-mail", "Dismiss")
-      } else {
-        this.addEmail()
-        this.snackBar.open("Thank you for subscribing", "Okay")
-      }
-    }
+  if (!this.email) {
+    this.snackBar.open("Please provide your e-mail", "Dismiss")
   } else {
-    this.addEmail()
-    this.snackBar.open("Thank you for subscribing", "Okay")
+    if (this.listOfSubs.length > 0) {
+      for (let sub in this.listOfSubs) {
+        if (this.listOfSubs[sub]['email'] == this.email) {
+          console.log((this.listOfSubs[sub]['email'] == this.email))
+          this.snackBar.open("You've already subscribed with this e-mail", "Dismiss")
+        } else {
+          this.addEmail()
+          this.snackBar.open("Thank you for subscribing", "Okay")
+        }
+      }
+    } else {
+      this.addEmail()
+      this.snackBar.open("Thank you for subscribing", "Okay")
+    }
   }
-  
 }
 
 addEmail () {
@@ -86,7 +84,7 @@ addEmail () {
 }
 
 subsribeFailed () {
-  this.snackBar.open("You've already subscribed with this e-mail", "Dismiss")
+  this.snackBar.open("E-mail incorrect", "Dismiss")
   
 }
 // test() {
