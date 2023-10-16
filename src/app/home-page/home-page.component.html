@@ -115,7 +115,7 @@
         </div>
         <div class="pack-container">
             <div class="header">
-              <p class="title">
+              <p class="titleIncome">
                 Daily income
               </p>
               <div class="price-container">
@@ -295,9 +295,18 @@
             to be a scam, or a new promising one is gaining popularity. The data I provide is 100% derived from my personal experience.</p>   
             <div class="subscribe">
                 <p>SUBSCRIBE</p>
-                <input placeholder="Your e-mail" class="subscribe-input" name="email" type="email">
+                
+                <input placeholder="Your e-mail" [(ngModel)]="email" class="subscribe-input" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" 
+                ngModel #emailref="ngModel"
+                name="email" type="email">
+                <div *ngIf="emailref.errors &&(emailref.touched || emailref.dirty)" class ="alert alert-danger">
+                  <div [hidden]="!emailref.errors.pattern">
+                    Invalid email
+                  </div> 
+                 </div> 
                 <br>
-                <div class="submit-btn">SUBMIT</div>
+                <div class="submit-btn" (click)="emailref.errors?.pattern ? null : subsribe()">SUBMIT</div>
               </div>
             
         </div>

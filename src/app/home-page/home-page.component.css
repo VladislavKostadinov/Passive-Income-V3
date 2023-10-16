@@ -162,9 +162,13 @@ body {
 .dailyIncomeH {
     text-align: center;
     font-family: 'OpenSansClassic';
-    color: goldenrod;
+    color: goldenrod !important;
 }
 
+.titleIncome {
+    font-family: 'OpenSansClassic';
+    color: goldenrod !important;
+}
 
 .dailyIncomeIntro {
         text-align: center;

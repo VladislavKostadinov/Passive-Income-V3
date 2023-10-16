@@ -16,6 +16,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule,
+    FormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
     AngularFireDatabaseModule,

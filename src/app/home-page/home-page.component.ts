@@ -18,6 +18,9 @@ payeer: string = '../../assets/images/payeer.png';
 binance: string = '../../assets/images/binance.svg';
 faucetPay: string = '../../assets/images/faucetPay.webp';
 
+numberOfSubs = 0;
+email = "";
+
 numberOfCmnts:number = 0;
 constructor(private db: AngularFireDatabase) {
   
@@ -35,6 +38,18 @@ constructor(private db: AngularFireDatabase) {
 
 }
 
+subsribe() {
+  this.db.list('subsriptions').valueChanges().subscribe(
+    (data) => {
+      this.numberOfSubs = data.length;
+    }
+  )
+  console.log(this.email, this.numberOfSubs)
+  this.db.database.ref('subsriptions').child(this.numberOfSubs.toString()).set(
+    {email: this.email}
+  )
+
+}
 // test() {
 
 //   this.numberOfCmnts = 0;
