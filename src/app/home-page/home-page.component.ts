@@ -36,18 +36,6 @@ constructor(private db: AngularFireDatabase, private snackBar: MatSnackBar) {
       }
     }
   );
-
-  // this.db.list('minelab/comments').valueChanges().subscribe(
-  //   (data) => {
-  //     console.log(data);
-  //     for (let x in data) {
-  //       this.numberOfCmnts ++;
-  //       console.log(this.numberOfCmnts);
-  //     }
-  //   }
-  // );
-  // console.log(this.numberOfCmnts);
-
 }
 
 subsribe() {
@@ -87,28 +75,4 @@ subsribeFailed () {
   this.snackBar.open("E-mail incorrect", "Dismiss")
   
 }
-// test() {
-
-//   this.numberOfCmnts = 0;
-//   this.db.list('minelab/comments').valueChanges().subscribe(
-//     (data) => {
-//       console.log(data);
-//       for (let x in data) {
-//         this.numberOfCmnts ++;
-//         console.log(this.numberOfCmnts);
-//       }
-//     }
-//   )
-//   console.log(this.numberOfCmnts);
-
-// }
-
-// rest() {
-
-//   this.db.database.ref("minelab").child('comments').child((this.numberOfCmnts).toString()).set(
-//     {user: "Y", comment: "xtra", rating: "2"}
-//   );
-
-// }
-
 }

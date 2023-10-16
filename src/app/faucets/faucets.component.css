@@ -76,12 +76,14 @@ body {
 
 .sideHustlesH {
     margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 .sideHustlesCards {
     display: flex;
     justify-content: space-around;
     margin: 3rem auto;
+    flex-wrap: wrap;
 }
 
 .faucetEnd {
@@ -119,6 +121,16 @@ body {
 
 }
 
+.faucetBtn {
+    width: 33% !important;
+}
+
+.faucetBtnWrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* .investValue {
     color: green !important;
 } */
@@ -127,4 +139,10 @@ body {
     text-decoration: underline;
     padding-right: 0.3rem;
     color: green !important;
+}
+
+.moneyRef {
+    font-size: 10px;
+    font-family: 'TilliumLR';
+    display: block;
 }

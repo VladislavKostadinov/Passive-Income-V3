@@ -14,5 +14,6 @@ export class FaucetsComponent {
   adbtc: string = '../../assets/images/adbtc.png';
   teaserFast: string = '../../assets/images/teaserFastwebp.webp';
   swagBucks: string = '../../assets/images/swagbucks.webp';
+  cointiply: string = '../../assets/images/cointiply.webp';
 
 }

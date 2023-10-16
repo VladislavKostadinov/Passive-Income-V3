@@ -237,6 +237,7 @@ footer {
     background-color: transparent;
     width: 190px;
     height: 254px;
+    margin-bottom: 2rem;
     perspective: 1000px;
     font-family: sans-serif;
   }
@@ -1220,7 +1221,7 @@ footer {
   content: " ";
   width: 0%;
   height: 100%;
-  background: #FFD401;
+  background: darkorchid;
   position: absolute;
   transition: all 0.4s ease-in-out;
   right: 0;
