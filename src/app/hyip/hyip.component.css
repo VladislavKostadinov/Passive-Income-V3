@@ -15,6 +15,8 @@
     color: lightcoral;
     text-align: center;
     font-family: 'TilliumLR';
+    width: 80%;
+    margin: 0 auto;
 }
 
 .hyipWarning {
@@ -57,4 +59,7 @@
     padding: 0 3rem;
 }
 
+.warning  {
+    color: red;
+}
 
