@@ -1,0 +1,60 @@
+
+
+.hyipH   {
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: goldenrod;
+    margin-top: 6rem;
+}
+
+.hyipH:hover {
+    color: gold;
+}
+
+.hyipDef {
+    color: lightcoral;
+    text-align: center;
+    font-family: 'TilliumLR';
+}
+
+.hyipWarning {
+    display: flex;
+    justify-content: center;
+}
+
+.beWarnedHyipH {
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: red;
+    margin-top: 2rem;
+}
+
+.beWarnedHyipH:hover, .myHyipsH:hover {
+    color: crimson
+}
+
+.beWarnedHyip {
+    text-align: center;
+    font-family: 'TilliumLR';
+    color: red;
+    padding: 0 3rem;
+    width: 50%;
+}
+
+.myHyipsH {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: goldenrod;
+    margin-top: 3rem;
+}
+
+.myHyips {
+    text-align: center;
+    font-family: 'TilliumLR';
+    color: lightcoral;
+    padding: 0 3rem;
+}
+
+

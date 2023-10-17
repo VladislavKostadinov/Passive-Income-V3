@@ -51,7 +51,7 @@ a:hover {
     margin-right: 5rem;
 }
 
-.myCloudsH, .beWarnedCloudH {
+.myCloudsH{
     text-align: center;
     font-family: 'OpenSansClassic';
     color: goldenrod;
@@ -129,4 +129,9 @@ a:hover {
 .cardBtns {
     display: flex;
     justify-content: space-between;
+}
+
+.footNote {
+    color: lightcoral;
+    margin-bottom: 2rem;
 }
