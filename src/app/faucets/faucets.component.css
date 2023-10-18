@@ -122,7 +122,7 @@ body {
 }
 
 .faucetBtn {
-    width: 33% !important;
+    width: 40% !important;
 }
 
 .faucetBtnWrap {
@@ -138,7 +138,7 @@ body {
 .cardRow {
     text-decoration: underline;
     padding-right: 0.3rem;
-    color: green !important;
+    color: gold !important;
 }
 
 .moneyRef {

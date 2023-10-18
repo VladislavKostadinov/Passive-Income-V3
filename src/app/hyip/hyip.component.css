@@ -1,4 +1,8 @@
-
+@media only screen and (max-width: 460px) {
+    .bitstarsLogo {
+        height: 7rem !important;
+    }
+  } 
 
 .hyipH   {
     text-align: center;
@@ -7,7 +11,7 @@
     margin-top: 6rem;
 }
 
-.hyipH:hover {
+.hyipH:hover, .iHeading:hover {
     color: gold;
 }
 
@@ -63,3 +67,67 @@
     color: red;
 }
 
+.underWarning {
+    text-decoration: underline;
+}
+
+.investmentCards {
+    margin: 3rem auto;
+    min-height: 300px;
+    background-image: url('../../assets/backgrounds/darkdenim3.png');
+}
+
+.iCardsBox {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.iCard {
+    margin: 3rem 5rem;
+}
+
+.iHeading {
+    margin-top: 2rem;
+    color: goldenrod;
+    font-family: 'OpenSansClassic';
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.sumUp {
+    color: lightcoral;
+}
+
+h3 {
+    color: goldenrod;
+    text-align: center;
+}
+
+h3:hover {
+    color: gold;
+}
+
+.iWarning {
+    text-align: center;
+    color: red;
+}
+
+.iWarning:hover {
+    color: goldenrod;
+}
+
+.innerIcardContainer {
+    display: flex;
+}
+
+.bitstarsLogo {
+    height: 11rem;
+}
+
+h4 {
+    color: gold;
+    text-align: center;
+    margin: 0.5rem auto;
+
+}

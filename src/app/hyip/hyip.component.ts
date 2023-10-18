@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HyipComponent {
 
+  bitstars: string = '../../assets/images/bitstarsLogo.jpg'
+  tronfin: string = '../../assets/images/tronfin.svg'
+  tron1477: string = '../../assets/images/t1477.jpg'
+
+
 }
