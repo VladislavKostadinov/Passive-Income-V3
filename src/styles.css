@@ -70,7 +70,6 @@ footer {
 }
 
 
-
 .btnSmooth {
     text-decoration: none;
     font-size: 9px;
@@ -79,7 +78,6 @@ footer {
 .btnSmooth:hover {
     color: gold;
 }
-
 
 
 
@@ -1395,7 +1393,7 @@ footer {
   width: 100%;
   padding: 8px 21px;
   color: #fff;
-  font-size: 1.125em;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   z-index: 20;
@@ -1431,10 +1429,9 @@ footer {
   color: #fff;
   cursor: pointer;
   padding: 8px 21px;
-  font-size: 1em;
+  font-size: 1rem;
   letter-spacing: 0.1em;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
   border: none;
  }
  
