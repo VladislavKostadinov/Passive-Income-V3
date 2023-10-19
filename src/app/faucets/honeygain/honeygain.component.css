@@ -149,3 +149,22 @@ color: coral;
 .book {
     margin: 0 10rem;
 }
+
+.inputField {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.commentField {
+    width: 30rem;
+    height: 13rem;
+    background-image: url('../../../assets/backgrounds/darkdenim3.png');
+    color: lightcoral;
+    overflow: hidden;
+}
+
+.commentField::placeholder {
+    color: lightcoral;
+   
+    
+}
