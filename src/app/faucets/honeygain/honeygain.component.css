@@ -199,3 +199,54 @@ select option {
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 
 }
+
+.comment {
+    font-family: 'TilliumLR';
+    color: lightcoral;
+    text-align: center;
+    font-size: 15px;
+    padding: 0 5rem;
+}
+
+.comment:hover {
+    color: coral;
+
+}
+
+.guestDetails {
+    justify-content: center;
+    border-bottom: 1px dashed turquoise;
+}
+
+.name {
+    font-family: 'TilliumLR';
+    color: goldenrod;
+    text-align: center;
+    font-size: 15px;
+}
+
+.guestRating {
+    color: gold;
+    font-size: 15px;
+    font-family: 'TilliumLR';
+    float: right;
+    margin-top: -2.2rem;
+    margin-right: 1rem;
+}
+
+.allComments {
+    border: 1px dashed turquoise;
+    width: 35%;
+    background-image: url('../../../assets/backgrounds/office.png');
+    margin: 0 auto;
+}
+
+.avRate {
+    color: coral;
+    font-size: 15px;
+    font-family: 'TilliumLR';
+    text-align: end;
+    width: 35%;
+    margin: 0 auto;
+
+}

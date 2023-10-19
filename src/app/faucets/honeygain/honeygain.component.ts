@@ -15,5 +15,8 @@ export class HoneygainComponent {
   honeyPot: string = '../../../assets/images/honeygain/small_pot_opened.svg';
   buddy: string = '../../../assets/images/honeygain/buddy.svg';
 
+  ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
+  halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
+
 
 }
