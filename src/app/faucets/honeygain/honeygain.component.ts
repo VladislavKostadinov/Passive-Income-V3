@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HoneygainComponent {
 
+  honeyGain: string = '../../../assets/images/honeyGainLogo.webp';
+  honeySofa: string = '../../../assets/images/honeygain/landing_page_sofa_tv.svg';
+  honeyIps: string = '../../../assets/images/honeygain/ip_number-1.svg';
+  honeyLoc: string = '../../../assets/images/honeygain/location-1.svg';
+  honeySpeed: string = '../../../assets/images/honeygain/speed-1.svg';
+
+
 }

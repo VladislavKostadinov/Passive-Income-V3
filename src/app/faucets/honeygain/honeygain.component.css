@@ -1,0 +1,84 @@
+
+h2 {
+    color: goldenrod;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+h2:hover, h4:hover, h3:hover {
+    color: gold;
+}
+
+.logo {
+    height: 12.5%;
+    width: 12.5%;
+    margin: 0 auto;
+}
+
+.logoContainer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.quote {
+    color: lightcoral;
+}
+
+.quote:hover {
+    color: coral;
+}
+
+.companyStatement, .myStatement {
+    background-image: url('../../../assets/backgrounds/darkdenim3.png');
+    padding: 1rem 1rem;
+}
+
+h4, h3{
+    color: goldenrod;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+.cStatement, .mStatement {
+    color: lightcoral;
+    padding: 1rem 2rem;
+    border: 1px dashed lightgray;
+}
+
+.emp {
+    color: gold;
+}
+
+.column1 {
+    color: coral;
+    width: 25%;
+    margin: 0 auto;
+}
+
+.def {
+    color: lightcoral;
+    padding: 1rem 2rem;
+}
+
+li {
+    padding: 1rem 0;
+    margin: auto;
+    width: 50%;
+}
+
+.wallpaper {
+    width: 60%;
+    margin: 2rem auto;
+}
+
+
+.listCont {
+    display: flex;
+}
+
+.honeyIps {
+    width: 75%;
+}
