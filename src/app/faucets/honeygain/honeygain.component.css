@@ -165,6 +165,37 @@ color: coral;
 
 .commentField::placeholder {
     color: lightcoral;
-   
-    
+}
+
+.commentBox {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.guestName {
+    margin-right: 1rem;
+}
+
+.nameInput {
+    background-image: url('../../../assets/backgrounds/darkdenim3.png');
+}
+
+.nameInput::placeholder {
+    color: lightcoral;
+}
+
+.rating {
+    margin-left: 1rem;
+}
+
+.stars {
+    background-image: url('../../../assets/backgrounds/darkdenim3.png');
+    color: gold;
+}
+
+select option {
+    background: darkslategray;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+
 }
