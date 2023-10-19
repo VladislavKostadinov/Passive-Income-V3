@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" *ngIf="faucets">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,10 +62,12 @@
                             </p>
                             <div class="faucetBtnWrap">
                                 <button class="walletBtn faucetBtn">
-                                    <a href="/" class="btnSmooth"><p class="walletLink">Explore</p></a>
+                                    <a routerLink="./honeygain"
+                                    class="btnSmooth"><p class="walletLink">Explore</p></a>
                                 </button> 
                                 <button class="walletBtn faucetBtn">
-                                    <a target="_blank" href="https://r.honeygain.me/BGOUTE2161" class="btnSmooth"><p class="walletLink">Register</p></a>
+                                    <a target="_blank" href="https://r.honeygain.me/BGOUTE2161" 
+                                    class="btnSmooth"><p class="walletLink">Register</p></a>
                                 </button>                        
                             </div>
                             
@@ -253,3 +255,4 @@
     </section>
 </body>
 </html>
+<router-outlet></router-outlet>

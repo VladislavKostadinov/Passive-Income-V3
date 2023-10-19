@@ -17,6 +17,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HoneygainComponent } from './faucets/honeygain/honeygain.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 
 @NgModule({
@@ -26,6 +29,8 @@ import { FormsModule } from '@angular/forms';
     FaucetsComponent,
     CloudMiningComponent,
     HyipComponent,
+    HoneygainComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

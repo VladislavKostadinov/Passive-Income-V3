@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-faucets',
@@ -16,4 +17,22 @@ export class FaucetsComponent {
   swagBucks: string = '../../assets/images/swagbucks.webp';
   cointiply: string = '../../assets/images/cointiply.webp';
 
+  faucets = true;
+  goHoney = false;
+
+  constructor(private router: Router) {
+
+    this.router.events.subscribe(
+      (event: any) => {
+        console.log(this.router.url)
+        if (this.router.url == "/faucets-and-more") {
+          this.faucets = true;
+          this.goHoney = false;
+        } else if (this.router.url == "/faucets-and-more/honeygain") {
+          this.faucets = false;
+          this.goHoney = true;
+        }
+      }
+    )
+  }
 }
