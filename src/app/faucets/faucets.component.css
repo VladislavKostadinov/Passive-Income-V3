@@ -146,3 +146,8 @@ body {
     font-family: 'TilliumLR';
     display: block;
 }
+
+.walletLink {
+    margin: 0 auto;
+    font-size: 9px;
+}

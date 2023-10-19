@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-honeygain',
@@ -18,5 +19,11 @@ export class HoneygainComponent {
   ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
   halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
 
+  constructor(private router: Router) {
 
+  }
+
+  goFaucets() {
+    this.router.navigate(['/faucets-and-more'])
+  }
 }

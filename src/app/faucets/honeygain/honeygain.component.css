@@ -238,7 +238,7 @@ select option {
     border: 1px dashed turquoise;
     width: 35%;
     background-image: url('../../../assets/backgrounds/office.png');
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
 }
 
 .avRate {
@@ -248,5 +248,12 @@ select option {
     text-align: end;
     width: 35%;
     margin: 0 auto;
+}
 
+.buttonSbmt {
+    margin: -4rem auto 0 auto;
+}
+
+.bToFauc {
+text-align: center;
 }

@@ -785,6 +785,7 @@ p {
 .walletBtn {
     width: 50%;
     margin: 0 auto;
+    height: 2rem !important;
     position: relative;
     padding: 3px 7px;
     border-radius: 7px;
@@ -1515,6 +1516,133 @@ p {
   }
  }
  /* Second btn end  */
+
+ /* Submit btn start  */
+
+ .buttonSbmt {
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+}
+
+.buttonSbmt:before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+.buttonSbmt:hover:before {
+  background-color: #fff;
+  width: 3rem;
+}
+ /* Submit btn end */
+
+/* Back btn start  */
+
+#buttonBack {
+  width: 140px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: #fff;
+  background: none;
+  position: relative;
+  padding-bottom: 2em;
+}
+
+#buttonBack > div,#buttonBack > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#buttonBack:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  background: currentColor;
+  transition: transform 0.25s ease-out;
+}
+
+#buttonBack:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#buttonBack .clone > *,#buttonBack .text > * {
+  opacity: 1;
+  font-size: 1.3rem;
+  transition: 0.2s;
+  margin-left: 4px;
+}
+
+#buttonBack .clone > * {
+  transform: translateY(60px);
+}
+
+#buttonBack:hover .clone > * {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+#buttonBack:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+#buttonBack:hover .clone > :nth-child(1) {
+  transition-delay: 0.15s;
+}
+
+#buttonBack:hover .clone > :nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+#buttonBack:hover .clone > :nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+#buttonBack:hover .clone > :nth-child(4) {
+  transition-delay: 0.3s;
+}
+/* icon style and hover */
+#buttonBack svg {
+  width: 20px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-50deg);
+  transition: 0.2s ease-out;
+}
+
+#buttonBack:hover svg {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+/* Back btn end  */
+
 
 /* Buttons end  */
 
