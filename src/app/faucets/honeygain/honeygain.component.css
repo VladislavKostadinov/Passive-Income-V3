@@ -53,10 +53,12 @@ h3 {
 }
 
 .column1 {
-    color: coral;
-    width: 25%;
+    color: lightcoral;
+    width: 30%;
     margin: 0 auto;
+    border: 1px dashed turquoise;
 }
+
 
 .def {
     color: lightcoral;
@@ -69,6 +71,11 @@ li {
     width: 50%;
 }
 
+li:hover {
+color: coral;
+
+}
+
 .wallpaper {
     width: 60%;
     margin: 2rem auto;
@@ -79,6 +86,25 @@ li {
     display: flex;
 }
 
+.potCont {
+    margin: 0 auto;
+}
+
 .honeyIps {
     width: 75%;
 }
+
+.honeyPot {
+    width: 4.5rem;
+    height: 70.3%;
+}
+
+.honeyPotRow {
+    width: 6rem;
+    padding-top: 2rem !important;
+}
+
+.tipsH {
+    margin-top: 2.5rem !important;
+}
+
