@@ -3,6 +3,7 @@ h2 {
     color: goldenrod;
     margin-top: 5rem;
     text-align: center;
+    font-family: 'OpenSansClassic';
 }
 
 h2:hover, h4:hover, h3:hover {
@@ -22,19 +23,21 @@ h2:hover, h4:hover, h3:hover {
 
 .quote {
     color: lightcoral;
+    
 }
 
 .quote:hover {
     color: coral;
 }
 
-.companyStatement, .myStatement {
+.companyStatement, .myStatement, .earnings {
     background-image: url('../../../assets/backgrounds/darkdenim3.png');
     padding: 1rem 1rem;
 }
 
 h4, h3{
     color: goldenrod;
+    font-family: 'OpenSansClassic';
 }
 
 h3 {
@@ -46,6 +49,7 @@ h3 {
     color: lightcoral;
     padding: 1rem 2rem;
     border: 1px dashed lightgray;
+    font-family: 'TilliumLR';
 }
 
 .emp {
@@ -63,12 +67,15 @@ h3 {
 .def {
     color: lightcoral;
     padding: 1rem 2rem;
+    font-family: 'TilliumLR';
 }
 
 li {
     padding: 1rem 0;
     margin: auto;
     width: 50%;
+    font-family: 'TilliumLR';
+
 }
 
 li:hover {
@@ -99,12 +106,46 @@ color: coral;
     height: 70.3%;
 }
 
+.honeyBuddy {
+    width: 4.5rem;
+}
+
 .honeyPotRow {
     width: 6rem;
     padding-top: 2rem !important;
 }
 
-.tipsH {
-    margin-top: 2.5rem !important;
+.hRef {
+    width: 6rem;
 }
 
+.tipsH {
+    margin-top: 2.5rem !important;
+    font-family: 'OpenSansClassic';
+}
+
+.earningsH {
+    padding-top: 2rem !important;
+    font-family: 'OpenSansClassic';
+}
+
+.earnings {
+    padding: 0 1rem;
+}
+
+.earningsInfo {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+.textInfo {
+    width: 40%;
+    font-family: 'TilliumLR';
+    color: lightcoral;
+    padding: 0 10rem;
+}
+
+.book {
+    margin: 0 10rem;
+}

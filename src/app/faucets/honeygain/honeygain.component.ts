@@ -13,6 +13,7 @@ export class HoneygainComponent {
   honeyLoc: string = '../../../assets/images/honeygain/location-1.svg';
   honeySpeed: string = '../../../assets/images/honeygain/speed-1.svg';
   honeyPot: string = '../../../assets/images/honeygain/small_pot_opened.svg';
+  buddy: string = '../../../assets/images/honeygain/buddy.svg';
 
 
 }
