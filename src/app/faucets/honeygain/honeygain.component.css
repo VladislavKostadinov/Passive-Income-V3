@@ -82,7 +82,10 @@ h3 {
     border: 1px dashed turquoise;
 }
 
-
+.regLink {
+    text-decoration: none;
+    color: wheat;
+}
 .def {
     color: lightcoral;
     padding: 1rem 2rem;
@@ -192,8 +195,11 @@ color: coral;
     margin-right: 1rem;
 }
 
+
+
 .nameInput {
     background-image: url('../../../assets/backgrounds/darkdenim3.png');
+    color: coral;
 }
 
 .nameInput::placeholder {
@@ -278,3 +284,35 @@ text-align: center;
     text-align: center;
     padding-bottom: 2rem;
 }
+
+.page {
+    color: lightcoral;
+    font-family: 'TilliumLR';
+    text-align: center;
+}
+
+.pages {
+    color: lightcoral;
+    font-family: 'OpenSansClassic';
+    display: inline;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+}
+
+.pagesMenu {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    text-align: center;  
+}
+
+/* Arrows start  */
+.pagesNav {
+    display: flex;
+    justify-content: center;
+}
+
+svg {
+    width: 2rem;
+    height: 3rem;
+}
+/* Arrows end  */

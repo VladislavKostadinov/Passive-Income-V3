@@ -785,7 +785,7 @@ p {
 .walletBtn {
     width: 50%;
     margin: 0 auto;
-    height: 2rem !important;
+    height: 150% !important;
     position: relative;
     padding: 3px 7px;
     border-radius: 7px;

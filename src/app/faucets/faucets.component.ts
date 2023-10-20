@@ -24,7 +24,6 @@ export class FaucetsComponent {
 
     this.router.events.subscribe(
       (event: any) => {
-        console.log(this.router.url)
         if (this.router.url == "/faucets-and-more") {
           this.faucets = true;
           this.goHoney = false;

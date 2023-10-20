@@ -126,7 +126,7 @@
     </div>
     <div class="goReg">
         <button class="regButton">
-            Button
+            <a class="regLink" target="_blank" href="https://r.honeygain.me/BGOUTE2161">Get Started</a>
         </button>
     </div>
 </section>
@@ -134,10 +134,10 @@
     <h3>Comments section</h3>
     <div class="commentBox">
         <div class="guestName">
-            <input class="nameInput" type="text" name="" id="" placeholder="Name / Nickname">
+            <input class="nameInput" type="text" name="" id="" placeholder="Name / Nickname" [(ngModel)]="nickName">
         </div>
         <div class="rating">
-            <select class="stars" name="" id="">
+            <select #uRating class="stars" name="" id="" (change)="getRating(uRating.value)">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -148,9 +148,12 @@
         <span><img [src]="ratings" alt=""></span>
     </div>
         <div class="inputField">
-            <textarea class="commentField" name="" id="" cols="30" rows="10" placeholder="Write a comment..."></textarea>
+            <textarea 
+            class="commentField form-control" name="" id="" cols="30" rows="10" placeholder="Write a comment..." 
+            [(ngModel)]="comment" required> 
+            </textarea>
         </div>
-        <button class="buttonSbmt">
+        <button class="buttonSbmt" (click)="post()">
             Submit
           </button>
 </section>
@@ -174,4 +177,18 @@
         </div>
         <p class="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex ut rem aperiam, blanditiis, debitis ratione vero atque voluptatem animi autem error perspiciatis, recusandae quibusdam deserunt delectus fuga minus voluptatibus explicabo!</p>
     </div>
+    <div class="pagesMenu">
+        <div class="pagesNav">
+            <svg>
+                <path fill="#f08080" d="M25 0 L15 0 L0 20 L15 40 L25 40 L10 20 Z"></path>
+            </svg>
+            <div class="pages" *ngFor="let p of commentPages; let i = index">{{i+1}}</div>
+            <svg>
+                <path fill="#f08080" d="M0 0 L10 0 L25 20 L10 40 L0 40 L15 20 Z"></path>
+            </svg>  
+        </div>
+        
+        <div class="page">Page</div>
+    </div>
+    
 </section>

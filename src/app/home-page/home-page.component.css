@@ -131,6 +131,9 @@ body {
     flex-wrap: wrap;
 }
 
+.homeWallet {
+    height: 15% !important;
+}
 
 
 .payeer, .binance {
