@@ -36,6 +36,7 @@ export class HoneygainComponent {
   numberOfComments: number = 0;
 
   commentPages:any = [];
+  currentPage: number = 1;
 
   constructor(private router: Router, private db: AngularFireDatabase, private snackBar: MatSnackBar, 
     private dialog: MatDialog) {
@@ -93,7 +94,7 @@ export class HoneygainComponent {
   }
 
   goPage(page:any) { 
-    console.log(page)
+    this.currentPage = page;
 
   }
 
@@ -103,7 +104,31 @@ export class HoneygainComponent {
       width: '200px', data: { page: 1 } 
     });
     dialogRef.afterClosed().subscribe(result => { 
-      console.log(result); 
+      if (result >= this.commentPages.length) {
+        this.currentPage = this.commentPages.length 
+      } 
+      else if (result <= 1) {
+        this.currentPage = 1;
+      }
+      else {
+        this.currentPage = result;
+      }
     }); 
+  }
+
+  pageBackward() {
+    if (this.currentPage == 1) {
+      this.currentPage = this.currentPage;
+    } else {
+      this.currentPage--;
+    }
+  }
+
+  pageForward() {
+    if (this.currentPage == this.commentPages.length) {
+      this.currentPage = this.currentPage;
+    } else {
+      this.currentPage++;
+    }
   }
 }

@@ -43,6 +43,7 @@ body {
     margin: 0;
     overflow: auto;
     z-index: 10;
+    caret-color: transparent
 }
 
 footer {

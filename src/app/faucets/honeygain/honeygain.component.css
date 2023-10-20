@@ -329,4 +329,24 @@ path:hover {
     fill: cadetblue;
     cursor: pointer;
 }
+
+.selectedP {
+    color: cyan;
+}
+
+.medPages {
+    color: lightcoral;
+    font-size: 24px;
+    font-family: 'TilliumLR';
+    margin-left: -2.5rem;
+    margin-right: -1.5rem;
+}
+
+.currentPage {
+    color: lightcoral;
+}
+
+.curPageNum {
+    color: cyan;
+}
 /* Arrows end  */
