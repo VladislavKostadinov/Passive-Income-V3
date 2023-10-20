@@ -153,14 +153,14 @@
             [(ngModel)]="comment" required> 
             </textarea>
         </div>
-        <button class="buttonSbmt" (click)="post()">
+        <button class="buttonSbmt" (click)="post()" [disabled]="newComment">
             Submit
           </button>
 </section>
 <section class="guestComments" id="cmntSect">
     <h3>Comments</h3>
-    <p *ngIf="noComments" class="noComments">There are no comments. Maybe you can add one?</p>
-    <p *ngIf="!noComments" class="avRate">Avarage rate: 
+    <p *ngIf="numberOfComments <= 1" class="noComments">There are no comments. Maybe you can add one?</p>
+    <p *ngIf="!newComment && numberOfComments > 0" class="avRate">Avarage rate: 
         <img [src]="ratings" alt="">
         <img [src]="ratings" alt="">
         <img [src]="ratings" alt="">
@@ -171,7 +171,7 @@
     <div class="allComments" *ngFor="let g of pageListComments">
         <div class="guestDetails">
             <p class="name">{{g['nick']}}</p>
-            <span class="guestRating">
+            <span *ngIf="g['rating'] > 0" class="guestRating">
                 <img *ngIf="g['rating'] > 0" [src]="ratings" alt="">
                 <img *ngIf="g['rating'] > 1" [src]="ratings" alt="">
                 <img *ngIf="g['rating'] > 2" [src]="ratings" alt="">
@@ -181,13 +181,13 @@
         </div>
         <p class="comment">{{g['comment']}}</p>
     </div>
-    <div *ngIf='!noComments' class="pagesMenu">
+    <div *ngIf='!newComment && numberOfComments > 0' class="pagesMenu">
         <div class="currentPage"><span>Current page: </span><span class="curPageNum">{{currentPage}}</span></div>
         <div class="pagesNav">
             <svg (click)="pageBackward()">
                 <path fill="#f08080" d="M25 0 L15 0 L0 20 L15 40 L25 40 L10 20 Z"></path>
             </svg>
-            <div *ngIf="!multiplePage">
+            <div *ngIf="!multiplePage" class="singPages">
                 <div class="pages" *ngFor="let p of commentPages; let i = index;">
                     <span *ngIf="i<=2" 
                     [ngClass]="i+1 == currentPage ? 'selectedP' : ''" (click)="goPage(i+1)">{{i+1}}
@@ -202,7 +202,7 @@
                     </span>
                 </div>
             </div>
-            <span class="medPages" (click)="choosePage()">...</span>
+            <span class="medPages" *ngIf="multiplePage" (click)="choosePage()">...</span>
             <div *ngIf="multiplePage" class="multiplePage">
                 <div class="pages" *ngFor="let p of commentPages; let i = index">
                     <span *ngIf="commentPages.length-2 <= i" 

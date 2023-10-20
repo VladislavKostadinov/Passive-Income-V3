@@ -40,9 +40,9 @@ export class HoneygainComponent {
   commentPages:any = [];
   currentPage: number = 1;
 
-  noComments: boolean = true;
   singlePage: boolean = true;
   multiplePage: boolean = false;
+  newComment: boolean = false;
 
   cmtnSct = document.getElementById('cmtnSect');
 
@@ -55,7 +55,6 @@ export class HoneygainComponent {
     this.db.list('honeygain/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
-          this.noComments = false;
           this.numberOfComments = data.length;
           if (this.numberOfComments > 3) {
             this.singlePage = false
@@ -75,12 +74,9 @@ export class HoneygainComponent {
           }
           for (let i = 0; i < this.numberOfComments; i+=3) {
             this.commentPages.push("page");
-          }
-          console.log(this.multiplePage, this.numberOfComments)
-
+          } 
           this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
         } else {
-          this.noComments = true;
         }
       }
     );
@@ -96,37 +92,41 @@ export class HoneygainComponent {
   }
 
   post() {
+    this.newComment = true;
     if (this.comment == "") {
       this.snackBar.open("Comment field can not be empty!", "Okay")
     } else {
       this.addComment();
-      }
+    }
+  
     }
 
   addComment () {
-    this.db.database.ref('honeygain').child('comments').child(this.numberOfComments.toString()).set(
-      {
-        nick: this.nickName == "" ? "Guest" : this.nickName,
-        rating: this.rating,
-        comment: this.comment
-      }
-    ).catch(
-      (err) => {
-        if (err) {
-          this.snackBar.open("An error occurred. Sorry for the inconvenience.", "Dismiss");
+      this.db.database.ref('honeygain').child('comments').child(this.numberOfComments.toString()).set(
+        {
+          nick: this.nickName == "" ? "Guest" : this.nickName,
+          rating: this.rating,
+          comment: this.comment
         }
-      }
-    )
-    this.snackBar.open("Thank you for your comment", "Dismiss");
-    this.commentPages = this.commentPages / 2;
-    setTimeout(() => {
-      this.snackBar.dismiss();
-      location.reload();
-    }, 2000);
+      ).catch(
+        (err) => {
+          if (err) {
+            this.snackBar.open("An error occurred. Sorry for the inconvenience.", "Dismiss");
+          }
+        }
+      )
+      this.snackBar.open("Thank you for your comment", "Dismiss");
+  
+      this.commentPages = this.commentPages / 2;
+  
+      setTimeout(() => {
+        this.snackBar.dismiss();
+        location.reload();
+      }, 2000);
 
-
-   
+      
   }
+
 
   goPage(page:any) { 
     if  (page == this.currentPage) {
