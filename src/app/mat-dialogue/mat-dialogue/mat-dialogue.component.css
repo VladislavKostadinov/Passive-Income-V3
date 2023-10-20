@@ -1,0 +1,17 @@
+input {
+    text-align: center;
+    width: 2rem;
+}
+
+.mat {
+    overflow: hidden;
+    background-image: url('../../../assets/backgrounds/skulls.png');
+    height: 100%;
+
+}
+
+mat-form-field {
+    width: 9rem;
+    text-align: center;
+}
+

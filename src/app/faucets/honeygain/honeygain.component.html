@@ -182,13 +182,15 @@
             <svg>
                 <path fill="#f08080" d="M25 0 L15 0 L0 20 L15 40 L25 40 L10 20 Z"></path>
             </svg>
-            <div class="pages" *ngFor="let p of commentPages; let i = index">{{i+1}}</div>
+            <div class="pages" *ngFor="let p of commentPages; let i = index">
+                <span (click)="goPage(i+1)">{{i+1}}</span>
+                </div>
             <svg>
                 <path fill="#f08080" d="M0 0 L10 0 L25 20 L10 40 L0 40 L15 20 Z"></path>
             </svg>  
         </div>
         
-        <div class="page">Page</div>
+        <div class="page" (click)="choosePage()">Page</div>
     </div>
     
 </section>

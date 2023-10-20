@@ -15,10 +15,17 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HoneygainComponent } from './faucets/honeygain/honeygain.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatDialogueComponent } from './mat-dialogue/mat-dialogue/mat-dialogue.component';
+import { MatButtonModule, } from '@angular/material/button'; 
+import { MatCommonModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 
@@ -31,6 +38,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HyipComponent,
     HoneygainComponent,
     PageNotFoundComponent,
+    MatDialogueComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +46,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AngularFireModule,
     FormsModule,
     MatSnackBarModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatCommonModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserAnimationsModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),

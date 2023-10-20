@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dialogue.component';
 
 @Component({
   selector: 'app-honeygain',
@@ -35,7 +37,8 @@ export class HoneygainComponent {
 
   commentPages:any = [];
 
-  constructor(private router: Router, private db: AngularFireDatabase, private snackBar: MatSnackBar) {
+  constructor(private router: Router, private db: AngularFireDatabase, private snackBar: MatSnackBar, 
+    private dialog: MatDialog) {
 
     this.db.list('honeygain/comments').valueChanges().subscribe(
       (data:any) => {
@@ -87,5 +90,20 @@ export class HoneygainComponent {
       }
     )
     this.snackBar.open("Thank you for your comment", "Dismiss");
+  }
+
+  goPage(page:any) { 
+    console.log(page)
+
+  }
+
+  choosePage() {
+    let dialogRef = this.dialog.open(MatDialogueComponent, {
+      height: '240px',
+      width: '200px', data: { page: 1 } 
+    });
+    dialogRef.afterClosed().subscribe(result => { 
+      console.log(result); 
+    }); 
   }
 }

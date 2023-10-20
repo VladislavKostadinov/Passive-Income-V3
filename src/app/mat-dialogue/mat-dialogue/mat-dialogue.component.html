@@ -1,0 +1,13 @@
+<div class="mat">
+    <h1 mat-dialog-title>Choose a page</h1> 
+    <div mat-dialog-content> 
+    <mat-form-field> 
+        <input matInput [(ngModel)]="data.page"> 
+    </mat-form-field> 
+    </div> 
+    <div mat-dialog-actions> 
+    <button mat-button (click)="onCancel()">No Thanks</button> 
+    <button mat-button [mat-dialog-close]="data.page"  
+                cdkFocusInitial>Ok</button> 
+    </div> 
+</div>

@@ -291,6 +291,15 @@ text-align: center;
     text-align: center;
 }
 
+.pages:hover {
+    color: cadetblue;
+    cursor: pointer;
+}
+.page:hover {
+    color: cadetblue;
+    cursor: pointer;
+}
+
 .pages {
     color: lightcoral;
     font-family: 'OpenSansClassic';
@@ -314,5 +323,10 @@ text-align: center;
 svg {
     width: 2rem;
     height: 3rem;
+}
+
+path:hover {
+    fill: cadetblue;
+    cursor: pointer;
 }
 /* Arrows end  */
