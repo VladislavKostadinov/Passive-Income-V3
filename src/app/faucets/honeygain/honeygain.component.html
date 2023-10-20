@@ -157,7 +157,7 @@
             Submit
           </button>
 </section>
-<section class="guestComments">
+<section class="guestComments" id="cmntSect">
     <h3>Comments</h3>
     <p class="avRate">Avarage rate: 
         <img [src]="ratings" alt="">
@@ -167,15 +167,18 @@
         <img [src]="halfRatings" alt="">
 
     </p>
-    <div class="allComments">
+    <div class="allComments" *ngFor="let g of pageListComments">
         <div class="guestDetails">
-            <p class="name">Vlad</p>
-            <span class="guestRating"><img [src]="ratings" alt=""><img [src]="ratings" alt="">
-                <img [src]="ratings" alt="">
-                <img [src]="ratings" alt="">
-                <img [src]="ratings" alt=""></span >
+            <p class="name">{{g['nick']}}</p>
+            <span class="guestRating">
+                <img *ngIf="g['rating'] > 0" [src]="ratings" alt="">
+                <img *ngIf="g['rating'] > 1" [src]="ratings" alt="">
+                <img *ngIf="g['rating'] > 2" [src]="ratings" alt="">
+                <img *ngIf="g['rating'] > 3" [src]="ratings" alt="">
+                <img *ngIf="g['rating'] > 4" [src]="ratings" alt="">
+            </span >
         </div>
-        <p class="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex ut rem aperiam, blanditiis, debitis ratione vero atque voluptatem animi autem error perspiciatis, recusandae quibusdam deserunt delectus fuga minus voluptatibus explicabo!</p>
+        <p class="comment">{{g['comment']}}</p>
     </div>
     <div class="pagesMenu">
         <div class="currentPage"><span>Current page: </span><span class="curPageNum">{{currentPage}}</span></div>

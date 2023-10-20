@@ -226,6 +226,7 @@ select option {
     color: lightcoral;
     text-align: center;
     font-size: 15px;
+    word-wrap: break-word;
 }
 
 .comment:hover {
@@ -289,6 +290,7 @@ text-align: center;
     color: lightcoral;
     font-family: 'TilliumLR';
     text-align: center;
+    margin-top: 1rem;
 }
 
 .pages:hover {
