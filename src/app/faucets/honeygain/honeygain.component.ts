@@ -40,6 +40,10 @@ export class HoneygainComponent {
   commentPages:any = [];
   currentPage: number = 1;
 
+  noComments: boolean = true;
+  singlePage: boolean = true;
+  multiplePage: boolean = false;
+
   cmtnSct = document.getElementById('cmtnSect');
 
 
@@ -51,17 +55,32 @@ export class HoneygainComponent {
     this.db.list('honeygain/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
+          this.noComments = false;
           this.numberOfComments = data.length;
+          if (this.numberOfComments > 3) {
+            this.singlePage = false
+          }  else {
+            this.singlePage = true;
+          }
+          if (this.numberOfComments > 12) {
+            this.multiplePage = true;
+          } else {
+            this.multiplePage = false;
+          }
           for (let c in data) {
             this.listOfComments.push(data[c]['comment']);
             this.listOfGuests.push(data[c]['nick']);
             this.listOfRatings.push(data[c]['rating']); 
             this.pageListGuests.push(data[c]);
           }
-          for (let i = 0; i <= this.numberOfComments; i+=3) {
+          for (let i = 0; i < this.numberOfComments; i+=3) {
             this.commentPages.push("page");
           }
+          console.log(this.multiplePage, this.numberOfComments)
+
           this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
+        } else {
+          this.noComments = true;
         }
       }
     );
@@ -99,6 +118,7 @@ export class HoneygainComponent {
       }
     )
     this.snackBar.open("Thank you for your comment", "Dismiss");
+    this.commentPages = this.commentPages / 2;
     setTimeout(() => {
       this.snackBar.dismiss();
       location.reload();
@@ -109,8 +129,12 @@ export class HoneygainComponent {
   }
 
   goPage(page:any) { 
-    this.currentPage = page;
-    this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
+    if  (page == this.currentPage) {
+      return;
+    } else {
+      this.currentPage = page;
+      this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
+    }
   }
 
   choosePage() {
@@ -138,20 +162,20 @@ export class HoneygainComponent {
 
   pageBackward() {
     if (this.currentPage == 1) {
-      this.currentPage = this.currentPage;
+      return;
     } else {
       this.currentPage--;
+      this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
     }
-    this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
 
   }
 
   pageForward() {
     if (this.currentPage == this.commentPages.length) {
-      this.currentPage = this.currentPage;
+      return;
     } else {
       this.currentPage++;
+      this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
     }
-    this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
   }
 }

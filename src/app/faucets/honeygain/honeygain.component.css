@@ -264,6 +264,13 @@ select option {
     margin: 0 auto 2rem auto;
 }
 
+.noComments {
+    color: coral;
+    font-size: 15px;
+    font-family: 'TilliumLR';
+    text-align: center;
+}
+
 .avRate {
     color: coral;
     font-size: 15px;
@@ -306,7 +313,7 @@ text-align: center;
     color: lightcoral;
     font-family: 'OpenSansClassic';
     display: inline;
-    padding-right: 1rem;
+    padding-right: 0.5rem;
     padding-top: 0.5rem;
 }
 
@@ -340,15 +347,23 @@ path:hover {
     color: lightcoral;
     font-size: 24px;
     font-family: 'TilliumLR';
-    margin-left: -2.5rem;
-    margin-right: -1.5rem;
+}
+
+.medPages:hover {
+    cursor: pointer;
+    color: cyan;
 }
 
 .currentPage {
     color: lightcoral;
+    margin-bottom: 0.7rem;
 }
 
 .curPageNum {
     color: cyan;
+}
+
+.multiplePage {
+    margin-top: 0.5rem
 }
 /* Arrows end  */
