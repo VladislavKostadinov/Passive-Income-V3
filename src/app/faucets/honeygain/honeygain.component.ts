@@ -79,13 +79,11 @@ export class HoneygainComponent {
           }
           for (let r of this.listOfRatings) {
           if (parseInt(r)) {
-            console.log(r)
             this.avarageRating += parseInt(r);
             this.trueRatings.push("realRate")
           }
 
           }
-          console.log(this.trueRatings)
           this.avarageRating /= this.trueRatings.length;
           if (this.avarageRating % 1 != 0) {
             this.ratingHalf = true;
@@ -93,7 +91,11 @@ export class HoneygainComponent {
             this.ratingHalf = false;
           }
           for (let i = 0; i < this.numberOfComments; i+=3) {
-            this.commentPages.push("page");
+            if (this.newComment) {
+              return
+            } else {
+              this.commentPages.push("page");
+            }
           } 
           
           this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
@@ -144,10 +146,7 @@ export class HoneygainComponent {
         this.snackBar.dismiss();
         location.reload();
       }, 2000);
-
-      
   }
-
 
   goPage(page:any) { 
     if  (page == this.currentPage) {
