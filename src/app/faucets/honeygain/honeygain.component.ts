@@ -46,6 +46,10 @@ export class HoneygainComponent {
 
   cmtnSct = document.getElementById('cmtnSect');
 
+  avarageRating: number = 0;
+  ratingHalf: boolean = false;
+  trueRatings: any = [];
+
 
   constructor(private router: Router, private db: AngularFireDatabase, private snackBar: MatSnackBar, 
     private dialog: MatDialog) {
@@ -71,10 +75,27 @@ export class HoneygainComponent {
             this.listOfGuests.push(data[c]['nick']);
             this.listOfRatings.push(data[c]['rating']); 
             this.pageListGuests.push(data[c]);
+           
+          }
+          for (let r of this.listOfRatings) {
+          if (parseInt(r)) {
+            console.log(r)
+            this.avarageRating += parseInt(r);
+            this.trueRatings.push("realRate")
+          }
+
+          }
+          console.log(this.trueRatings)
+          this.avarageRating /= this.trueRatings.length;
+          if (this.avarageRating % 1 != 0) {
+            this.ratingHalf = true;
+          } else {
+            this.ratingHalf = false;
           }
           for (let i = 0; i < this.numberOfComments; i+=3) {
             this.commentPages.push("page");
           } 
+          
           this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
         } else {
         }
@@ -134,7 +155,9 @@ export class HoneygainComponent {
     } else {
       this.currentPage = page;
       this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
+
     }
+    this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
   }
 
   choosePage() {
@@ -156,6 +179,8 @@ export class HoneygainComponent {
           this.currentPage = this.currentPage;
         }
       } 
+      console.log(this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3))
+
       this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
     }); 
   }
@@ -167,6 +192,7 @@ export class HoneygainComponent {
       this.currentPage--;
       this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
     }
+    this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
 
   }
 
@@ -177,5 +203,6 @@ export class HoneygainComponent {
       this.currentPage++;
       this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
     }
+    this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
   }
 }

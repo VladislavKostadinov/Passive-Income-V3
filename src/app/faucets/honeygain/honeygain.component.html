@@ -161,11 +161,12 @@
     <h3>Comments</h3>
     <p *ngIf="numberOfComments <= 1" class="noComments">There are no comments. Maybe you can add one?</p>
     <p *ngIf="!newComment && numberOfComments > 0" class="avRate">Avarage rate: 
-        <img [src]="ratings" alt="">
-        <img [src]="ratings" alt="">
-        <img [src]="ratings" alt="">
-        <img [src]="ratings" alt="">
-        <img [src]="halfRatings" alt="">
+        <img *ngIf="avarageRating >= 0 && !halfRatings" [src]="ratings" alt="">
+        <img *ngIf="avarageRating >= 1" [src]="ratings" alt="">
+        <img *ngIf="avarageRating >= 2" [src]="ratings" alt="">
+        <img *ngIf="avarageRating >= 3" [src]="ratings" alt="">
+        <img *ngIf="avarageRating >= 4" [src]="ratings" alt="">
+        <img *ngIf="ratingHalf" [src]="halfRatings" alt="">
 
     </p>
     <div class="allComments" *ngFor="let g of pageListComments">

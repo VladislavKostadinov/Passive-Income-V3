@@ -16,6 +16,7 @@ export class FaucetsComponent {
   teaserFast: string = '../../assets/images/teaserFastwebp.webp';
   swagBucks: string = '../../assets/images/swagbucks.webp';
   cointiply: string = '../../assets/images/cointiply.webp';
+  bmf: string = '../../assets/images/bmf3.png';
 
   faucets = true;
   goHoney = false;
