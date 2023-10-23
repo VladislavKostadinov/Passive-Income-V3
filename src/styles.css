@@ -47,18 +47,25 @@ body {
 }
 
 footer {
-    background-image: url('../src/assets/backgrounds/black-763784_1280.jpg');
+    background-image: url('../src/assets/backgrounds/denim.webp');
 }
 
 .cr {
     font-family: 'OpenSansClassic';
     color: lightcoral;
-    padding: 0 1rem;
+    margin: auto;
+    font-size: 15px;
+    text-align: right;
+    margin-right: 1rem;
 }
 .footerH {
     font-family: 'OpenSansClassic';
     color: violet;
-    padding: 0 1rem;
+    margin: auto;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+
 }
 
 .footerH:hover {
@@ -68,6 +75,7 @@ footer {
 .footerInfo {
     display: flex;
     justify-content: space-between;
+    height: 3rem;
 }
 
 

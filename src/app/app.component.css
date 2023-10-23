@@ -38,7 +38,7 @@ body {
 .navBar {
     display: flex;
     justify-content: space-between;
-    background-image: url(../../src/assets/backgrounds/black-763784_1280.jpg);
+    background-image: url(../../src/assets/backgrounds/denim.webp);
     border-bottom: 1px solid black;
 }
 
@@ -46,22 +46,26 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: row-reverse;
+    margin: auto 0;
+    flex-wrap: wrap;
+    width: 33%;
+    justify-content: left;
   }
   
   .topnav a {
 
     float: left;
-    color: rgb(206, 85, 71);;
+    color: coral;
     text-align: center;
-    padding: 14px 16px;
+    padding: 7px 5px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 12px;
     font-family: 'OpenSansClassic';
   }
 
   .svg-icon {
-    height: 3rem !important;
-    width: 3rem !important;
+    height: 2rem !important;
+    width: 2rem !important;
   }
   
   .topnav a:hover {
@@ -80,7 +84,7 @@ body {
     text-decoration: underline;
   }
   .topNavMain a.active:hover {
-    color: darkred;
+    color: darkorange;
     text-decoration: underline;
   }
 
@@ -88,9 +92,15 @@ body {
     max-height: 2rem;
 }
 
+.heading {
+  margin: auto;
+  width: 120%;
+}
+
 .welcomeMsg {
     color: lightcoral;
     text-align: center;
     font-family: 'OpenSansClassic';
+    font-size: 20px;
 }
 
