@@ -46,6 +46,10 @@ body {
     caret-color: transparent
 }
 
+p {
+  font-size: 12px;
+}
+
 footer {
     background-image: url('../src/assets/backgrounds/denim.webp');
 }
@@ -549,6 +553,7 @@ footer {
   -ms-flex-pack: center;
   justify-content: center;
   color: #000;
+  margin: auto 0;
 }
 
 .cover {
@@ -586,8 +591,7 @@ footer {
 }
 
 p {
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 15px;
 }
 
 /* Earnings card info end  */

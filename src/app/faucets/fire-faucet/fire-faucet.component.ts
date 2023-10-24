@@ -12,13 +12,9 @@ import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dial
 })
 export class FireFaucetComponent {
 
-  fireFaucet: string = '../../../assets/images/ffaucet/fireFaucet.png';
-  honeySofa: string = '../../../assets/images/honeygain/landing_page_sofa_tv.svg';
-  honeyIps: string = '../../../assets/images/honeygain/ip_number-1.svg';
-  honeyLoc: string = '../../../assets/images/honeygain/location-1.svg';
-  honeySpeed: string = '../../../assets/images/honeygain/speed-1.svg';
-  honeyPot: string = '../../../assets/images/honeygain/small_pot_opened.svg';
-  buddy: string = '../../../assets/images/honeygain/buddy.svg';
+  fireFaucet: string = '../../../assets/images/ffaucet/ff3.png';
+  fFaucetWall: string = '../../../assets/images/ffaucet/fireFaucet.png';
+  faucet: string = '../../../assets/images/ffaucet/faucet.png';
 
   ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
   halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
@@ -56,7 +52,7 @@ export class FireFaucetComponent {
  
 
 
-    this.db.list('honeygain/comments').valueChanges().subscribe(
+    this.db.list('firefaucet/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -125,7 +121,7 @@ export class FireFaucetComponent {
     }
 
   addComment () {
-      this.db.database.ref('honeygain').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('firefaucet').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,

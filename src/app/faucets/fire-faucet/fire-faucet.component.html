@@ -1,7 +1,7 @@
 
 <h2>Fire Faucet</h2>
 <div class="logoContainer">
-    <img class="logo" [src]="fireFaucet" alt="Fire Faucet's logo - the text, caught on fire">
+    <img class="logo" [src]="fireFaucet" alt="Fire Faucet's logo - F, caught on digitigalized fire">
     <p><i class="quote">"Earn your favorite cryptocurrencies and gift cards by doing multiple tasks such as 
         filling out surveys, offerwalls, watching videos and much more! ."</i>
     </p>    
@@ -39,55 +39,70 @@
         <div class="column1">
             <ul>
                 <div class="listCont">
-                    <li>Use the Faucet (free points every 30 minutes)</li>
-                    <span>
-                        <img class="honeyIps" [src]="honeyIps" alt="">
+                    <li>Use the Faucet (every 30 min.)*</li>
+                    <span class="tipsIcon">
+                        <i class="fas fa-mouse-pointer left tIcon"></i>
                     </span>
                 </div>
                 <div class="listCont">
-                    <li>Click on the PTC (Pay-To-Click)*</li>
-                    <span class="honeyPotRow">
-                        <img class="honeyIps honeyPot" [src]="honeyPot" alt="">
+                    <li>Click on the PTC (Pay-To-Click)</li>
+                    <span class="tipsIcon">
+                        <i class="far fa-eye left tIcon"></i>
                     </span>
                 </div>
                 <div class="listCont">
-                    <li>Complete your Daily Tasks**</li>
-                    <span>
-                        <img class="honeyIps" [src]="honeySpeed" alt="">
+                    <li>Plan out your daily Shortlinks**</li>
+                    <span class="tipsIcon">
+                        <i class="fas fa-link left tIcon"></i>
                     </span>
                 </div>
                 <div class="listCont">
-                    <li>Plan out your daily Shortlinks***</li>
-                    <span>
-                        <i class="fas fa-mouse-pointer left"></i>
+                    <li>Complete your Daily Tasks***</li>
+                    <span class="tipsIcon">
+                        <i class="fas fa-gift left tIcon"></i>
+                    </span>
+                </div>
+                <div class="listCont">
+                    <li>Start Auto Faucet****</li>
+                    <span class="tipsIcon">
+                        <img class="honeyIps" [src]="faucet" alt="a faucet">
                     </span>
                 </div>
                 <div class="listCont">
                     <li>Invite friends / Acquire referrals</li>
-                    <span class="hRef">
-                        <img class="honeyIps honeyBuddy" [src]="buddy" alt="">
+                    <span class="tipsIcon">
+                        <i class="fa fa-user-plus left tIcon"></i>
                     </span>
                 </div>
             </ul>
         </div>
         <div class="wallpaper"> 
-            <img [src]="honeySofa"
-            alt="a person sitting on his sofa in the living room, while his devices emit digital bees">
+            <img class="wallpaperImg" [src]="fFaucetWall"
+            alt="Fire Faucet text, caught on fire">
         </div>
         <div class="def">
-            <p><i>*If you manage to share at least 15 MB daily, you unlock the Honey Pot, which can provide you from 
-                0.005$ to 10$. But, know this, my biggest win at the current moment is 0.5$. Usually, it provides between 
-                0.005$ to 0.015$. Still, there is the chance of a big win, and it takes no more than a minute of your time.
+            <p><i>
+                *The faucet claim is available every 30 minutes and gives a random amount of 
+                <i class="emp">Action Points</i>, between 25-70(I am not completely sure). You can get them every 30 
+                minutes, after you complete a short captcha, to prove you are not a bot. 
+    
             </i></p>
-            <p><i>**JumpTask is a partner of Honeygain. It is a different platform, in which you can earn more passive income
-                by completing tasks. JumpTask has its native token - JMPT, which is not launched in the official blockchain,
-                but still has a certain value. If you decide to use Honeygain's partnership with JumpTask, you will receive 
-                a 10% bonus.
+            <p><i>**Shortlinks are tedeous and require more time and patience than normal ads, 
+                but provide more <i class="emp">Action Points</i>. Once you get used to them and find the ones that 
+                suit you the best, it is more of a daily routine than a serious tasks, that requires effort.
             </i></p>
-            <p><i>***Content Delivery is yet another way to share your Internet connection. 
-                It includes multiple types of bandwidth-intensive content such as images, videos, audio, streaming, 
-                heavy websites, IPTV, VOD, social media, or VoIP services. No, your device storage will not be accessed 
-                – as usual, the app only uses your network!
+            <p><i>***The <i class="emp">Daily Tasks</i> is a list of tasks, which can be completed every day. Each taks 
+                gives a nice bonus and the list is refreshed daily. If all of them are completed, 
+                they provide a nice boost to your 
+                daily income and that is why I limit my daily activity to completing all the tasks and activating the 
+                <i class="emp">Auto Faucet</i>. This way I don't waste much time and still get a sufficient return rate.
+            </i></p>
+            <p><i>****The <i class="emp">Auto Faucet</i> is the automated conversion from <i class="emp">
+                ACP (Action Points)
+            </i> to <i class="emp">Crypto currencies</i>, which you can then withdraw to your direct wallet. You can 
+            increase the <i class="emp">speed</i> of the Auto Faucet up to 4x and also choose it to convert ACP to up to 12
+             different crypto currencies at the same time. And don't worry, you can then exchange all your crypto to a 
+             certain specific one (that you want to withdraw) <i class="emp">without any fee</i>. 
             </i></p>
         </div>
         <div class="bToFauc">
@@ -111,15 +126,18 @@
     <h2 class="earningsH">My earnings</h2>
     <div class="earningsInfo">
         <p class="textInfo">
-            As I already mentioned, Honeygain is completely free. Once you install it, you need only open the Lucky Pot 
-            once per day (and it is not even neccessary). All you need to do is collect 20$, and you can withdraw. 
-            Depending on your network, referrals, number of devices and luck, you can actually make a decent passive 
-            income from this project. I, for instance, am depending mainly on my two devices - mobile and lap-top. And 
-            have still managed to withdraw once. <br>
+            Fire Faucet is completely free, and even though it requires a certain amount of effort daily, 
+            it can actually be quite fun. There's also a chat, in which you can communicate with you fellow earners,
+             ask question, or just have fun. Don't advertise, though, and don't ask questions before checking in 
+             the FAQ section. The interface is friendly and moderators are cool. And it really pays for the effort. Just 
+             not that much. But if you decide to start on your crypto journey towards passive income, it is a very good 
+             spot to begin from and I highly recommend it. If you find referrals, though, your income might jump 
+             significantly, as you gain 20% of their earnings in the platform. 
+             <br>
             Good luck!
         </p>
         <div class="book">
-            <p>17.8$</p>
+            <p>~12$</p>
             <div class="cover">
                 <p>Earnings</p>
             </div>
@@ -127,7 +145,7 @@
     </div>
     <div class="goReg">
         <button class="regButton">
-            <a class="regLink" target="_blank" href="https://r.honeygain.me/BGOUTE2161">Get Started</a>
+            <a class="regLink" target="_blank" href="https://firefaucet.win/ref/VladTaltos89">Get Started</a>
         </button>
     </div>
 </section>
