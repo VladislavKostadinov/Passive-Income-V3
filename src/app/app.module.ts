@@ -25,6 +25,12 @@ import { MatButtonModule, } from '@angular/material/button';
 import { MatCommonModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { FireFaucetComponent } from './faucets/fire-faucet/fire-faucet.component';
+import { AdbtcComponent } from './faucets/adbtc/adbtc.component';
+import { TeaserfastComponent } from './faucets/teaserfast/teaserfast.component';
+import { SwagbucksComponent } from './faucets/swagbucks/swagbucks.component';
+import { CointiplyComponent } from './faucets/cointiply/cointiply.component';
+import { BmfComponent } from './faucets/bmf/bmf.component';
 
 
 
@@ -39,6 +45,12 @@ import { MatInputModule } from '@angular/material/input';
     HoneygainComponent,
     PageNotFoundComponent,
     MatDialogueComponent,
+    FireFaucetComponent,
+    AdbtcComponent,
+    TeaserfastComponent,
+    SwagbucksComponent,
+    CointiplyComponent,
+    BmfComponent,
   ],
   imports: [
     BrowserModule,
