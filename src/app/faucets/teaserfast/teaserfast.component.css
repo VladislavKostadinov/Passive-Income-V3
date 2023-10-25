@@ -418,3 +418,12 @@ path:hover {
 .referral {
     width: 2.5rem;
 }
+
+.tm {
+    color: red;
+}
+
+.gl {
+    color: gold;
+    display: block;
+}

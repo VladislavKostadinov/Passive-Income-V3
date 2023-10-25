@@ -394,3 +394,12 @@ path:hover {
 .welcomeQ {
     font-size: 18px;
 }
+
+.tm {
+    color: red;
+}
+
+.gl {
+    color: gold;
+    display: block;
+}
