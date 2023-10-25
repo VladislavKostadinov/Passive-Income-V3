@@ -1,0 +1,430 @@
+@media only screen and (max-width: 580px) {
+    .honeyPot {
+        width: 2.5rem !important;
+    }
+    
+    .honeyBuddy {
+        width: 3rem !important;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .honeyPot {
+        width: 1.5rem !important;
+    }
+    
+    .honeyBuddy {
+        width: 2rem !important;
+    }
+}
+
+
+h2 {
+    color: goldenrod;
+    margin-top: 7rem;
+    text-align: center;
+    font-family: 'OpenSansClassic';
+}
+
+h2:hover, h4:hover, h3:hover {
+    color: gold;
+}
+
+.logo {
+    height: 12.5%;
+    width: 12.5%;
+    margin: 0 auto;
+    border-radius: 20%;
+}
+
+.logoContainer {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.quote {
+    color: lightcoral;
+    
+}
+
+.quote:hover {
+    color: coral;
+}
+
+.companyStatement, .myStatement, .earnings {
+    background-image: url('../../../assets/backgrounds/darkdenim3.png');
+    padding: 1rem 1rem;
+}
+
+h4, h3{
+    color: goldenrod;
+    font-family: 'OpenSansClassic';
+}
+
+h3 {
+    text-align: center;
+}
+
+/* p {
+    font-size: 12px;
+} */
+
+
+.cStatement, .mStatement {
+    color: lightcoral;
+    padding: 1rem 2rem;
+    border: 1px dashed lightgray;
+    font-family: 'TilliumLR';
+}
+
+.emp {
+    color: gold;
+}
+
+.column1 {
+    color: lightcoral;
+    width: 35%;
+    margin: 0 auto;
+    border: 1px dashed turquoise;
+}
+
+.regLink {
+    text-decoration: none;
+    color: wheat;
+}
+.def {
+    color: lightcoral;
+    padding: 1rem 2rem;
+    font-family: 'TilliumLR';
+    width: 75%;
+    margin: 0 auto;
+}
+
+li {
+    padding: 1rem 0;
+    margin: auto;
+    width: 50%;
+    font-family: 'TilliumLR';
+
+}
+
+li:hover {
+color: coral;
+
+}
+
+.wallpaper {
+    margin: 2rem auto;
+}
+
+.wallpaperImg {
+    display: flex;
+    margin: 0 auto;
+    width: 35rem;
+}
+
+.listCont {
+    display: flex;
+}
+
+.potCont {
+    margin: 0 auto;
+}
+
+.honeyIps {
+    width: 3rem;
+}
+
+.honeyPot {
+    width: 4.5rem;
+    height: 70.3%;
+}
+
+.honeyBuddy {
+    width: 4.5rem;
+}
+
+.honeyPotRow {
+    width: 6rem;
+    padding-top: 2rem !important;
+}
+
+.hRef {
+    width: 6rem;
+}
+
+.tipsH {
+    margin-top: 2.5rem !important;
+    font-family: 'OpenSansClassic';
+}
+
+.earningsH {
+    padding-top: 2rem !important;
+    font-family: 'OpenSansClassic';
+}
+
+.earnings {
+    padding: 0 1rem;
+}
+
+.earningsInfo {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+.textInfo {
+    width: 40%;
+    font-family: 'TilliumLR';
+    color: lightcoral;
+    margin: auto 0;
+}
+
+
+.inputField {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.commentField {
+    width: 30rem;
+    height: 13rem;
+    background-image: url('../../../assets/backgrounds/darkdenim3.png');
+    color: lightcoral;
+    overflow: hidden;
+}
+
+.commentField::placeholder {
+    color: lightcoral;
+}
+
+.commentBox {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.guestName {
+    margin-right: 1rem;
+}
+
+
+
+.nameInput {
+    background-image: url('../../../assets/backgrounds/darkdenim3.png');
+    color: coral;
+}
+
+.nameInput::placeholder {
+    color: lightcoral;
+}
+
+.rating {
+    margin-left: 1rem;
+}
+
+.stars {
+    background-image: url('../../../assets/backgrounds/darkdenim3.png');
+    color: gold;
+}
+
+select option {
+    background: darkslategray;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+.comment {
+    font-family: 'TilliumLR';
+    color: lightcoral;
+    text-align: center;
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+.comment:hover {
+    color: coral;
+
+}
+
+.guestDetails {
+    justify-content: space-around;
+    border-bottom: 1px dashed turquoise;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.name {
+    font-family: 'TilliumLR';
+    color: goldenrod;
+    text-align: center;
+    font-size: 15px;
+}
+
+.guestRating {
+    color: gold;
+    font-size: 15px;
+    font-family: 'TilliumLR';
+    float: right;
+    margin-top: 1.1rem;
+    margin-right: 1rem;
+}
+
+.allComments {
+    border: 1px dashed turquoise;
+    width: 35%;
+    background-image: url('../../../assets/backgrounds/office.png');
+    margin: 0 auto 2rem auto;
+}
+
+.noComments {
+    color: coral;
+    font-size: 15px;
+    font-family: 'TilliumLR';
+    text-align: center;
+}
+
+.avRate {
+    color: coral;
+    font-size: 15px;
+    font-family: 'TilliumLR';
+    text-align: end;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.buttonSbmt {
+    margin: -4rem auto 0 auto;
+}
+
+.bToFauc {
+text-align: center;
+}
+
+.goReg {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.page {
+    color: lightcoral;
+    font-family: 'TilliumLR';
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.pages:hover {
+    color: cadetblue;
+    cursor: pointer;
+}
+.page:hover {
+    color: cadetblue;
+    cursor: pointer;
+}
+
+.pages {
+    color: lightcoral;
+    font-family: 'OpenSansClassic';
+    display: inline;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.pagesMenu {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    text-align: center;  
+}
+
+/* Arrows start  */
+.pagesNav {
+    display: flex;
+    justify-content: center;
+}
+
+svg {
+    width: 2rem;
+    height: 3rem;
+}
+
+path:hover {
+    fill: cadetblue;
+    cursor: pointer;
+}
+
+.selectedP {
+    color: cyan;
+}
+
+.medPages {
+    color: lightcoral;
+    font-size: 24px;
+    font-family: 'TilliumLR';
+}
+
+.singPages {
+    margin-top: 0.4rem;
+}
+
+.medPages:hover {
+    cursor: pointer;
+    color: cyan;
+}
+
+.currentPage {
+    color: lightcoral;
+    margin-bottom: 0.7rem;
+}
+
+.curPageNum {
+    color: cyan;
+}
+
+.multiplePage {
+    margin-top: 0.5rem
+}
+/* Arrows end  */
+
+.tIcon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+}
+
+.tipsIcon {
+    margin: auto;
+}
+
+.homeLink {
+    text-decoration: none;
+}
+
+.homeLink i:hover{
+    color: darkviolet;
+}
+
+.statementTitle {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.welcomeQ {
+    font-size: 18px;
+}
+
+.ytube, .bExt {
+    width: 3rem;
+}
+
+.referral {
+    width: 2.5rem;
+}
+
+.dng {
+    color: red;
+}
+
+
+.gl {
+    color: gold;
+    display: block;
+}

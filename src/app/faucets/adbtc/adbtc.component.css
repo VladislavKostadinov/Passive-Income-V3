@@ -115,7 +115,7 @@ color: coral;
 .wallpaperImg {
     display: flex;
     margin: 0 auto;
-    width: 40rem;
+    width: 35rem;
 }
 
 .listCont {
@@ -387,6 +387,7 @@ path:hover {
 
 .tipsIcon {
     margin: auto;
+    width: 3rem;
 }
 
 .homeLink {
@@ -395,4 +396,8 @@ path:hover {
 
 .homeLink i:hover{
     color: darkviolet;
+}
+
+.welcomeQ {
+    font-size: 18px;
 }

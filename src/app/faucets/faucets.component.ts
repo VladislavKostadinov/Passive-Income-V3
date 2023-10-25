@@ -13,7 +13,7 @@ export class FaucetsComponent {
   fireFaucet: string = '../../assets/images/fireFaucetLogo.png';
   moneySMS: string = '../../assets/images/moneySMS.webp';
   adbtc: string = '../../assets/images/adbtc.png';
-  teaserFast: string = '../../assets/images/teaserFastwebp.webp';
+  teaserFast: string = '../../assets/images/teaserLogo.jpg';
   swagBucks: string = '../../assets/images/swagbucks.webp';
   cointiply: string = '../../assets/images/cointiply.webp';
   bmf: string = '../../assets/images/bmf3.png';

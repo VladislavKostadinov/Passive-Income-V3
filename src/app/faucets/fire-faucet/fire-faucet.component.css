@@ -122,8 +122,8 @@ color: coral;
 }
 
 .honeyIps {
-    width: 50%;
-    margin-left: 1rem;
+    width: 3rem;
+    margin-left: -0.5rem;
 }
 
 .honeyPot {
@@ -383,6 +383,7 @@ path:hover {
 
 .tipsIcon {
     margin: auto;
+    width: 3rem;
 }
 
 .wallpaperImg {
@@ -390,3 +391,6 @@ path:hover {
     margin: 0 auto;
 }
 
+.welcomeQ {
+    font-size: 18px;
+}

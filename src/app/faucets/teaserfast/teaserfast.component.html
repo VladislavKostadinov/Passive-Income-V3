@@ -2,7 +2,7 @@
 <h2>TeaserFast</h2>
 <div class="logoContainer">
     <img class="logo" [src]="teaser" alt="Honeygain's logo, a bee">
-    <p><i class="quote">"TeaserFast.ru is a tool for finding clients in any area of business: 
+    <p class="welcomeQ"><i class="quote">"TeaserFast.ru is a tool for finding clients in any area of business: 
         subscribers, referrals, buyers, investors, players, partners.
         "</i>
     </p>    
@@ -36,7 +36,8 @@
          (after which you are rewarded), 
         and a "teaser" pop-up, which is a small window a timer (and you decide if you want to visit the website or not). 
         And the third option for earning is watching short 15-30 sec. videos on the 
-         website platform. These videos are not very rewarding, but still give a small bonus (similar a small pop-up).  
+         website platform. These videos are not very rewarding, but still give a small bonus (similar a small pop-up). <br>
+         <i class="emp">You can also advertise on the platform.</i>
         
     </p>
 </section>
@@ -46,45 +47,49 @@
         <div class="column1">
             <ul>
                 <div class="listCont">
-                    <li>Check from time to time for new ads to watch</li>
+                    <li>Manipulate browser extension to your liking*</li>
                     <span class="tipsIcon">
-                        <i class="fas fa-mouse-pointer left tIcon"></i>
+                        <img class="honeyIps" [src]="config" alt="">
                     </span>
                 </div>
                 <div class="listCont">
-                    <li>Get your Rating up*</li>
+                    <li>Use browser extension in a convenient moment**</li>
                     <span class="tipsIcon">
-                        <i class="fa fa-star left tIcon"></i>
+                        <img class="mark bExt" [src]="mark" alt="">
                     </span>
                 </div>
                 <div class="listCont">
-                    <li>Make a FaucetPay or Payeer wallet to receive earnings**</li>
+                    <li>Watch some videos when you got the time***</li>
                     <span class="tipsIcon">
-                        <i class="fa-solid fa-wallet left tIcon"></i>
+                        <img class="mark ytube" [src]="ytube" alt="">
                     </span>
                 </div>
                 <div class="listCont">
                     <li>Invite friends / Acquire referrals</li>
-                    <span class="tipsIcon">
+                    <span class="tipsIcon referral">
                         <i class="fa fa-user-plus left tIcon"></i>
                     </span>
                 </div>
             </ul>
         </div>
         <div class="wallpaper"> 
-            <img class='wallpaperImg' [src]="adbtcWall"
+            <img class='wallpaperImg' [src]="teaserWall"
             alt="a person sitting on his sofa in the living room, while his devices emit digital bees">
         </div>
         <div class="def">
-            <p><i>*Rating is increased with every ad you watch. The higher the rating, the bigger the number of ads and 
-                higher the rewards you have access to. Also less captchas.
+            <p><i>*You can pin the browser extension in your browser, so you can the timer of the standart pop-ups. Also 
+                you can easily pause the extension in a crucial moment, when you certainly don't want pop-ups disturbing 
+                you. The extension provides details on your current earnings and you can use it to access the platform and 
+                withdraw.
             </i></p>
-            <p><i>**You will need either a <i class="emp">Faucet Pay</i> or <i class="emp">Payeer</i> wallets to receive your earnings.
-                The minimum withdrawal for Faucet Pay is significantly smaller than the one to Payeer. You can reach the 
-                minimum for a couple of days, if you are active, while the one for Payeer is 100 times higher. You can also 
-                withdraw to a Direct BTC Wallet address (the same minimum withdrawal as Payeer). The last option is to a 
-                WTBC (Polygon) wallet. You can find more information about Payeer and Faucet Pay wallets on the 
-                <a class="homeLink" routerLink="/home"><i class="emp">homepage</i></a>.
+            <p><i>**You can activate the extension when you decide to surf the web, complete some tasks (it runs well with 
+                other PTC surfing and Shortlinks), and when you are not doing some important work, that requires 
+                concentration. Otherwise, it is quite intimidating. 
+            </i></p>
+            <p><i>***In the <i class="emp">TeaserFast</i>'s website you can watch some youtube videos for extra rewards. 
+                Some of the videos are even interesting. They are quite short, usually a preview (~15-30 sec.), and the 
+                rewards are not that high. There are ~50 videos per day. If you have spare time, you can give them 
+                a look. 
             </i></p>
         </div>
         <div class="bToFauc">
@@ -93,8 +98,7 @@
                     <span>Back</span>
                 </div>
                 <div class="clone">
-                    <span>Go</span>
-                    <span>Faucets</span>
+                    <span>Side Hustles</span>
                 </div>
                 <svg width="20px" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -108,18 +112,19 @@
     <h2 class="earningsH">My earnings</h2>
     <div class="earningsInfo">
         <p class="textInfo">
-            You won't be able to earn a lot in adBTC.top unless you have a lot of referrals. But you can still boost 
-            your crypto income. I use these projects for some spare change and to increase my 
-            investment potential. Of course, you would need to find a good project to invest in, so you don't lose 
-            your hard-earned money. In adBTC, you can earn some BTC by browsing ads. You don't even need to be on the 
-            ad page, when you open it. You just need to wait 15 seconds before closing the page and receiving a reward. 
-            And it doesn't take up much time. If you do it on a daily basis, in combination with other online activities, 
-            you won't even notice it. And there is always the option to check some new projects, which are 
-            advertised and broaden your horizons, but I recommend caution. Some of them (if not most) might be scam.<br>
-            Good luck!
+            <i class="emp">TeaserFast</i> can be used to advertise your own projects and links for a good price. 
+            Otherwise you can always use it to gain some spare cash in the form of Rubles, which you can invest in some 
+            other projects and increase your overall earnings. Once again, you won't earn much, but you can earn
+             10-30 Rubles a day, 
+            without much effort, which tends to pile up. Anyway, if you use TeaserFast in combination with other small 
+            side-hustles it becomes more attractive. I recommend using it with <i class="emp">FireFaucet</i> and 
+            <i class="emp">adBTC.top</i>. This way you can 
+            earn some extra cash, with which you can start your crypto journey. If you use those three in combination, 
+            you might reach ~1$ daily, but on the condition, that you invest more effort. I know, that sounds pretty low, 
+            but if you are starting from 0, it is actually quite helpful. 
         </p>
         <div class="book">
-            <p>~2$</p>
+            <p>~1$</p>
             <div class="cover">
                 <p>Earnings</p>
             </div>
@@ -127,7 +132,7 @@
     </div>
     <div class="goReg">
         <button class="regButton">
-            <a class="regLink" target="_blank" href="https://r.adbtc.top/3297858">Get Started</a>
+            <a class="regLink" target="_blank" href="https://teaserfast.ru/u/VladislavKostadinov">Get Started</a>
         </button>
     </div>
 </section>
@@ -163,7 +168,7 @@
     <h3>Comments</h3>
     <p *ngIf="numberOfComments <= 1" class="noComments">There are no comments. Maybe you can add one?</p>
     <p *ngIf="!newComment && numberOfComments > 0" class="avRate">Avarage rate: 
-        <img *ngIf="avarageRating >= 0 && !halfRatings" [src]="ratings" alt="">
+        <img *ngIf="avarageRating >= 0 && !ratingHalf" [src]="ratings" alt="">
         <img *ngIf="avarageRating >= 1" [src]="ratings" alt="">
         <img *ngIf="avarageRating >= 2" [src]="ratings" alt="">
         <img *ngIf="avarageRating >= 3" [src]="ratings" alt="">

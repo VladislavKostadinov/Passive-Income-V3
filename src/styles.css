@@ -1660,7 +1660,7 @@ p {
 
 #buttonBack .clone > *,#buttonBack .text > * {
   opacity: 1;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   transition: 0.2s;
   margin-left: 4px;
 }

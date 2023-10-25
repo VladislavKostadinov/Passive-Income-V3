@@ -2,7 +2,7 @@
 <h2>adBTC</h2>
 <div class="logoContainer">
     <img class="logo" [src]="adbtc" alt="Honeygain's logo, a bee">
-    <p><i class="quote">"This website allows you to get free bitcoin. 
+    <p class="welcomeQ"><i class="quote">"This website allows you to get free bitcoin. 
         It is better than bitcoin faucet, it is not btc miner, just earn bitcoin online 
         for viewing web pages, mostly bitcoin sites.
         "</i>
@@ -83,8 +83,7 @@
                     <span>Back</span>
                 </div>
                 <div class="clone">
-                    <span>Go</span>
-                    <span>Faucets</span>
+                    <span>Side Hustles</span>
                 </div>
                 <svg width="20px" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -153,7 +152,7 @@
     <h3>Comments</h3>
     <p *ngIf="numberOfComments <= 1" class="noComments">There are no comments. Maybe you can add one?</p>
     <p *ngIf="!newComment && numberOfComments > 0" class="avRate">Avarage rate: 
-        <img *ngIf="avarageRating >= 0 && !halfRatings" [src]="ratings" alt="">
+        <img *ngIf="avarageRating >= 0 && !ratingHalf" [src]="ratings" alt="">
         <img *ngIf="avarageRating >= 1" [src]="ratings" alt="">
         <img *ngIf="avarageRating >= 2" [src]="ratings" alt="">
         <img *ngIf="avarageRating >= 3" [src]="ratings" alt="">

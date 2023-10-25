@@ -11,8 +11,12 @@ import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dial
   styleUrls: ['./teaserfast.component.css']
 })
 export class TeaserfastComponent {
-  teaser: string = '../../../assets/images/teaser/teaserFastwebp.webp';
-  adbtcWall: string = '../../../assets/images/adbtc/adbtc_wall.jpeg';
+  teaser: string = '../../../assets/images/teaser/teaserLogo.jpg';
+  mark: string = '../../../assets/images/teaser/mark.png';
+  config: string = '../../../assets/images/teaser/config.png';
+  ytube: string = '../../../assets/images/teaser/youtube.png';
+
+  teaserWall: string = '../../../assets/images/teaser/teaserFastwebp.webp';
 
   ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
   halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
@@ -50,7 +54,7 @@ export class TeaserfastComponent {
  
 
 
-    this.db.list('adbtc/comments').valueChanges().subscribe(
+    this.db.list('teaserfast/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -119,7 +123,7 @@ export class TeaserfastComponent {
     }
 
   addComment () {
-      this.db.database.ref('adbtc').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('teaserfast').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,
