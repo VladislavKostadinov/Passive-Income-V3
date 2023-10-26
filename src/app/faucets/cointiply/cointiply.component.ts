@@ -14,11 +14,11 @@ export class CointiplyComponent {
 
   cointiply: string = '../../../assets/images/cointiply/cointiply.webp';
 
-  games: string = '../../../assets/images/cointiply/games.webp';
-  offers: string = '../../../assets/images/cointiply/offers.webp';
-  surveys: string = '../../../assets/images/cointiply/surveys.webp';
-  tasks: string = '../../../assets/images/cointiply/tasks.webp';
-  videos: string = '../../../assets/images/cointiply/videos.webp';
+  games: string = '../../../assets/images/cointiply/game.png';
+  offers: string = '../../../assets/images/cointiply/offers.png';
+  surveys: string = '../../../assets/images/cointiply/survey.png';
+  tasks: string = '../../../assets/images/cointiply/tasks.png';
+  videos: string = '../../../assets/images/cointiply/videos.png';
   refer: string = '../../../assets/images/refer.webp'
 
 
