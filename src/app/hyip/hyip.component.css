@@ -1,6 +1,10 @@
 @media only screen and (max-width: 460px) {
     .bitstarsLogo {
-        height: 7rem !important;
+        height: 6.9rem !important;
+    }
+
+    .merobitLogo {
+        height: 7.8rem !important;
     }
     .flipCardDesc {
         font-size: 10px !important;
@@ -106,6 +110,7 @@ a {
     font-family: 'OpenSansClassic';
     text-align: center;
     padding-top: 2rem;
+    margin-bottom: -1rem;
 }
 
 .sumUp {
@@ -135,7 +140,11 @@ h3:hover {
 }
 
 .bitstarsLogo {
-    height: 11rem;
+    height: 11.2rem;
+}
+
+.merobitLogo {
+    height: 12.2rem;
 }
 
 h4 {
