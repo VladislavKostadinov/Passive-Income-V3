@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HyipComponent {
 
-  bitstars: string = '../../assets/images/bitstarsinv/bitstars_cover.jpg';
+  bitstars: string = '../../assets/images/bitstarsinv/wallpaper.jpg';
   tronfin: string = '../../assets/images/tronfin.svg';
   tron1477: string = '../../assets/images/tronfin.svg';
-  merobit: string = '../../assets/images/merobit/homepage.jpg';
+  merobit: string = '../../assets/images/merobit/mero_wall.png';
 
 
 }
