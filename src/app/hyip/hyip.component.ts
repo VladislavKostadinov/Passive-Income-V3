@@ -10,7 +10,7 @@ export class HyipComponent {
   bitstars: string = '../../assets/images/bitstarsinv/wallpaper.jpg';
   tronfin: string = '../../assets/images/tronfin.svg';
   tron1477: string = '../../assets/images/tronfin.svg';
-  merobit: string = '../../assets/images/merobit/mero_wall.png';
+  merobit: string = '../../assets/images/merobit/mero_wall1.png';
 
 
 }
