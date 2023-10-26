@@ -51,7 +51,7 @@ export class AdbtcComponent {
  
 
 
-    this.db.list('adbtc/comments').valueChanges().subscribe(
+    this.db.list('side-hustles/adbtc/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -80,7 +80,7 @@ export class AdbtcComponent {
 
           }
           this.avarageRating /= this.trueRatings.length;
-          if (this.avarageRating % 1 != 0) {
+          if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
             this.ratingHalf = true;
           } else {
             this.ratingHalf = false;
@@ -102,7 +102,7 @@ export class AdbtcComponent {
 
 
   goFaucets() {
-    this.router.navigate(['/faucets-and-more'])
+    this.router.navigate(['/side-hustles'])
   }
 
   getRating(rate: any) {
@@ -120,7 +120,7 @@ export class AdbtcComponent {
     }
 
   addComment () {
-      this.db.database.ref('adbtc').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('side-hustles').child('adbtc').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,

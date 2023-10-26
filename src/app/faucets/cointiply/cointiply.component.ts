@@ -19,6 +19,8 @@ export class CointiplyComponent {
   surveys: string = '../../../assets/images/cointiply/surveys.webp';
   tasks: string = '../../../assets/images/cointiply/tasks.webp';
   videos: string = '../../../assets/images/cointiply/videos.webp';
+  refer: string = '../../../assets/images/refer.webp'
+
 
   cointiplyWall: string = '../../../assets/images/cointiply/cointiply_wall.webp';
 
@@ -58,7 +60,7 @@ export class CointiplyComponent {
  
 
 
-    this.db.list('cointiply/comments').valueChanges().subscribe(
+    this.db.list('side-hustles/cointiply/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -87,7 +89,7 @@ export class CointiplyComponent {
 
           }
           this.avarageRating /= this.trueRatings.length;
-          if (this.avarageRating % 1 != 0) {
+          if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
             this.ratingHalf = true;
           } else {
             this.ratingHalf = false;
@@ -109,7 +111,7 @@ export class CointiplyComponent {
 
 
   goFaucets() {
-    this.router.navigate(['/faucets-and-more'])
+    this.router.navigate(['/side-hustles'])
   }
 
   getRating(rate: any) {
@@ -127,7 +129,7 @@ export class CointiplyComponent {
     }
 
   addComment () {
-      this.db.database.ref('cointiply').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('side-hustles').child('cointiply').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,

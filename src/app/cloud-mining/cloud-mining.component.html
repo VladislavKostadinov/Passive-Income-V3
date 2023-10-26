@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" *ngIf="cloud">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -139,7 +139,7 @@
                       </p>
                       <div class="cardBtns">
                         <button class="btnLearnMore">
-                            <span class="btnLearnSpan">Explore</span>
+                            <a routerLink="./nftferma"><span class="btnLearnSpan">Explore</span></a>
                         </button>
                         <button class="btnReg">
                             <span class="btnRegSpan">
@@ -162,7 +162,7 @@
                     </p>
                     <div class="cardBtns">
                         <button class="btnLearnMore">
-                            <span class="btnLearnSpan">Explore</span>
+                            <a routerLink="./minelab"><span class="btnLearnSpan">Explore</span></a>
                         </button>
                         <button class="btnReg">
                             <span class="btnRegSpan">
@@ -184,7 +184,7 @@
                     </p>
                     <div class="cardBtns">
                         <button class="btnLearnMore">
-                            <span class="btnLearnSpan">Explore</span>
+                            <a routerLink="./f2hash"><span class="btnLearnSpan">Explore</span></a>
                         </button>
                         <button class="btnReg">
                             <span class="btnRegSpan">
@@ -206,7 +206,7 @@
                     </p>
                     <div class="cardBtns">
                         <button class="btnLearnMore">
-                            <span class="btnLearnSpan">Explore</span>
+                            <a routerLink="./stormgain"><span class="btnLearnSpan">Explore</span></a>
                         </button>
                         <button class="btnReg">
                             <span class="btnRegSpan">
@@ -232,3 +232,4 @@
     </section>
 </body>
 </html>
+<router-outlet></router-outlet>

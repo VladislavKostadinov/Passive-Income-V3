@@ -31,7 +31,7 @@ export class FaucetsComponent {
 
     this.router.events.subscribe(
       (event: any) => {
-        if (this.router.url == "/faucets-and-more") {
+        if (this.router.url == "/side-hustles") {
 
           this.faucets = true;
           this.goHoney = false;
@@ -42,7 +42,7 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
 
-        } else if (this.router.url == "/faucets-and-more/honeygain") {
+        } else if (this.router.url == "/side-hustles/honeygain") {
           
           this.faucets = false;
           this.goHoney = true;
@@ -53,7 +53,7 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
 
-        } else if (this.router.url == "/faucets-and-more/fire-faucet") {
+        } else if (this.router.url == "/side-hustles/fire-faucet") {
           
           this.faucets = false;
           this.goHoney = false;
@@ -65,7 +65,7 @@ export class FaucetsComponent {
           this.goBmf = false;
 
         }
-        else if (this.router.url == "/faucets-and-more/adbtc") {
+        else if (this.router.url == "/side-hustles/adbtc") {
           
           this.faucets = false;
           this.goHoney = false;
@@ -77,7 +77,7 @@ export class FaucetsComponent {
           this.goBmf = false;
 
         }
-        else if (this.router.url == "/faucets-and-more/teaserfast") {
+        else if (this.router.url == "/side-hustles/teaserfast") {
           
           this.faucets = false;
           this.goHoney = false;
@@ -89,7 +89,7 @@ export class FaucetsComponent {
           this.goBmf = false;
 
         }
-        else if (this.router.url == "/faucets-and-more/swagbucks") {
+        else if (this.router.url == "/side-hustles/swagbucks") {
           
           this.faucets = false;
           this.goHoney = false;
@@ -101,7 +101,7 @@ export class FaucetsComponent {
           this.goBmf = false;
 
         }
-        else if (this.router.url == "/faucets-and-more/cointiply") {
+        else if (this.router.url == "/side-hustles/cointiply") {
           
           this.faucets = false;
           this.goHoney = false;
@@ -113,7 +113,7 @@ export class FaucetsComponent {
           this.goBmf = false;
 
         }
-        else if (this.router.url == "/faucets-and-more/bmf") {
+        else if (this.router.url == "/side-hustles/bmf") {
           
           this.faucets = false;
           this.goHoney = false;

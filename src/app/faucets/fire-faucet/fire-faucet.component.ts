@@ -52,7 +52,7 @@ export class FireFaucetComponent {
  
 
 
-    this.db.list('firefaucet/comments').valueChanges().subscribe(
+    this.db.list('side-hustles/firefaucet/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -81,7 +81,7 @@ export class FireFaucetComponent {
 
           }
           this.avarageRating /= this.trueRatings.length;
-          if (this.avarageRating % 1 != 0) {
+          if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
             this.ratingHalf = true;
           } else {
             this.ratingHalf = false;
@@ -103,7 +103,7 @@ export class FireFaucetComponent {
 
 
   goFaucets() {
-    this.router.navigate(['/faucets-and-more'])
+    this.router.navigate(['/side-hustles'])
   }
 
   getRating(rate: any) {
@@ -121,7 +121,7 @@ export class FireFaucetComponent {
     }
 
   addComment () {
-      this.db.database.ref('firefaucet').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('side-hustles').child('firefaucet').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,

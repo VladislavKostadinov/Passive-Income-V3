@@ -56,7 +56,7 @@ export class HoneygainComponent {
  
 
 
-    this.db.list('honeygain/comments').valueChanges().subscribe(
+    this.db.list('side-hustles/honeygain/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -85,7 +85,7 @@ export class HoneygainComponent {
 
           }
           this.avarageRating /= this.trueRatings.length;
-          if (this.avarageRating % 1 != 0) {
+          if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
             this.ratingHalf = true;
           } else {
             this.ratingHalf = false;
@@ -107,7 +107,7 @@ export class HoneygainComponent {
 
 
   goFaucets() {
-    this.router.navigate(['/faucets-and-more'])
+    this.router.navigate(['/side-hustles'])
   }
 
   getRating(rate: any) {
@@ -125,7 +125,7 @@ export class HoneygainComponent {
     }
 
   addComment () {
-      this.db.database.ref('honeygain').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('side-hustles').child('honeygain').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,

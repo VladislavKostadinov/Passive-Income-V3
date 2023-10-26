@@ -17,6 +17,8 @@ export class BmfComponent {
   search: string = '../../../assets/images/bmf/search.png';
   reply: string = '../../../assets/images/bmf/post.png';
   thread: string = '../../../assets/images/bmf/topic.png';
+  refer: string = '../../../assets/images/refer.webp'
+
 
   bmfWall: string = '../../../assets/images/bmf/bmf3.png';
 
@@ -56,7 +58,7 @@ export class BmfComponent {
  
 
 
-    this.db.list('bmf/comments').valueChanges().subscribe(
+    this.db.list('side-hustles/bmf/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -85,7 +87,7 @@ export class BmfComponent {
 
           }
           this.avarageRating /= this.trueRatings.length;
-          if (this.avarageRating % 1 != 0) {
+          if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
             this.ratingHalf = true;
           } else {
             this.ratingHalf = false;
@@ -107,7 +109,7 @@ export class BmfComponent {
 
 
   goFaucets() {
-    this.router.navigate(['/faucets-and-more'])
+    this.router.navigate(['/side-hustles'])
   }
 
   getRating(rate: any) {
@@ -125,7 +127,7 @@ export class BmfComponent {
     }
 
   addComment () {
-      this.db.database.ref('bmf').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('side-hustles').child('bmf').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,

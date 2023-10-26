@@ -15,6 +15,8 @@ export class TeaserfastComponent {
   mark: string = '../../../assets/images/teaser/mark.png';
   config: string = '../../../assets/images/teaser/config.png';
   ytube: string = '../../../assets/images/teaser/youtube.png';
+  refer: string = '../../../assets/images/refer.webp'
+
 
   teaserWall: string = '../../../assets/images/teaser/teaserFastwebp.webp';
 
@@ -54,7 +56,7 @@ export class TeaserfastComponent {
  
 
 
-    this.db.list('teaserfast/comments').valueChanges().subscribe(
+    this.db.list('side-hustles/teaserfast/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -83,7 +85,7 @@ export class TeaserfastComponent {
 
           }
           this.avarageRating /= this.trueRatings.length;
-          if (this.avarageRating % 1 != 0) {
+          if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
             this.ratingHalf = true;
           } else {
             this.ratingHalf = false;
@@ -105,7 +107,7 @@ export class TeaserfastComponent {
 
 
   goFaucets() {
-    this.router.navigate(['/faucets-and-more'])
+    this.router.navigate(['/side-hustles'])
   }
 
   getRating(rate: any) {
@@ -123,7 +125,7 @@ export class TeaserfastComponent {
     }
 
   addComment () {
-      this.db.database.ref('teaserfast').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('side-hustles').child('teaserfast').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,

@@ -74,8 +74,8 @@
         </div>
         <div class="def">
             <p class="tm">
-                <i>The icons, I've used for the Tips section are <i class="emp">Honeygain's</i> original images. 
-                I do not create or any own them.</i>
+                <i>The icons, I've used for the <i class="emp">Tips</i> section are <i class="emp">Honeygain's</i> original images. 
+                I did not create or any own them.</i>
             </p>
             <p><i>*If you manage to share at least 15 MB daily, you unlock the Honey Pot, which can provide you from 
                 0.005$ to 10$. But, know this, my biggest win at the current moment is 0.5$. Usually, it provides between 
@@ -163,12 +163,12 @@
 <section class="guestComments" id="cmntSect">
     <h3>Comments</h3>
     <p *ngIf="numberOfComments <= 1" class="noComments">There are no comments. Maybe you can add one?</p>
-    <p *ngIf="!newComment && numberOfComments > 0" class="avRate">Avarage rate: 
-        <img *ngIf="avarageRating >= 0 && !ratingHalf" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 1" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 2" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 3" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 4" [src]="ratings" alt="">
+    <p *ngIf="!newComment && numberOfComments > 0 && avarageRating > 0" class="avRate">Avarage rate: 
+        <img *ngIf="avarageRating > 0 && !ratingHalf" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 1" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 2" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 3" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 4" [src]="ratings" alt="">
         <img *ngIf="ratingHalf" [src]="halfRatings" alt="">
 
     </p>

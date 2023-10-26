@@ -12,11 +12,15 @@ import { TeaserfastComponent } from './faucets/teaserfast/teaserfast.component';
 import { SwagbucksComponent } from './faucets/swagbucks/swagbucks.component';
 import { CointiplyComponent } from './faucets/cointiply/cointiply.component';
 import { BmfComponent } from './faucets/bmf/bmf.component';
+import { NftfermaComponent } from './cloud-mining/nftferma/nftferma.component';
+import { MinelabComponent } from './cloud-mining/minelab/minelab.component';
+import { F2hashComponent } from './cloud-mining/f2hash/f2hash.component';
+import { StormgainComponent } from './cloud-mining/stormgain/stormgain.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: "home", component: HomePageComponent},
-  {path: 'faucets-and-more', component: FaucetsComponent, children: [
+  {path: 'side-hustles', component: FaucetsComponent, children: [
     {
       path: 'honeygain', component: HoneygainComponent
     },
@@ -39,7 +43,20 @@ const routes: Routes = [
       path: 'bmf', component: BmfComponent
     },
   ]},
-  {path: 'cloud-mining', component: CloudMiningComponent},
+  {path: 'cloud-mining', component: CloudMiningComponent, children: [
+    {
+      path: 'nftferma', component: NftfermaComponent
+    },
+    {
+      path: 'minelab', component: MinelabComponent
+    },
+    {
+      path: 'f2hash', component: F2hashComponent
+    },
+    {
+      path: 'stormgain', component: StormgainComponent
+    },
+  ]},
   {path: 'hyip', component: HyipComponent},
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 

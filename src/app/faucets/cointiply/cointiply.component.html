@@ -70,8 +70,8 @@
                 </div>
                 <div class="listCont">
                     <li>Invite friends and acquire referrals</li>
-                    <span class="tipsIcon referral">
-                        <i class="fa fa-user-plus left tIcon"></i>
+                    <span class="tipsIcon">
+                        <img class="mark ytube" [src]="refer" alt="">
                     </span>
                 </div>
             </ul>
@@ -82,8 +82,8 @@
         </div>
         <div class="def">
             <p class="tm">
-                <i>The icons, I've used for the Tips section are <i class="emp">Cointiply's</i> original images. 
-                I do not create or own them.</i>
+                <i>The icons, I've used for the <i class="emp">Tips</i> section are <i class="emp">Cointiply's</i> original images. 
+                I did not create or own them.</i>
             </p>
             <p><i>*<i class="emp">Games</i> are a type of offer, you accept and try to complete. They are related, for example,
                  to reaching a <i class="emp">particular level</i> or 
@@ -175,12 +175,12 @@
 <section class="guestComments" id="cmntSect">
     <h3>Comments</h3>
     <p *ngIf="numberOfComments <= 1" class="noComments">There are no comments. Maybe you can add one?</p>
-    <p *ngIf="!newComment && numberOfComments > 0" class="avRate">Avarage rate: 
-        <img *ngIf="avarageRating >= 0 && !ratingHalf" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 1" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 2" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 3" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 4" [src]="ratings" alt="">
+    <p *ngIf="!newComment && numberOfComments > 0 && avarageRating > 0" class="avRate">Avarage rate: 
+        <img *ngIf="avarageRating > 0 && !ratingHalf" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 1" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 2" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 3" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 4" [src]="ratings" alt="">
         <img *ngIf="ratingHalf" [src]="halfRatings" alt="">
 
     </p>

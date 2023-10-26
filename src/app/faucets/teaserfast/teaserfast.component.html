@@ -66,8 +66,8 @@
                 </div>
                 <div class="listCont">
                     <li>Invite friends / Acquire referrals</li>
-                    <span class="tipsIcon referral">
-                        <i class="fa fa-user-plus left tIcon"></i>
+                    <span class="tipsIcon">
+                        <img class="mark ytube" [src]="refer" alt="">
                     </span>
                 </div>
             </ul>
@@ -78,8 +78,8 @@
         </div>
         <div class="def">
             <p class="tm">
-                <i>Some of the icons, I've used for the Tips section are <i class="emp">TeaserFast's</i> original images. 
-                I do not create or own any of them.</i>
+                <i>Some of the icons, I've used for the <i class="emp">Tips</i> section are <i class="emp">TeaserFast's</i> original images. 
+                I did not create or own any of them.</i>
             </p>
             <p><i>*You can pin the browser extension in your browser, so you can the timer of the standart pop-ups. Also 
                 you can easily pause the extension in a crucial moment, when you certainly don't want pop-ups disturbing 
@@ -172,12 +172,12 @@
 <section class="guestComments" id="cmntSect">
     <h3>Comments</h3>
     <p *ngIf="numberOfComments <= 1" class="noComments">There are no comments. Maybe you can add one?</p>
-    <p *ngIf="!newComment && numberOfComments > 0" class="avRate">Avarage rate: 
-        <img *ngIf="avarageRating >= 0 && !ratingHalf" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 1" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 2" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 3" [src]="ratings" alt="">
-        <img *ngIf="avarageRating >= 4" [src]="ratings" alt="">
+    <p *ngIf="!newComment && numberOfComments > 0 && avarageRating > 0" class="avRate">Avarage rate: 
+        <img *ngIf="avarageRating > 0 && !ratingHalf" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 1" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 2" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 3" [src]="ratings" alt="">
+        <img *ngIf="avarageRating > 4" [src]="ratings" alt="">
         <img *ngIf="ratingHalf" [src]="halfRatings" alt="">
 
     </p>

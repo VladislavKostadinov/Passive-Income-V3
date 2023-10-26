@@ -17,6 +17,8 @@ export class SwagbucksComponent {
   survey: string = '../../../assets/images/swagbucks/survey.png';
   shopping: string = '../../../assets/images/swagbucks/shopping.png';
   game: string = '../../../assets/images/swagbucks/game.png';
+  refer: string = '../../../assets/images/refer.webp'
+
 
   swagWall: string = '../../../assets/images/swagbucks/swagbucks_wall.png';
 
@@ -56,7 +58,7 @@ export class SwagbucksComponent {
  
 
 
-    this.db.list('swagbucks/comments').valueChanges().subscribe(
+    this.db.list('side-hustles/swagbucks/comments').valueChanges().subscribe(
       (data:any) => {
         if (data) {
           this.numberOfComments = data.length;
@@ -85,7 +87,7 @@ export class SwagbucksComponent {
 
           }
           this.avarageRating /= this.trueRatings.length;
-          if (this.avarageRating % 1 != 0) {
+          if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
             this.ratingHalf = true;
           } else {
             this.ratingHalf = false;
@@ -107,7 +109,7 @@ export class SwagbucksComponent {
 
 
   goFaucets() {
-    this.router.navigate(['/faucets-and-more'])
+    this.router.navigate(['/side-hustles'])
   }
 
   getRating(rate: any) {
@@ -125,7 +127,7 @@ export class SwagbucksComponent {
     }
 
   addComment () {
-      this.db.database.ref('swagbucks').child('comments').child(this.numberOfComments.toString()).set(
+      this.db.database.ref('side-hustles').child('swagbucks').child('comments').child(this.numberOfComments.toString()).set(
         {
           nick: this.nickName == "" ? "Guest" : this.nickName,
           rating: this.rating,
