@@ -35,6 +35,9 @@ import { NftfermaComponent } from './cloud-mining/nftferma/nftferma.component';
 import { MinelabComponent } from './cloud-mining/minelab/minelab.component';
 import { F2hashComponent } from './cloud-mining/f2hash/f2hash.component';
 import { StormgainComponent } from './cloud-mining/stormgain/stormgain.component';
+import { BitstarsinvComponent } from './hyip/bitstarsinv/bitstarsinv.component';
+import { MerobitComponent } from './hyip/merobit/merobit.component';
+import { Tron1477Component } from './hyip/tron1477/tron1477.component';
 
 
 
@@ -59,6 +62,9 @@ import { StormgainComponent } from './cloud-mining/stormgain/stormgain.component
     MinelabComponent,
     F2hashComponent,
     StormgainComponent,
+    BitstarsinvComponent,
+    MerobitComponent,
+    Tron1477Component,
   ],
   imports: [
     BrowserModule,

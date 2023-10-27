@@ -1,8 +1,8 @@
-<html lang="en">
+<html lang="en" *ngIf="invest">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HYIP</title>
+    <title>Investments</title>
 </head>
 <body>
     <section>
@@ -75,7 +75,7 @@
                     </p>
                     <div class="cardBtns">
                         <button class="btnLearnMore">
-                            <span class="btnLearnSpan iBtnE">Explore</span>
+                            <a routerLink="./bitstarsinv"><span class="btnLearnSpan">Explore</span></a>
                         </button>
                         <button class="btnReg">
                             <span class="btnRegSpan iBtnR">
@@ -101,7 +101,7 @@
                     </p>
                     <div class="cardBtns">
                         <button class="btnLearnMore">
-                            <span class="btnLearnSpan iBtnE">Explore</span>
+                            <a routerLink="./merobit"><span class="btnLearnSpan">Explore</span></a>
                         </button>
                         <button class="btnReg">
                             <span class="btnRegSpan iBtnR">
@@ -153,7 +153,9 @@
                     </p>
                     <div class="cardBtns">
                         <button class="btnLearnMore">
-                            <span class="btnLearnSpan iBtnE">Explore</span>
+                            <span class="btnLearnSpan iBtnE">
+                                <a routerLink="./tron1477"><span class="btnLearnSpan">Explore</span></a>
+                            </span>
                         </button>
                         <button class="btnReg">
                             <span class="btnRegSpan iBtnR">
@@ -183,3 +185,5 @@
     </section>
 </body>
 </html>
+
+<router-outlet></router-outlet>

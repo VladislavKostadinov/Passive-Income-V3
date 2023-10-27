@@ -16,6 +16,9 @@ import { NftfermaComponent } from './cloud-mining/nftferma/nftferma.component';
 import { MinelabComponent } from './cloud-mining/minelab/minelab.component';
 import { F2hashComponent } from './cloud-mining/f2hash/f2hash.component';
 import { StormgainComponent } from './cloud-mining/stormgain/stormgain.component';
+import { BitstarsinvComponent } from './hyip/bitstarsinv/bitstarsinv.component';
+import { MerobitComponent } from './hyip/merobit/merobit.component';
+import { Tron1477Component } from './hyip/tron1477/tron1477.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -57,7 +60,17 @@ const routes: Routes = [
       path: 'stormgain', component: StormgainComponent
     },
   ]},
-  {path: 'hyip', component: HyipComponent},
+  {path: 'investments', component: HyipComponent, children: [
+    {
+      path: 'bitstarsinv', component: BitstarsinvComponent
+    },
+    {
+      path: 'merobit', component: MerobitComponent
+    },
+    {
+      path: 'tron1477', component: Tron1477Component
+    }
+  ]},
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 
 ];
