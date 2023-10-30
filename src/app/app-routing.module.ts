@@ -21,7 +21,7 @@ import { MerobitComponent } from './hyip/merobit/merobit.component';
 import { Tron1477Component } from './hyip/tron1477/tron1477.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: "", redirectTo: "home", pathMatch: 'full'},
   {path: "home", component: HomePageComponent},
   {path: 'side-hustles', component: FaucetsComponent, children: [
     {

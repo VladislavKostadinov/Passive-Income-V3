@@ -1,6 +1,7 @@
 {
   "projects": {
-    "default": "cryptoblog-929c6"
+    "default": "cryptoblog-929c6",
+    "staging": "cryptoblog-929c6"
   },
   "targets": {
     "cryptoblog-929c6": {
@@ -10,5 +11,6 @@
         ]
       }
     }
-  }
+  },
+  "etags": {}
 }

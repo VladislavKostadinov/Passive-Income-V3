@@ -50,6 +50,21 @@ p {
   font-size: 12px;
 }
 
+.welcomeBlog {
+  color: gold !important;
+  text-align: center;
+}
+
+.special {
+  color: gold !important;
+}
+
+.warningBlog {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+}
+
 footer {
     background-image: url('../src/assets/backgrounds/denim.webp');
 }

@@ -7,13 +7,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FaucetsComponent } from './faucets/faucets.component';
 import { CloudMiningComponent } from './cloud-mining/cloud-mining.component';
 import { HyipComponent } from './hyip/hyip.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -38,9 +33,7 @@ import { StormgainComponent } from './cloud-mining/stormgain/stormgain.component
 import { BitstarsinvComponent } from './hyip/bitstarsinv/bitstarsinv.component';
 import { MerobitComponent } from './hyip/merobit/merobit.component';
 import { Tron1477Component } from './hyip/tron1477/tron1477.component';
-
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -78,11 +71,12 @@ import { Tron1477Component } from './hyip/tron1477/tron1477.component';
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,
-    AngularFireDatabaseModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore())
+    // provideAuth(() => getAuth()),
+    // provideDatabase(() => getDatabase(initializeApp(environment.firebase)
+    // , 'https://cryptoblog-929c6-default-rtdb.europe-west1.firebasedatabase.app')),
+    // provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

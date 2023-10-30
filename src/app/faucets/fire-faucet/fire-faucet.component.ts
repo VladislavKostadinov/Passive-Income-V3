@@ -52,53 +52,53 @@ export class FireFaucetComponent {
  
 
 
-    this.db.list('side-hustles/firefaucet/comments').valueChanges().subscribe(
-      (data:any) => {
-        if (data) {
-          this.numberOfComments = data.length;
-          if (this.numberOfComments > 3) {
-            this.singlePage = false
-          }  else {
-            this.singlePage = true;
-          }
-          if (this.numberOfComments > 12) {
-            this.multiplePage = true;
-          } else {
-            this.multiplePage = false;
-          }
-          for (let c in data) {
-            this.listOfComments.push(data[c]['comment']);
-            this.listOfGuests.push(data[c]['nick']);
-            this.listOfRatings.push(data[c]['rating']); 
-            this.pageListGuests.push(data[c]);
+    // this.db.list('side-hustles/firefaucet/comments').valueChanges().subscribe(
+    //   (data:any) => {
+    //     if (data) {
+    //       this.numberOfComments = data.length;
+    //       if (this.numberOfComments > 3) {
+    //         this.singlePage = false
+    //       }  else {
+    //         this.singlePage = true;
+    //       }
+    //       if (this.numberOfComments > 12) {
+    //         this.multiplePage = true;
+    //       } else {
+    //         this.multiplePage = false;
+    //       }
+    //       for (let c in data) {
+    //         this.listOfComments.push(data[c]['comment']);
+    //         this.listOfGuests.push(data[c]['nick']);
+    //         this.listOfRatings.push(data[c]['rating']); 
+    //         this.pageListGuests.push(data[c]);
            
-          }
-          for (let r of this.listOfRatings) {
-          if (parseInt(r)) {
-            this.avarageRating += parseInt(r);
-            this.trueRatings.push("realRate")
-          }
+    //       }
+    //       for (let r of this.listOfRatings) {
+    //       if (parseInt(r)) {
+    //         this.avarageRating += parseInt(r);
+    //         this.trueRatings.push("realRate")
+    //       }
 
-          }
-          this.avarageRating /= this.trueRatings.length;
-          if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
-            this.ratingHalf = true;
-          } else {
-            this.ratingHalf = false;
-          }
-          for (let i = 0; i < this.numberOfComments; i+=3) {
-            if (this.newComment) {
-              return
-            } else {
-              this.commentPages.push("page");
-            }
-          } 
+    //       }
+    //       this.avarageRating /= this.trueRatings.length;
+    //       if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
+    //         this.ratingHalf = true;
+    //       } else {
+    //         this.ratingHalf = false;
+    //       }
+    //       for (let i = 0; i < this.numberOfComments; i+=3) {
+    //         if (this.newComment) {
+    //           return
+    //         } else {
+    //           this.commentPages.push("page");
+    //         }
+    //       } 
           
-          this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
-        } else {
-        }
-      }
-    );
+    //       this.pageListComments = this.pageListGuests.reverse().slice(this.currentPage*3-3, this.currentPage*3);
+    //     } else {
+    //     }
+    //   }
+    // );
   }
 
 
@@ -121,19 +121,19 @@ export class FireFaucetComponent {
     }
 
   addComment () {
-      this.db.database.ref('side-hustles').child('firefaucet').child('comments').child(this.numberOfComments.toString()).set(
-        {
-          nick: this.nickName == "" ? "Guest" : this.nickName,
-          rating: this.rating,
-          comment: this.comment
-        }
-      ).catch(
-        (err) => {
-          if (err) {
-            this.snackBar.open("An error occurred. Sorry for the inconvenience.", "Dismiss");
-          }
-        }
-      )
+      // this.db.database.ref('side-hustles').child('firefaucet').child('comments').child(this.numberOfComments.toString()).set(
+      //   {
+      //     nick: this.nickName == "" ? "Guest" : this.nickName,
+      //     rating: this.rating,
+      //     comment: this.comment
+      //   }
+      // ).catch(
+      //   (err) => {
+      //     if (err) {
+      //       this.snackBar.open("An error occurred. Sorry for the inconvenience.", "Dismiss");
+      //     }
+      //   }
+      // )
       this.snackBar.open("Thank you for your comment", "Dismiss");
   
       this.commentPages = this.commentPages / 2;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'passiveIncome';
   scroll = false;
-  constructor() {
+  constructor(private router: Router) {
     var title = document.getElementsByClassName('welcomeMsg') as HTMLCollectionOf<HTMLElement>;
     var topNav = document.getElementsByClassName("topnav") as HTMLCollectionOf<HTMLElement>;
     var topNavHover = "topnav a:hover {color: red;}"
@@ -29,5 +30,8 @@ export class AppComponent {
 
   }
 
+  goHome() {
+    this.router.navigate(['/home'])
+  }
 
 }
