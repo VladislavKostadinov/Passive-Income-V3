@@ -91,13 +91,6 @@ this.http.get("http://localhost:3333/intel").subscribe(data => {
   }
   console.log(this.numberofOldSubs)
 });
-
-this.http.post<any>('http://localhost:3333/rom', 'test').subscribe(
-  (data) => {
-    console.log(data)
-  }
-)
-
 }
 
 

@@ -3,7 +3,7 @@ body {
 }
 @media only screen and (max-width: 870px) {
     .profilePic {
-        min-width: 100%;
+        min-width: 93%;
         display: block;
     }
     .sectionPic {
@@ -18,14 +18,43 @@ body {
     .subscribeNotif {
         width: auto;
   } 
+
+  .briefing {
+    margin-top: 7rem !important;
+  }
+
+  .pyramid-loader {
+    margin-top: 5rem !important;
+  }
+
+  .introSection {
+    margin: 2.5rem 3.5rem !important
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .briefing {
+        margin-top: 10rem !important;
+    }
+    .pyramid-loader {
+        margin-top: 11rem !important;
+        padding: 0 2rem;
+    }
+    .profilePic {
+        min-width: 80%;
+    }
 }
 
 .briefing {
-    width: 55%;
     display: flex;
     align-items: center;
     font-family: 'TilliumLItalic' !important;
-    margin-top: 7rem;
+    margin-top: 6rem;
+}
+
+.pyramid-loader {
+    margin-top: 4rem;
 }
 
 
@@ -49,6 +78,7 @@ body {
 
 .innerAboutMe {
     font-family: 'TilliumLR';
+    text-align: center;
 }
 
 

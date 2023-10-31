@@ -23,17 +23,23 @@
       height: 115px !important;
       width: 115px;
  }
+ .footerInfo {
+  height: 5rem !important;
+ }
 }
 @media only screen and (max-width: 500px) {
   .scan-loader {
-      height: 55px !important;
-      width: 55px !important;
+      height: 8rem !important;
+      width: 12rem !important;
  }
 }
 @media only screen and (max-width: 460px) {
   .scan-loader {
-      height: 35px !important;
-      width: 35px !important;
+      height: 5rem !important;
+      width: 6rem !important;
+ }
+ .footerInfo {
+  height: 6rem !important;
  }
 }
 
@@ -1154,6 +1160,7 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin: auto;
 }
 
 .scan-loader::before {

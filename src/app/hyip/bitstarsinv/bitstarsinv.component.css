@@ -6,6 +6,27 @@
     .honeyBuddy {
         width: 3rem !important;
     }
+
+    .column1 {
+        width: 50% !important;
+    }
+
+    .wallpaperImg, .commentField  {
+        width: 75% !important;
+    }
+
+    .earningsInfo {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .book {
+        margin: 0 auto !important;
+    }
+
+    .textInfo {
+        width: 100% !important;
+    }
 }
 @media only screen and (max-width: 430px) {
     .honeyPot {
@@ -14,6 +35,10 @@
     
     .honeyBuddy {
         width: 2rem !important;
+    }
+    
+    .column1 {
+        width: 75% !important;
     }
 }
 
