@@ -59,6 +59,8 @@ export class BitstarsinvComponent {
   ratingHalf: boolean = false;
   trueRatings: any = [];
 
+  maintenace: boolean = false;
+
 
   constructor(private router: Router, private snackBar: MatSnackBar, 
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
@@ -66,7 +68,6 @@ export class BitstarsinvComponent {
   ngOnInit() {
     this.http.get("http://localhost:3333/bitstarsinvUsers").subscribe(data => {
       this.listOfGuests = data;
-      console.log(this.listOfGuests)
       this.listOfComments.push(data);
       if (data) {
         for (let u in data) {
@@ -90,6 +91,8 @@ export class BitstarsinvComponent {
           }
         } 
       }
+    }, error => {
+      this.maintenace = true;
     });
     this.http.get("http://localhost:3333/bitstarsinvRatings").subscribe(data => {
       this.listOfRatings = data;
@@ -106,10 +109,11 @@ export class BitstarsinvComponent {
       } else {
         this.ratingHalf = false;
       }
+    }, error => {
+      this.maintenace = true;
     });
     this.http.get("http://localhost:3333/bitstarsinvComments").subscribe(data => {
       this.listOfComments.push(data);
-      console.log(this.listOfComments);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
    
@@ -118,9 +122,9 @@ export class BitstarsinvComponent {
           this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
         }
       }
-      console.log(this.listOfComments)
+    }, error => {
+      this.maintenace = true;
     });
-   
   }
 
   ngAfterViewChecked(){
@@ -149,23 +153,11 @@ export class BitstarsinvComponent {
     this.guest = "";
     this.rate = 0;
     this.cmnt = "";
-      // this.db.database.ref('investments').child('merobit').child('comments').child(this.numberOfComments.toString()).set(
-      //   {
-      //     nick: this.nickName == "" ? "Guest" : this.nickName,
-      //     rating: this.rating,
-      //     comment: this.comment
-      //   }
-      // ).catch(
-      //   (err) => {
-      //     if (err) {
-      //       this.snackBar.open("An error occurred. Sorry for the inconvenience.", "Dismiss");
-      //     }
-      //   }
-      // )
+    this.guest = this.nickName == "" ? "Guest" : this.nickName;
+    this.rate = this.rating;
+    this.cmnt = this.comment;
 
-      this.guest = this.nickName == "" ? "Guest" : this.nickName;
-      this.rate = this.rating;
-      this.cmnt = this.comment;
+    if (!this.maintenace) {
       this.http.post<any>("http://localhost:3333/bitstarsinvPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
@@ -178,6 +170,9 @@ export class BitstarsinvComponent {
         this.snackBar.dismiss();
         location.reload();
       }, 3000);
+    } else {
+      this.snackBar.open("Server under maintenance. Try later.", "Dismiss");
+    }  
   }
 
   goPage(page:any) { 

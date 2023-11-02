@@ -32,14 +32,22 @@
       height: 8rem !important;
       width: 12rem !important;
  }
+
+ .pack-container {
+  width: 75% !important;
+ }
 }
 @media only screen and (max-width: 460px) {
   .scan-loader {
-      height: 5rem !important;
-      width: 6rem !important;
+      height: 4rem !important;
+      width: 4rem !important;
  }
  .footerInfo {
   height: 6rem !important;
+ }
+
+ .card__description {
+  font-size: 11px !important;
  }
 }
 
@@ -748,6 +756,7 @@ p {
   height: 254px;
   perspective: 1000px;
   margin-bottom: 3rem;
+  padding: 0 1.5rem;
 }
 
 .title {

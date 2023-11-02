@@ -3,7 +3,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-
+import { BlobOptions } from 'buffer';
 import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dialogue.component';
 
 @Component({
@@ -60,6 +60,7 @@ export class MerobitComponent {
   ratingHalf: boolean = false;
   trueRatings: any = [];
 
+  maintenance: boolean = false;
 
   constructor(private router: Router, private snackBar: MatSnackBar, 
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
@@ -67,7 +68,6 @@ export class MerobitComponent {
   ngOnInit() {
     this.http.get("http://localhost:3333/merobitUsers").subscribe(data => {
       this.listOfGuests = data;
-      console.log(this.listOfGuests)
       this.listOfComments.push(data);
       if (data) {
         for (let u in data) {
@@ -91,6 +91,8 @@ export class MerobitComponent {
           }
         } 
       }
+    }, error => {
+      this.maintenance = true;
     });
     this.http.get("http://localhost:3333/merobitRatings").subscribe(data => {
       this.listOfRatings = data;
@@ -107,10 +109,11 @@ export class MerobitComponent {
       } else {
         this.ratingHalf = false;
       }
+    }, error => {
+      this.maintenance = true;
     });
     this.http.get("http://localhost:3333/merobitComments").subscribe(data => {
       this.listOfComments.push(data);
-      console.log(this.listOfComments);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
    
@@ -119,9 +122,9 @@ export class MerobitComponent {
           this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
         }
       }
-      console.log(this.listOfComments)
+    }, error => {
+      this.maintenance = true;
     });
-   
   }
 
   ngAfterViewChecked(){
@@ -150,23 +153,12 @@ export class MerobitComponent {
     this.guest = "";
     this.rate = 0;
     this.cmnt = "";
-      // this.db.database.ref('investments').child('merobit').child('comments').child(this.numberOfComments.toString()).set(
-      //   {
-      //     nick: this.nickName == "" ? "Guest" : this.nickName,
-      //     rating: this.rating,
-      //     comment: this.comment
-      //   }
-      // ).catch(
-      //   (err) => {
-      //     if (err) {
-      //       this.snackBar.open("An error occurred. Sorry for the inconvenience.", "Dismiss");
-      //     }
-      //   }
-      // )
+ 
+    this.guest = this.nickName == "" ? "Guest" : this.nickName;
+    this.rate = this.rating;
+    this.cmnt = this.comment;
 
-      this.guest = this.nickName == "" ? "Guest" : this.nickName;
-      this.rate = this.rating;
-      this.cmnt = this.comment;
+    if (!this.maintenance) {
       this.http.post<any>("http://localhost:3333/merobitPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
@@ -179,6 +171,9 @@ export class MerobitComponent {
         this.snackBar.dismiss();
         location.reload();
       }, 3000);
+    } else {
+      this.snackBar.open("Server under maintenance. Try later.", "Dismiss");
+    }  
   }
 
   goPage(page:any) { 

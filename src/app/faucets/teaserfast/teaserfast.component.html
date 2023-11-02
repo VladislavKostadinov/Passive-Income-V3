@@ -97,7 +97,7 @@
             </i></p>
         </div>
         <div class="bToFauc">
-            <button id="buttonBack" (click)="goFaucets()">
+            <button id="buttonBack" (click)="goInvest()">
                 <div class="text">
                     <span>Back</span>
                 </div>
@@ -181,18 +181,18 @@
         <img *ngIf="ratingHalf" [src]="halfRatings" alt="">
 
     </p>
-    <div class="allComments" *ngFor="let g of pageListComments">
+    <div class="allComments" *ngFor="let g of numberOC, index as i">
         <div class="guestDetails">
-            <p class="name">{{g['nick']}}</p>
-            <span *ngIf="g['rating'] > 0" class="guestRating">
-                <img *ngIf="g['rating'] > 0" [src]="ratings" alt="">
-                <img *ngIf="g['rating'] > 1" [src]="ratings" alt="">
-                <img *ngIf="g['rating'] > 2" [src]="ratings" alt="">
-                <img *ngIf="g['rating'] > 3" [src]="ratings" alt="">
-                <img *ngIf="g['rating'] > 4" [src]="ratings" alt="">
+            <p class="name">{{listOfComments[0].slice(this.currentPage*3-3, this.currentPage*3)[i]}}</p>
+            <span *ngIf="listOfComments[1].slice(this.currentPage*3-3, this.currentPage*3)[i] > 0" class="guestRating">
+                <img *ngIf="listOfComments[1].slice(this.currentPage*3-3, this.currentPage*3)[i] > 0" [src]="ratings" alt="">
+                <img *ngIf="listOfComments[1].slice(this.currentPage*3-3, this.currentPage*3)[i] > 1" [src]="ratings" alt="">
+                <img *ngIf="listOfComments[1].slice(this.currentPage*3-3, this.currentPage*3)[i] > 2" [src]="ratings" alt="">
+                <img *ngIf="listOfComments[1].slice(this.currentPage*3-3, this.currentPage*3)[i] > 3" [src]="ratings" alt="">
+                <img *ngIf="listOfComments[1].slice(this.currentPage*3-3, this.currentPage*3)[i] > 4" [src]="ratings" alt="">
             </span >
         </div>
-        <p class="comment">{{g['comment']}}</p>
+        <p class="comment">{{listOfComments[2].slice(this.currentPage*3-3, this.currentPage*3)[i]}}</p>
     </div>
     <div *ngIf='!newComment && numberOfComments > 0' class="pagesMenu">
         <div class="currentPage"><span>Current page: </span><span class="curPageNum">{{currentPage}}</span></div>

@@ -255,6 +255,7 @@ select option {
     text-align: center;
     font-size: 15px;
     word-wrap: break-word;
+    padding: .5rem;
 }
 
 .comment:hover {

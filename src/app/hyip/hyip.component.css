@@ -12,6 +12,11 @@
     }
 
 } 
+@media only screen and (max-width: 550px) {
+    .hyipH   {
+        margin-top: 9rem !important;
+    } 
+}
 
 a {
     text-decoration: none;

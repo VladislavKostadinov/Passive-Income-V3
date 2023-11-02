@@ -10,6 +10,8 @@ body {
         border: 5px solid #555;
         margin: auto;
         height: auto !important;
+        width: 75% !important;
+        margin-bottom: 2rem !important;
     }
     .subscription {
         padding: 0 !important;
@@ -31,6 +33,24 @@ body {
     margin: 2.5rem 3.5rem !important
   }
 
+  .aboutBlog {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .subscription {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .subscribeNotif {
+        margin-top: 2rem !important;
+    }
+
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -45,6 +65,7 @@ body {
         min-width: 80%;
     }
 }
+
 
 .briefing {
     display: flex;
@@ -112,6 +133,13 @@ body {
     margin: auto;
     
 }
+
+.explorer:hover  {
+    color: gold;
+    background-color: darkviolet;
+}
+
+
 
 .blogInfo {
     text-align: center;

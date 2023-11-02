@@ -4,6 +4,12 @@
    }
 }
 
+@media only screen and (max-width: 550px) {
+    .faucetH   {
+        margin-top: 9rem !important;
+    } 
+}
+
 body {
     overflow: hidden;
 }
