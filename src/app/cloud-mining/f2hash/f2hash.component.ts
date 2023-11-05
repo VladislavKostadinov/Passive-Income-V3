@@ -112,6 +112,7 @@ export class F2hashComponent {
       }
     }, error => {
       this.maintenance = true;
+      this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
     });
     this.http.get("http://localhost:3333/f2hashComments").subscribe(data => {
       this.listOfComments.push(data);

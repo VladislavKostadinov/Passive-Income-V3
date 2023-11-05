@@ -125,6 +125,7 @@ export class BmfComponent {
       }
     }, error => {
       this.maintenance = true;
+      this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
     });
   }
 

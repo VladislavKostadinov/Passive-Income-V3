@@ -92,6 +92,14 @@ body {
     max-height: 2rem;
 }
 
+.activeL {
+  color: gold !important;
+}
+.notActiveL {
+  color: coral;
+  text-decoration: none;
+}
+
 .heading {
   margin: auto;
   width: 120%;

@@ -47,7 +47,8 @@ this.http.get("http://localhost:3333/intel").subscribe(data => {
     this.numberofOldSubs ++;
   }
 }, error => {
-    console.log("Server under maintenance")
+    console.log("Server under maintenance");
+    this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
   }
   );
 }

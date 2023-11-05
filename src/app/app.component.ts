@@ -9,7 +9,16 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'passiveIncome';
   scroll = false;
+
+  invest = false;
+  mine = false;
+  hustle = false;
+
   constructor(private router: Router) {
+  //   if (location.hostname.indexOf('cryptoblog-929c6.web.app') === -1) {
+  //     location.replace("https://passive-income.pro");
+  // }
+
     var title = document.getElementsByClassName('welcomeMsg') as HTMLCollectionOf<HTMLElement>;
     var topNav = document.getElementsByClassName("topnav") as HTMLCollectionOf<HTMLElement>;
     var topNavHover = "topnav a:hover {color: red;}"
@@ -31,7 +40,29 @@ export class AppComponent {
   }
 
   goHome() {
-    this.router.navigate(['/home'])
+    // this.router.navigate(['/home']);
+    this.mine = false;
+    this.hustle = false;
+    this.invest = false;
+    console.log(this.mine)
+  }
+
+  investments() {
+    this.mine = false;
+    this.hustle = false;
+    this.invest = true;
+  }
+
+  cloudMining() {
+    this.mine = true;
+    this.hustle = false;
+    this.invest = false;
+  }
+
+  faucets() {
+    this.mine = false;
+    this.hustle = true;
+    this.invest = false;
   }
 
 }
