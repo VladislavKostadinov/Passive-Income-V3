@@ -67,7 +67,7 @@ export class F2hashComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/f2hashUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/f2hashUsers").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -95,7 +95,7 @@ export class F2hashComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/f2hashRatings").subscribe(data => {
+    this.http.get("https://passive-income.icu/f2hashRatings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -114,7 +114,7 @@ export class F2hashComponent {
       this.maintenance = true;
       this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
     });
-    this.http.get("http://localhost:3333/f2hashComments").subscribe(data => {
+    this.http.get("https://passive-income.icu/f2hashComments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -160,7 +160,7 @@ export class F2hashComponent {
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("http://localhost:3333/f2hashPost", 
+      this.http.post<any>("https://passive-income.icu/f2hashPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

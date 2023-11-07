@@ -65,7 +65,7 @@ export class SwagbucksComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/swagbucksUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/swagbucksUsers").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -93,7 +93,7 @@ export class SwagbucksComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/swagbucksRatings").subscribe(data => {
+    this.http.get("https://passive-income.icu/swagbucksRatings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -112,7 +112,7 @@ export class SwagbucksComponent {
       this.maintenance = true;
       this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
     });
-    this.http.get("http://localhost:3333/swagbucksComments").subscribe(data => {
+    this.http.get("https://passive-income.icu/swagbucksComments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -158,7 +158,7 @@ export class SwagbucksComponent {
     this.rate = this.rating;
     this.cmnt = this.comment;
     if (!this.maintenance) {
-      this.http.post<any>("http://localhost:3333/swagbucksPost", 
+      this.http.post<any>("https://passive-income.icu/swagbucksPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

@@ -63,7 +63,7 @@ export class TeaserfastComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/teaserfastUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/teaserfastUsers").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -94,7 +94,7 @@ export class TeaserfastComponent {
       this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/teaserfastRatings").subscribe(data => {
+    this.http.get("https://passive-income.icu/teaserfastRatings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -112,7 +112,7 @@ export class TeaserfastComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/teaserfastComments").subscribe(data => {
+    this.http.get("https://passive-income.icu/teaserfastComments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -158,7 +158,7 @@ export class TeaserfastComponent {
     this.rate = this.rating;
     this.cmnt = this.comment;
     if (!this.maintenance) {
-      this.http.post<any>("http://localhost:3333/teaserfastPost", 
+      this.http.post<any>("https://passive-income.icu/teaserfastPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

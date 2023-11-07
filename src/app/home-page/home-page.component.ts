@@ -41,7 +41,7 @@ constructor(private snackBar: MatSnackBar, private http: HttpClient, private rou
 
 ngOnInit() {
 
-this.http.get("http://localhost:3333/intel").subscribe(data => {
+this.http.get("https://passive-income.icu/intel/").subscribe(data => {
   this.listOfOldSubs = data;
   for (let sub in data) {
     this.numberofOldSubs ++;
@@ -84,7 +84,7 @@ subsribe() {
 }
 
 addEmail () {
-    this.http.post<any>("http://localhost:3333/sub", this.email.toString()).subscribe(data => {
+    this.http.post<any>("https://passive-income.icu/sub/", this.email.toString()).subscribe(data => {
 })
 }
 

@@ -60,7 +60,7 @@ export class FireFaucetComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/firefaucetUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/firefaucetUsers").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -88,7 +88,7 @@ export class FireFaucetComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/firefaucetRatings").subscribe(data => {
+    this.http.get("https://passive-income.icu/firefaucetRatings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -106,7 +106,7 @@ export class FireFaucetComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/firefaucetComments").subscribe(data => {
+    this.http.get("https://passive-income.icu/firefaucetComments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -153,7 +153,7 @@ export class FireFaucetComponent {
     this.cmnt = this.comment;
 
     if(!this.maintenance) {
-      this.http.post<any>("http://localhost:3333/firefaucetPost", 
+      this.http.post<any>("https://passive-income.icu/firefaucetPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

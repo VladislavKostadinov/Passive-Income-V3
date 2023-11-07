@@ -66,7 +66,7 @@ export class BmfComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/bmfUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/bmfUsers").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -95,7 +95,7 @@ export class BmfComponent {
       this.maintenance = true;
     });
 
-    this.http.get("http://localhost:3333/bmfRatings").subscribe(data => {
+    this.http.get("https://passive-income.icu/bmfRatings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -113,7 +113,7 @@ export class BmfComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/bmfComments").subscribe(data => {
+    this.http.get("https://passive-income.icu/bmfComments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -161,7 +161,7 @@ export class BmfComponent {
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("http://localhost:3333/bmfPost", 
+      this.http.post<any>("https://passive-income.icu/bmfPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

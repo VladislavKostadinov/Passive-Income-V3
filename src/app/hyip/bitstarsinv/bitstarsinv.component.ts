@@ -66,7 +66,7 @@ export class BitstarsinvComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/bitstarsinvUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/bitstarsinvUsers").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -94,7 +94,7 @@ export class BitstarsinvComponent {
     }, error => {
       this.maintenace = true;
     });
-    this.http.get("http://localhost:3333/bitstarsinvRatings").subscribe(data => {
+    this.http.get("https://passive-income.icu/bitstarsinvRatings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -113,7 +113,7 @@ export class BitstarsinvComponent {
       this.maintenace = true;
       this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
     });
-    this.http.get("http://localhost:3333/bitstarsinvComments").subscribe(data => {
+    this.http.get("https://passive-income.icu/bitstarsinvComments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -159,7 +159,7 @@ export class BitstarsinvComponent {
     this.cmnt = this.comment;
 
     if (!this.maintenace) {
-      this.http.post<any>("http://localhost:3333/bitstarsinvPost", 
+      this.http.post<any>("https://passive-income.icu/bitstarsinvPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

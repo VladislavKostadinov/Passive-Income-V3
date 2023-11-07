@@ -67,7 +67,7 @@ export class Tron1477Component {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/tron1477Users").subscribe(data => {
+    this.http.get("https://passive-income.icu/tron1477Users").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -95,7 +95,7 @@ export class Tron1477Component {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/tron1477Ratings").subscribe(data => {
+    this.http.get("https://passive-income.icu/tron1477Ratings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -113,7 +113,7 @@ export class Tron1477Component {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/tron1477Comments").subscribe(data => {
+    this.http.get("https://passive-income.icu/tron1477Comments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -160,7 +160,7 @@ export class Tron1477Component {
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("http://localhost:3333/tron1477", 
+      this.http.post<any>("https://passive-income.icu/tron1477Post", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

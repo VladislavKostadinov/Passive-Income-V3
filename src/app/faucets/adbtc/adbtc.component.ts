@@ -59,7 +59,7 @@ export class AdbtcComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/adbtcUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/adbtcUsers").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -89,7 +89,7 @@ export class AdbtcComponent {
       this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
     });
 
-    this.http.get("http://localhost:3333/adbtcRatings").subscribe(data => {
+    this.http.get("https://passive-income.icu/adbtcRatings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -107,7 +107,7 @@ export class AdbtcComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/adbtcComments").subscribe(data => {
+    this.http.get("https://passive-income.icu/adbtcComments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -152,7 +152,7 @@ export class AdbtcComponent {
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("http://localhost:3333/adbtcPost", 
+      this.http.post<any>("https://passive-income.icu/adbtcPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

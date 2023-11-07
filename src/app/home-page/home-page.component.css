@@ -169,6 +169,10 @@ body {
     font-family: 'TilliumLR';
 }
 
+.innertitle {
+    padding: 0 0.2rem;
+}
+
 .cryptoWalletsH {
     text-align: center;
     font-family: 'OpenSansClassic';
@@ -204,7 +208,9 @@ body {
 
 
 .metaMaskLogo {
-    width: 95%;
+    width: 90%;
+    height: 10rem !important;
+    margin: 0 auto;
 }
 .faucetPayLogo, .binanceLogo {
     height: 70%;

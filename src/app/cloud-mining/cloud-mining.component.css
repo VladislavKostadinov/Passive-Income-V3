@@ -92,6 +92,10 @@ a:hover {
     color: red;
 }
 
+.warning {
+    color: red;
+}
+
 .gCloud {
     color: gold;
 }

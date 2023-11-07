@@ -66,7 +66,7 @@ export class MerobitComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3333/merobitUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/merobitUsers").subscribe(data => {
       this.listOfGuests = data;
       this.listOfComments.push(data);
       if (data) {
@@ -94,7 +94,7 @@ export class MerobitComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/merobitRatings").subscribe(data => {
+    this.http.get("https://passive-income.icu/merobitRatings").subscribe(data => {
       this.listOfRatings = data;
       this.listOfComments.push(data);
       for (let r of this.listOfRatings) {
@@ -112,7 +112,7 @@ export class MerobitComponent {
     }, error => {
       this.maintenance = true;
     });
-    this.http.get("http://localhost:3333/merobitComments").subscribe(data => {
+    this.http.get("https://passive-income.icu/merobitComments").subscribe(data => {
       this.listOfComments.push(data);
       for (let el in this.listOfComments) {
         this.listOfComments[el] = this.listOfComments[el].reverse();
@@ -160,7 +160,7 @@ export class MerobitComponent {
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("http://localhost:3333/merobitPost", 
+      this.http.post<any>("https://passive-income.icu/merobitPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })
