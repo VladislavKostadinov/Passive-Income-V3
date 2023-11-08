@@ -48,14 +48,16 @@ a {
 
 .hyipWarning {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .beWarnedHyipH {
     text-align: center;
     font-family: 'OpenSansClassic';
     color: red;
-    margin-top: 2rem;
+
 }
 
 .beWarnedHyipH:hover, .myHyipsH:hover {
@@ -67,7 +69,8 @@ a {
     font-family: 'TilliumLR';
     color: red;
     padding: 0 1rem;
-    width: 50%;
+    width: 75%;
+    margin: 1.5rem auto 0 auto !important;
 }
 
 .myHyipsH {
@@ -93,6 +96,11 @@ a {
 .underWarning {
     text-decoration: underline;
 }
+
+.investmentWarningTitle {
+    display: flex;
+}
+
 
 .investmentCards {
     margin: 3rem auto;

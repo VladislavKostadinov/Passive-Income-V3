@@ -1,3 +1,10 @@
+@media only screen and (max-width: 980px) {
+    
+    .column1 {
+        width: 50% !important;
+    }
+}
+
 @media only screen and (max-width: 580px) {
     .honeyPot {
         width: 2.5rem !important;
@@ -8,7 +15,7 @@
     }
 
     .column1 {
-        width: 50% !important;
+        width: 60% !important;
     }
 
     .wallpaperImg, .commentField  {
@@ -26,6 +33,10 @@
 
     .textInfo {
         width: 100% !important;
+    }
+    
+    .allComments {
+        width: 75% !important;
     }
 }
 @media only screen and (max-width: 430px) {
@@ -297,7 +308,7 @@ select option {
 
 .allComments {
     border: 1px dashed turquoise;
-    width: 35%;
+    width: 50%;
     background-image: url('../../../assets/backgrounds/office.png');
     margin: 0 auto 2rem auto;
 }

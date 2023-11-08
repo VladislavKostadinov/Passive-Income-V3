@@ -13,25 +13,25 @@
 }
 
 @media only screen and (max-width: 760px) {
-  .scan-loader {
+  /* .scan-loader {
       height: 135px !important;
       width: 135px;
- }
+ } */
 }
 @media only screen and (max-width: 600px) {
-  .scan-loader {
+  /* .scan-loader {
       height: 115px !important;
       width: 115px;
- }
+ } */
  .footerInfo {
   height: 5rem !important;
  }
 }
 @media only screen and (max-width: 500px) {
-  .scan-loader {
+  /* .scan-loader {
       height: 8rem !important;
       width: 12rem !important;
- }
+ } */
 
  .pack-container {
   width: 75% !important;
@@ -1159,8 +1159,8 @@ p {
 
 .scan-loader {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 75px;
+  height: 75px;
   background: transparent;
   border-radius: 50%;
   box-shadow: 25px 25px 75px rgba(0,0,0,0.55);
