@@ -68,15 +68,16 @@ export class F2hashComponent {
 
   ngOnInit() {
     this.http.get("https://passive-income.icu/f2hashUsers").subscribe(data => {
-      this.listOfGuests = data;
-      this.listOfComments.push(data);
       if (data) {
+        this.listOfGuests = data;
+        this.listOfComments.push(data);
+
         for (let u in data) {
-          this.numberOfComments ++;
+          this.numberOfComments++;
         }
         if (this.numberOfComments > 3) {
           this.singlePage = false
-        }  else {
+        } else {
           this.singlePage = true;
         }
         if (this.numberOfComments > 12) {
@@ -84,48 +85,50 @@ export class F2hashComponent {
         } else {
           this.multiplePage = false;
         }
-        for (let i = 0; i < this.numberOfComments; i+=3) {
+        for (let i = 0; i < this.numberOfComments; i += 3) {
           if (this.newComment) {
             return
           } else {
             this.commentPages.push("page");
           }
-        } 
-      }
-    }, error => {
-      this.maintenance = true;
-    });
-    this.http.get("https://passive-income.icu/f2hashRatings").subscribe(data => {
-      this.listOfRatings = data;
-      this.listOfComments.push(data);
-      for (let r of this.listOfRatings) {
-        if (parseInt(r)) {
-          this.avarageRating += parseInt(r);
-          this.trueRatings.push("realRate")
         }
-      }
-      this.avarageRating /= this.trueRatings.length;
-      if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
-        this.ratingHalf = true;
-      } else {
-        this.ratingHalf = false;
+        this.http.get("https://passive-income.icu/f2hashRatings").subscribe(data => {
+          if (data) {
+            this.listOfRatings = data;
+            this.listOfComments.push(data);
+            for (let r of this.listOfRatings) {
+              if (parseInt(r)) {
+                this.avarageRating += parseInt(r);
+                this.trueRatings.push("realRate")
+              }
+            }
+            this.avarageRating /= this.trueRatings.length;
+            if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
+              this.ratingHalf = true;
+            } else {
+              this.ratingHalf = false;
+            }
+            this.http.get("https://passive-income.icu/f2hashComments").subscribe(data => {
+              if (data) {
+                this.listOfComments.push(data);
+                for (let el in this.listOfComments) {
+                  this.listOfComments[el] = this.listOfComments[el].reverse();
+                  for (let em in this.listOfComments[el]) {
+                    this.numberOC = this.listOfComments[el].slice(this.currentPage * 3 - 3, this.currentPage * 3);
+                  }
+                }
+              }
+            }, error => {
+              this.maintenance = true;
+            });
+          }
+        }, error => {
+          this.maintenance = true;
+        });
       }
     }, error => {
       this.maintenance = true;
       this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
-    });
-    this.http.get("https://passive-income.icu/f2hashComments").subscribe(data => {
-      this.listOfComments.push(data);
-      for (let el in this.listOfComments) {
-        this.listOfComments[el] = this.listOfComments[el].reverse();
-   
-
-        for (let em in this.listOfComments[el]) {
-          this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
-        }
-      }
-    }, error => {
-      this.maintenance = true;
     });
   }
 

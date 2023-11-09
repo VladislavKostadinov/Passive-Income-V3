@@ -3,6 +3,11 @@
     .column1 {
         width: 50% !important;
     }
+
+    
+    .avRate {
+        width: 50% !important;
+    }
 }
 
 @media only screen and (max-width: 580px) {
@@ -16,6 +21,10 @@
 
     .column1 {
         width: 60% !important;
+    }
+    
+    .avRate {
+        width: 75% !important;
     }
 
     .wallpaperImg, .commentField  {
@@ -49,6 +58,10 @@
     }
 
     .column1 {
+        width: 75% !important;
+    }
+
+    .avRate {
         width: 75% !important;
     }
 }
@@ -325,7 +338,7 @@ select option {
     font-size: 15px;
     font-family: 'TilliumLR';
     text-align: end;
-    width: 35%;
+    width: 50%;
     margin: 0 auto;
 }
 

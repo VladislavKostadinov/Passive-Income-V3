@@ -59,7 +59,7 @@ export class BitstarsinvComponent {
   ratingHalf: boolean = false;
   trueRatings: any = [];
 
-  maintenace: boolean = false;
+  maintenance: boolean = false;
 
 
   constructor(private router: Router, private snackBar: MatSnackBar, 
@@ -67,15 +67,16 @@ export class BitstarsinvComponent {
 
   ngOnInit() {
     this.http.get("https://passive-income.icu/bitstarsinvUsers").subscribe(data => {
-      this.listOfGuests = data;
-      this.listOfComments.push(data);
       if (data) {
+        this.listOfGuests = data;
+        this.listOfComments.push(data);
+
         for (let u in data) {
-          this.numberOfComments ++;
+          this.numberOfComments++;
         }
         if (this.numberOfComments > 3) {
           this.singlePage = false
-        }  else {
+        } else {
           this.singlePage = true;
         }
         if (this.numberOfComments > 12) {
@@ -83,48 +84,50 @@ export class BitstarsinvComponent {
         } else {
           this.multiplePage = false;
         }
-        for (let i = 0; i < this.numberOfComments; i+=3) {
+        for (let i = 0; i < this.numberOfComments; i += 3) {
           if (this.newComment) {
             return
           } else {
             this.commentPages.push("page");
           }
-        } 
-      }
-    }, error => {
-      this.maintenace = true;
-    });
-    this.http.get("https://passive-income.icu/bitstarsinvRatings").subscribe(data => {
-      this.listOfRatings = data;
-      this.listOfComments.push(data);
-      for (let r of this.listOfRatings) {
-        if (parseInt(r)) {
-          this.avarageRating += parseInt(r);
-          this.trueRatings.push("realRate")
         }
-      }
-      this.avarageRating /= this.trueRatings.length;
-      if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
-        this.ratingHalf = true;
-      } else {
-        this.ratingHalf = false;
+        this.http.get("https://passive-income.icu/bitstarsinvRatings").subscribe(data => {
+          if (data) {
+            this.listOfRatings = data;
+            this.listOfComments.push(data);
+            for (let r of this.listOfRatings) {
+              if (parseInt(r)) {
+                this.avarageRating += parseInt(r);
+                this.trueRatings.push("realRate")
+              }
+            }
+            this.avarageRating /= this.trueRatings.length;
+            if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
+              this.ratingHalf = true;
+            } else {
+              this.ratingHalf = false;
+            }
+            this.http.get("https://passive-income.icu/bitstarsinvComments").subscribe(data => {
+              if (data) {
+                this.listOfComments.push(data);
+                for (let el in this.listOfComments) {
+                  this.listOfComments[el] = this.listOfComments[el].reverse();
+                  for (let em in this.listOfComments[el]) {
+                    this.numberOC = this.listOfComments[el].slice(this.currentPage * 3 - 3, this.currentPage * 3);
+                  }
+                }
+              }
+            }, error => {
+              this.maintenance = true;
+            });
+          }
+        }, error => {
+          this.maintenance = true;
+        });
       }
     }, error => {
-      this.maintenace = true;
+      this.maintenance = true;
       this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
-    });
-    this.http.get("https://passive-income.icu/bitstarsinvComments").subscribe(data => {
-      this.listOfComments.push(data);
-      for (let el in this.listOfComments) {
-        this.listOfComments[el] = this.listOfComments[el].reverse();
-   
-
-        for (let em in this.listOfComments[el]) {
-          this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
-        }
-      }
-    }, error => {
-      this.maintenace = true;
     });
   }
 
@@ -158,7 +161,7 @@ export class BitstarsinvComponent {
     this.rate = this.rating;
     this.cmnt = this.comment;
 
-    if (!this.maintenace) {
+    if (!this.maintenance) {
       this.http.post<any>("https://passive-income.icu/bitstarsinvPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {

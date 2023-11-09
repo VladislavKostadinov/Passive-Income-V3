@@ -200,7 +200,7 @@
                 <img *ngIf="listOfComments[1].slice(this.currentPage*3-3, this.currentPage*3)[i] > 4" [src]="ratings" alt="">
             </span >
         </div>
-        <p class="comment">{{listOfComments[2].slice(this.currentPage*3-3, this.currentPage*3)[i]}}</p>
+        <p class="comment">{{listOfComments[2]?.slice(this.currentPage*3-3, this.currentPage*3)[i]}}</p>
     </div>
     <div *ngIf='!newComment && numberOfComments > 0' class="pagesMenu">
         <div class="currentPage"><span>Current page: </span><span class="curPageNum">{{currentPage}}</span></div>
