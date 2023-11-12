@@ -17,6 +17,12 @@
         margin-top: 9rem !important;
     } 
 }
+@media only screen and (max-width: 400px) {
+
+    .btnLearnMore, .btnRegSpan {
+        padding: 8px 15px !important
+    }
+}
 
 a {
     text-decoration: none;
@@ -110,7 +116,7 @@ a {
 
 .iCardsBox {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -164,7 +170,7 @@ h3:hover {
 h4 {
     color: gold;
     text-align: center;
-    margin: 0.5rem auto;
+    margin: 0 auto;
 
 }
 

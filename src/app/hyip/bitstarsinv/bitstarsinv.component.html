@@ -16,8 +16,7 @@
         to make transactions immediately. Using cyrptos instead of fiat, we provide traders with instant deposits, 
         instant delivery, access to the global market from around the world, narrow spreads and the best customer service. <br>
         Our goal is to provide our investors with a reliable source of high income, achieving stable 
-        performance through the experience of our team of investment experts.
-        "
+        performance through the experience of our team of investment experts."
     </p>
 </section>
 <section class="myStatement">
@@ -31,7 +30,7 @@
         I've seen a lot of payment proofs and I believe it currently pays. Its ROI is not that high in comparison to others 
         (at least at the lower investment plans), 
         but it compensates with stability and <i class="emp">a longer life cycle</i>, so I recommend giving it a look, if 
-        you already haven't. It might prove to be a stable source of passive income. 
+        you already haven't. It might prove to be a stable source of passive income."
     </p>
 </section>
 <section>
@@ -176,7 +175,7 @@
 </section>
 <section class="guestComments" id="cmntSect">
     <h3>Comments</h3>
-    <p *ngIf="numberOfComments <= 1" class="noComments">There are no comments. Maybe you can add one?</p>
+    <p *ngIf="numberOfComments < 1" class="noComments">There are no comments. Maybe you can add one?</p>
     <p *ngIf="!newComment && numberOfComments > 0 && avarageRating > 0" class="avRate">Avarage rate: 
         <img *ngIf="avarageRating > 0 && !ratingHalf" [src]="ratings" alt="">
         <img *ngIf="avarageRating > 1" [src]="ratings" alt="">

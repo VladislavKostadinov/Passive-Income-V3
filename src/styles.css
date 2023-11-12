@@ -1408,6 +1408,7 @@ p {
 
 /* Cloud cards start  */
 .cloudyCard {
+  margin: 1rem;
   position: relative;
   width: 350px;
   margin-bottom: 2rem;
@@ -1451,6 +1452,9 @@ p {
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cloudyCard:hover .card__content {
