@@ -34,6 +34,7 @@ import { BitstarsinvComponent } from './hyip/bitstarsinv/bitstarsinv.component';
 import { MerobitComponent } from './hyip/merobit/merobit.component';
 import { Tron1477Component } from './hyip/tron1477/tron1477.component';
 import { HttpClientModule } from '@angular/common/http';
+import { YomigtComponent } from './hyip/yomigt/yomigt.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { HttpClientModule } from '@angular/common/http';
     BitstarsinvComponent,
     MerobitComponent,
     Tron1477Component,
+    YomigtComponent,
   ],
   imports: [
     BrowserModule,

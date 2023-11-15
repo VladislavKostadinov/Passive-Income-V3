@@ -1,3 +1,25 @@
+
+@media only screen and (max-width: 550px) {
+    .hyipH   {
+        margin-top: 9rem !important;
+    } 
+}
+
+@media only screen and (max-width: 480px) {
+    .yomigtLogo{
+        height: 10rem !important;
+    }
+    .bitstarsLogo {
+        height: 10rem !important;
+    }
+
+    .merobitLogo {
+        height:10rem !important;
+        width: 17.7rem !important;
+    }
+
+} 
+
 @media only screen and (max-width: 460px) {
     .bitstarsLogo {
         height: 6.9rem !important;
@@ -11,18 +33,20 @@
         font-size: 10px !important;
     }
 
+    .yomigtLogo{
+        height: 6.7rem !important;
+    }
+
 } 
-@media only screen and (max-width: 550px) {
-    .hyipH   {
-        margin-top: 9rem !important;
-    } 
-}
+
 @media only screen and (max-width: 400px) {
 
     .btnLearnMore, .btnRegSpan {
         padding: 8px 15px !important
     }
 }
+
+
 
 a {
     text-decoration: none;
@@ -167,6 +191,10 @@ h3:hover {
     height: 10.5rem;
 }
 
+.yomigtLogo{
+    height: 10.75rem;
+}
+
 h4 {
     color: gold;
     text-align: center;
@@ -201,4 +229,8 @@ h4 {
 .flipCardDesc {
     font-size: 14px;
     font-family: 'TilliumLR';
+}
+
+.btnLearnSpan, .btnRegSpan {
+    font-size: 16px !important;
 }

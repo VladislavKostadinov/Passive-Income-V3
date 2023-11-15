@@ -13,11 +13,12 @@ export class HyipComponent {
   tronfin: string = '../../assets/images/tronfin.svg';
   tron1477: string = '../../assets/images/tronfin.svg';
   merobit: string = '../../assets/images/merobit/mero_wall1.png';
+  yomigt: string = '../../assets/images/yomigt/background.jpg';
 
   invest = true;
   bitstarsinv = false;
   merobitP = false;
-  tron1477P = false;
+  yomigtP = false;
 
 
   constructor(private snackBar: MatSnackBar, private router: Router) {
@@ -28,30 +29,36 @@ export class HyipComponent {
           this.invest = true;
           this.bitstarsinv = false;
           this.merobitP = false;
-          this.tron1477P = false;
+          this.yomigtP = false;
 
         } else if (this.router.url == "/investments/bitstarsinv") {
           this.invest = false;
           this.bitstarsinv = true;
           this.merobitP = false;
-          this.tron1477P = false;
+          this.yomigtP = false;
 
         } else if (this.router.url == "/investments/merobit") {
           
           this.invest = false;
           this.bitstarsinv = false;
           this.merobitP = true;
-          this.tron1477P = false;
+          this.yomigtP = false;
 
-        }
-        else if (this.router.url == "/investments/tron1477") {
-          
+        } else if (this.router.url == "/investments/yomigt") {
           this.invest = false;
           this.bitstarsinv = false;
           this.merobitP = false;
-          this.tron1477P = true;
-
+          this.yomigtP = true;
         }
+        // else if (this.router.url == "/investments/tron1477") {
+          
+        //   this.invest = false;
+        //   this.bitstarsinv = false;
+        //   this.merobitP = false;
+        //   this.tron1477P = true;
+        //   this.yomigtP = false;
+
+        // }
       }
     )
 

@@ -19,6 +19,7 @@ import { StormgainComponent } from './cloud-mining/stormgain/stormgain.component
 import { BitstarsinvComponent } from './hyip/bitstarsinv/bitstarsinv.component';
 import { MerobitComponent } from './hyip/merobit/merobit.component';
 import { Tron1477Component } from './hyip/tron1477/tron1477.component';
+import { YomigtComponent } from './hyip/yomigt/yomigt.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: 'full'},
@@ -69,6 +70,9 @@ const routes: Routes = [
     },
     {
       path: 'tron1477', component: Tron1477Component
+    },
+    {
+      path: 'yomigt', component: YomigtComponent
     }
   ]},
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
