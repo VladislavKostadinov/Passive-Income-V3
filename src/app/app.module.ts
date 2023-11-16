@@ -27,14 +27,13 @@ import { SwagbucksComponent } from './faucets/swagbucks/swagbucks.component';
 import { CointiplyComponent } from './faucets/cointiply/cointiply.component';
 import { BmfComponent } from './faucets/bmf/bmf.component';
 import { NftfermaComponent } from './cloud-mining/nftferma/nftferma.component';
-import { MinelabComponent } from './cloud-mining/minelab/minelab.component';
 import { F2hashComponent } from './cloud-mining/f2hash/f2hash.component';
 import { StormgainComponent } from './cloud-mining/stormgain/stormgain.component';
 import { BitstarsinvComponent } from './hyip/bitstarsinv/bitstarsinv.component';
 import { MerobitComponent } from './hyip/merobit/merobit.component';
-import { Tron1477Component } from './hyip/tron1477/tron1477.component';
 import { HttpClientModule } from '@angular/common/http';
 import { YomigtComponent } from './hyip/yomigt/yomigt.component';
+import { MirComponent } from './faucets/mir/mir.component';
 
 @NgModule({
   declarations: [
@@ -53,13 +52,12 @@ import { YomigtComponent } from './hyip/yomigt/yomigt.component';
     CointiplyComponent,
     BmfComponent,
     NftfermaComponent,
-    MinelabComponent,
     F2hashComponent,
     StormgainComponent,
     BitstarsinvComponent,
     MerobitComponent,
-    Tron1477Component,
     YomigtComponent,
+    MirComponent,
   ],
   imports: [
     BrowserModule,

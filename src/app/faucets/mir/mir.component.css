@@ -26,7 +26,7 @@
         width: 75% !important;
     }
 
-    .wallpaperImg, .commentField {
+    .wallpaperImg, .commentField  {
         width: 75% !important;
     }
 
@@ -57,10 +57,6 @@
     }
 
     .column1 {
-        width: 75% !important;
-    }
-    
-    .avRate {
         width: 75% !important;
     }
 }
@@ -124,7 +120,7 @@ h3 {
     font-family: 'TilliumLR';
 }
 
-.emp {
+.emp, .cStatementTitle {
     color: gold;
 }
 
@@ -468,14 +464,9 @@ path:hover {
     width: 2.5rem;
 }
 
-.dng {
-    color: red;
-}
-
-
-.gl {
-    color: gold;
+.cStatementTitle {
     display: block;
+    text-align: center;
 }
 
 .tm {
@@ -485,4 +476,8 @@ path:hover {
 .gl {
     color: gold;
     display: block;
+}
+
+.dng {
+    color: red;
 }

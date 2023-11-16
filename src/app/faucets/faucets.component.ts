@@ -17,6 +17,7 @@ export class FaucetsComponent {
   swagBucks: string = '../../assets/images/swagbucks.webp';
   cointiply: string = '../../assets/images/cointiply.webp';
   bmf: string = '../../assets/images/bmf3.png';
+  mir: string = '../../assets/images/mir/logo.svg'
 
   faucets = true;
   goHoney = false;
@@ -26,6 +27,7 @@ export class FaucetsComponent {
   goSwagbucks = false;
   goCointiply = false;
   goBmf = false;
+  goMir = false;
 
   constructor(private router: Router) {
 
@@ -41,6 +43,7 @@ export class FaucetsComponent {
           this.goSwagbucks = false;
           this.goCointiply = false;
           this.goBmf = false;
+          this.goMir = false;
 
         } else if (this.router.url == "/side-hustles/honeygain") {
           
@@ -52,6 +55,7 @@ export class FaucetsComponent {
           this.goSwagbucks = false;
           this.goCointiply = false;
           this.goBmf = false;
+          this.goMir = false;
 
         } else if (this.router.url == "/side-hustles/fire-faucet") {
           
@@ -63,6 +67,7 @@ export class FaucetsComponent {
           this.goSwagbucks = false;
           this.goCointiply = false;
           this.goBmf = false;
+          this.goMir = false;
 
         }
         else if (this.router.url == "/side-hustles/adbtc") {
@@ -75,6 +80,7 @@ export class FaucetsComponent {
           this.goSwagbucks = false;
           this.goCointiply = false;
           this.goBmf = false;
+          this.goMir = false;
 
         }
         else if (this.router.url == "/side-hustles/teaserfast") {
@@ -87,6 +93,7 @@ export class FaucetsComponent {
           this.goSwagbucks = false;
           this.goCointiply = false;
           this.goBmf = false;
+          this.goMir = false;
 
         }
         else if (this.router.url == "/side-hustles/swagbucks") {
@@ -99,6 +106,7 @@ export class FaucetsComponent {
           this.goSwagbucks = true;
           this.goCointiply = false;
           this.goBmf = false;
+          this.goMir = false;
 
         }
         else if (this.router.url == "/side-hustles/cointiply") {
@@ -111,6 +119,7 @@ export class FaucetsComponent {
           this.goSwagbucks = false;
           this.goCointiply = true;
           this.goBmf = false;
+          this.goMir = false;
 
         }
         else if (this.router.url == "/side-hustles/bmf") {
@@ -123,6 +132,20 @@ export class FaucetsComponent {
           this.goSwagbucks = false;
           this.goCointiply = false;
           this.goBmf = true;
+          this.goMir = false;
+
+        }
+        else if (this.router.url == "/side-hustles/mir") {
+          
+          this.faucets = false;
+          this.goHoney = false;
+          this.goFFaucet = false;
+          this.goAdbtc = false;
+          this.goTeaserFast = false;
+          this.goSwagbucks = false;
+          this.goCointiply = false;
+          this.goBmf = false;
+          this.goMir = true;
 
         }
       }

@@ -6,22 +6,21 @@ import { Router } from '@angular/router';
 import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dialogue.component';
 
 @Component({
-  selector: 'app-tron1477',
-  templateUrl: './tron1477.component.html',
-  styleUrls: ['./tron1477.component.css']
+  selector: 'app-mir',
+  templateUrl: './mir.component.html',
+  styleUrls: ['./mir.component.css']
 })
-export class Tron1477Component {
+export class MirComponent {
 
-  
-  tron: string = '../../../assets/images/tron1477/tron1477.png';
+  mirLogo: string = '../../../assets/images/mir/front.jpg';
+  register: string = '../../../assets/images/mir/register.png';
+  telegram: string = '../../../assets/images/mir/telegram.png';
+  bets: string = '../../../assets/images/mir/placebet.png';
+  earn: string = '../../../assets/images/mir/frontLogo.webp';
 
-  reg: string = '../../../assets/images/tron1477/whitepaper.png';
-  lifecycle: string = '../../../assets/images/tron1477/lifecycle.png';
-  withdraw: string = '../../../assets/images/tron1477/withdrawal.png';
-  group: string = '../../../assets/images/tron1477/team.png';
-  ref: string = '../../../assets/images/tron1477/share.png';
+  refer: string = '../../../assets/images/refer.webp'
 
-  tron1477_wall: string = '../../../assets/images/tron1477/t1477.jpg';
+  mir_wall: string = '../../../assets/images/mir/background.jpg';
 
   ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
   halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
@@ -67,7 +66,7 @@ export class Tron1477Component {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("https://passive-income.icu/tron1477Users").subscribe(data => {
+    this.http.get("https://passive-income.icu/mirUsers").subscribe(data => {
       if (data) {
         this.listOfGuests = data;
         this.listOfComments.push(data);
@@ -92,7 +91,7 @@ export class Tron1477Component {
             this.commentPages.push("page");
           }
         }
-        this.http.get("https://passive-income.icu/tron1477Ratings").subscribe(data => {
+        this.http.get("https://passive-income.icu/mirRatings").subscribe(data => {
           if (data) {
             this.listOfRatings = data;
             this.listOfComments.push(data);
@@ -108,7 +107,7 @@ export class Tron1477Component {
             } else {
               this.ratingHalf = false;
             }
-            this.http.get("https://passive-income.icu/tron1477Comments").subscribe(data => {
+            this.http.get("https://passive-income.icu/mirComments").subscribe(data => {
               if (data) {
                 this.listOfComments.push(data);
                 for (let el in this.listOfComments) {
@@ -163,7 +162,7 @@ export class Tron1477Component {
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("https://passive-income.icu/tron1477Post", 
+      this.http.post<any>("https://passive-income.icu/mirPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })
