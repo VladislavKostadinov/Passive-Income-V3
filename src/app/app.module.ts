@@ -34,6 +34,8 @@ import { MerobitComponent } from './hyip/merobit/merobit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { YomigtComponent } from './hyip/yomigt/yomigt.component';
 import { MirComponent } from './faucets/mir/mir.component';
+import { CamelbtcComponent } from './faucets/camelbtc/camelbtc.component';
+import { WpayzComponent } from './faucets/wpayz/wpayz.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { MirComponent } from './faucets/mir/mir.component';
     MerobitComponent,
     YomigtComponent,
     MirComponent,
+    CamelbtcComponent,
+    WpayzComponent,
   ],
   imports: [
     BrowserModule,

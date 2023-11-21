@@ -6,23 +6,21 @@ import { Router } from '@angular/router';
 import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dialogue.component';
 
 @Component({
-  selector: 'app-cointiply',
-  templateUrl: './cointiply.component.html',
-  styleUrls: ['./cointiply.component.css']
+  selector: 'app-camelbtc',
+  templateUrl: './camelbtc.component.html',
+  styleUrls: ['./camelbtc.component.css']
 })
-export class CointiplyComponent {
+export class CamelbtcComponent {
+  cointiply: string = '/assets/images/camelbtc/logo1.png';
 
-  cointiply: string = '../../../assets/images/cointiply/cointiply.webp';
-
-  games: string = '../../../assets/images/cointiply/game.png';
-  offers: string = '../../../assets/images/cointiply/offers.png';
-  surveys: string = '../../../assets/images/cointiply/survey.png';
-  tasks: string = '../../../assets/images/cointiply/tasks.png';
-  videos: string = '../../../assets/images/cointiply/videos.png';
-  refer: string = '../../../assets/images/refer.webp'
+  reg: string = '/assets/images/camelbtc/reg.jpg';
+  play: string = '/assets/images/camelbtc/food.png';
+  earn: string = '/assets/images/camelbtc/coins.png';
+  newlinks: string = '/assets/images/camelbtc/referrals.png';
+  refer: string = '/assets/images/refer.webp'
 
 
-  cointiplyWall: string = '../../../assets/images/cointiply/wall2.webp';
+  camelWall: string = '/assets/images/camelbtc/camel_wall.jpg';
 
   ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
   halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
@@ -68,7 +66,7 @@ export class CointiplyComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("https://passive-income.icu/cointiplyUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/camelbtcUsers").subscribe(data => {
       if (data) {
         this.listOfGuests = data;
         this.listOfComments.push(data);
@@ -93,7 +91,7 @@ export class CointiplyComponent {
             this.commentPages.push("page");
           }
         }
-        this.http.get("https://passive-income.icu/cointiplyRatings").subscribe(data => {
+        this.http.get("https://passive-income.icu/camelbtcRatings").subscribe(data => {
           if (data) {
             this.listOfRatings = data;
             this.listOfComments.push(data);
@@ -109,7 +107,7 @@ export class CointiplyComponent {
             } else {
               this.ratingHalf = false;
             }
-            this.http.get("https://passive-income.icu/cointiplyComments").subscribe(data => {
+            this.http.get("https://passive-income.icu/camelbtcComments").subscribe(data => {
               if (data) {
                 this.listOfComments.push(data);
                 for (let el in this.listOfComments) {
@@ -164,7 +162,7 @@ export class CointiplyComponent {
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("https://passive-income.icu/cointiplyPost", 
+      this.http.post<any>("https://passive-income.icu/camelbtcPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })

@@ -8,7 +8,7 @@ import { NavigationStart, Router } from '@angular/router';
 })
 export class FaucetsComponent {
 
-  faucet: string = '../../assets/images/crypto_faucet.png';
+  faucet: string = '../../assets/images/faucet5.jpg';
   honeyGain: string = '../../assets/images/honeyGainLogo.webp';
   fireFaucet: string = '../../assets/images/fireFaucetLogo.png';
   moneySMS: string = '../../assets/images/moneySMS.webp';
@@ -17,7 +17,9 @@ export class FaucetsComponent {
   swagBucks: string = '../../assets/images/swagbucks.webp';
   cointiply: string = '../../assets/images/cointiply.webp';
   bmf: string = '../../assets/images/bmf3.png';
-  mir: string = '../../assets/images/mir/logo.svg'
+  mir: string = '../../assets/images/mir/logo.svg';
+  camel: string = '/assets/images/camelbtc/logo3.png';
+  wpayz: string = '/assets/images/wpayz/mainlogo.png'
 
   faucets = true;
   goHoney = false;
@@ -28,6 +30,8 @@ export class FaucetsComponent {
   goCointiply = false;
   goBmf = false;
   goMir = false;
+  goCamel = false;
+  goWpayz = false;
 
   constructor(private router: Router) {
 
@@ -44,6 +48,8 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
           this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
 
         } else if (this.router.url == "/side-hustles/honeygain") {
           
@@ -56,6 +62,8 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
           this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
 
         } else if (this.router.url == "/side-hustles/fire-faucet") {
           
@@ -68,6 +76,8 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
           this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
 
         }
         else if (this.router.url == "/side-hustles/adbtc") {
@@ -81,6 +91,8 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
           this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
 
         }
         else if (this.router.url == "/side-hustles/teaserfast") {
@@ -94,6 +106,8 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
           this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
 
         }
         else if (this.router.url == "/side-hustles/swagbucks") {
@@ -107,6 +121,8 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
           this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
 
         }
         else if (this.router.url == "/side-hustles/cointiply") {
@@ -120,6 +136,8 @@ export class FaucetsComponent {
           this.goCointiply = true;
           this.goBmf = false;
           this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
 
         }
         else if (this.router.url == "/side-hustles/bmf") {
@@ -133,6 +151,8 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = true;
           this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
 
         }
         else if (this.router.url == "/side-hustles/mir") {
@@ -146,6 +166,38 @@ export class FaucetsComponent {
           this.goCointiply = false;
           this.goBmf = false;
           this.goMir = true;
+          this.goCamel = false;
+          this.goWpayz = false;
+
+        }
+        else if (this.router.url == "/side-hustles/camelbtc") {
+          
+          this.faucets = false;
+          this.goHoney = false;
+          this.goFFaucet = false;
+          this.goAdbtc = false;
+          this.goTeaserFast = false;
+          this.goSwagbucks = false;
+          this.goCointiply = false;
+          this.goBmf = false;
+          this.goMir = true;
+          this.goCamel = false;
+          this.goWpayz = false;
+
+        }
+        else if (this.router.url == "/side-hustles/wpayz") {
+          
+          this.faucets = false;
+          this.goHoney = false;
+          this.goFFaucet = false;
+          this.goAdbtc = false;
+          this.goTeaserFast = false;
+          this.goSwagbucks = false;
+          this.goCointiply = false;
+          this.goBmf = false;
+          this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = true;
 
         }
       }

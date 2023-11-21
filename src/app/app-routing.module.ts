@@ -19,6 +19,8 @@ import { BitstarsinvComponent } from './hyip/bitstarsinv/bitstarsinv.component';
 import { MerobitComponent } from './hyip/merobit/merobit.component';
 import { YomigtComponent } from './hyip/yomigt/yomigt.component';
 import { MirComponent } from './faucets/mir/mir.component';
+import { CamelbtcComponent } from './faucets/camelbtc/camelbtc.component';
+import { WpayzComponent } from './faucets/wpayz/wpayz.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: 'full'},
@@ -47,6 +49,12 @@ const routes: Routes = [
     },
     {
       path: 'bmf', component: BmfComponent
+    },
+    {
+      path: 'camelbtc', component: CamelbtcComponent
+    },
+    {
+      path: 'wpayz', component: WpayzComponent
     },
   ]},
   {path: 'cloud-mining', component: CloudMiningComponent, children: [

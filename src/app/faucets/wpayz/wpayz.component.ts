@@ -6,23 +6,21 @@ import { Router } from '@angular/router';
 import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dialogue.component';
 
 @Component({
-  selector: 'app-cointiply',
-  templateUrl: './cointiply.component.html',
-  styleUrls: ['./cointiply.component.css']
+  selector: 'app-wpayz',
+  templateUrl: './wpayz.component.html',
+  styleUrls: ['./wpayz.component.css']
 })
-export class CointiplyComponent {
+export class WpayzComponent {
 
-  cointiply: string = '../../../assets/images/cointiply/cointiply.webp';
-
-  games: string = '../../../assets/images/cointiply/game.png';
-  offers: string = '../../../assets/images/cointiply/offers.png';
-  surveys: string = '../../../assets/images/cointiply/survey.png';
-  tasks: string = '../../../assets/images/cointiply/tasks.png';
-  videos: string = '../../../assets/images/cointiply/videos.png';
-  refer: string = '../../../assets/images/refer.webp'
+  wpayz: string = '../../../assets/images/wpayz/logo.png';
+  reg: string = '../../../assets/images/wpayz/reg.png';
+  faucet: string = '../../../assets/images/wpayz/faucet.png';
+  packs: string = '../../../assets/images/wpayz/packs.png';
+  games: string = '../../../assets/images/wpayz/games.png';
+  refer: string = '../../../assets/images/wpayz/ref.png'
 
 
-  cointiplyWall: string = '../../../assets/images/cointiply/wall2.webp';
+  wpayzWall: string = '../../../assets/images/wpayz/about.png';
 
   ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
   halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
@@ -63,12 +61,11 @@ export class CointiplyComponent {
 
   maintenance: boolean = false;
 
-
   constructor(private router: Router, private snackBar: MatSnackBar, 
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("https://passive-income.icu/cointiplyUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/wpayzUsers").subscribe(data => {
       if (data) {
         this.listOfGuests = data;
         this.listOfComments.push(data);
@@ -93,7 +90,7 @@ export class CointiplyComponent {
             this.commentPages.push("page");
           }
         }
-        this.http.get("https://passive-income.icu/cointiplyRatings").subscribe(data => {
+        this.http.get("https://passive-income.icu/wpayzRatings").subscribe(data => {
           if (data) {
             this.listOfRatings = data;
             this.listOfComments.push(data);
@@ -109,7 +106,7 @@ export class CointiplyComponent {
             } else {
               this.ratingHalf = false;
             }
-            this.http.get("https://passive-income.icu/cointiplyComments").subscribe(data => {
+            this.http.get("https://passive-income.icu/wpayzComments").subscribe(data => {
               if (data) {
                 this.listOfComments.push(data);
                 for (let el in this.listOfComments) {
@@ -159,12 +156,12 @@ export class CointiplyComponent {
     this.guest = "";
     this.rate = 0;
     this.cmnt = "";
+
     this.guest = this.nickName == "" ? "Guest" : this.nickName;
     this.rate = this.rating;
     this.cmnt = this.comment;
-
     if (!this.maintenance) {
-      this.http.post<any>("https://passive-income.icu/cointiplyPost", 
+      this.http.post<any>("https://passive-income.icu/wpayzPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })
@@ -179,6 +176,7 @@ export class CointiplyComponent {
     } else {
       this.snackBar.open("Server under maintenance. Try later.", "Dismiss");
     }
+      
   }
 
   goPage(page:any) { 
