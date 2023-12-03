@@ -1,6 +1,14 @@
 body {
     overflow: hidden;
 }
+
+@media only screen and (max-width: 1000px) {
+    .subscription {
+        padding: 0 8rem !important;
+    }
+
+}
+
 @media only screen and (max-width: 870px) {
     .profilePic {
         min-width: 93%;
@@ -44,6 +52,8 @@ body {
 } 
 
 }
+
+
 
 
 @media only screen and (max-width: 600px) {
@@ -382,3 +392,18 @@ body {
     box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
   }
 /* Subsrive Interface End */
+
+.youtubePartner {
+    width: 3rem;
+    text-align: center;
+}
+
+.partner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 15rem;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    font-family: 'TilliumLR';
+}

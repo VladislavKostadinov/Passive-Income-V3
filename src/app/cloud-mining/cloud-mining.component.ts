@@ -14,11 +14,13 @@ export class CloudMiningComponent {
   goMinelab = false;
   goF2hash = false;
   goStormGain = false;
+  goGot = false;
 
   nftFerma: string = "../../assets/images/nft_ferma_special_logo.png";
   minelab: string = "../../assets/images/minelab_logo.png";
   f2hash: string = "../../assets/images/f2hash.webp";
-  stormGain: string = '../../assets/images/stormgain1.jpg'
+  stormGain: string = '../../assets/images/stormgain1.jpg';
+  got: string = '/assets/images/got/BigLogo.png';
 
   constructor(private snackBar: MatSnackBar, private router: Router) {
 
@@ -30,13 +32,15 @@ export class CloudMiningComponent {
           this.goMinelab = false;
           this.goF2hash = false;
           this.goStormGain = false;
+          this.goGot = false;
 
         } else if (this.router.url == "/cloud-mining/nftferma") {
           this.cloud = false;
           this.goNft = true;
           this.goMinelab = false;
           this.goF2hash = false;
-          this.goStormGain = false;;
+          this.goStormGain = false;
+          this.goGot = false;
 
         } else if (this.router.url == "/cloud-mining/minelab") {
           
@@ -45,6 +49,7 @@ export class CloudMiningComponent {
           this.goMinelab = true;
           this.goF2hash = false;
           this.goStormGain = false;
+          this.goGot = false;
 
         }
         else if (this.router.url == "/cloud-mining/f2hash") {
@@ -54,6 +59,7 @@ export class CloudMiningComponent {
           this.goMinelab = false;
           this.goF2hash = true;
           this.goStormGain = false;
+          this.goGot = false;
 
         }
         else if (this.router.url == "/cloud-mining/stormgain") {
@@ -63,6 +69,17 @@ export class CloudMiningComponent {
           this.goMinelab = false;
           this.goF2hash = false;
           this.goStormGain = true;
+          this.goGot = false;
+
+        }
+        else if (this.router.url == "/cloud-mining/got") {
+          
+          this.cloud = false;
+          this.goNft = false;
+          this.goMinelab = false;
+          this.goF2hash = false;
+          this.goStormGain = false;
+          this.goGot = true;
 
         }
       }

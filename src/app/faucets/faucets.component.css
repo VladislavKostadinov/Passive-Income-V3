@@ -1,14 +1,27 @@
+@media only screen and (max-width:908px) {
+    .faucetH   {
+        margin-top: 7rem !important;
+    } 
+}
+
+@media only screen and (max-width: 532px) {
+    .faucetH   {
+        margin-top: 8rem !important;
+    } 
+}
+
 @media only screen and (max-width: 480px) {
     .faucetImg {
         width: 15rem !important;
    }
 }
-
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 378px) {
     .faucetH   {
-        margin-top: 9rem !important;
+        margin-top: 10rem !important;
     } 
 }
+
+
 
 body {
     overflow: hidden;

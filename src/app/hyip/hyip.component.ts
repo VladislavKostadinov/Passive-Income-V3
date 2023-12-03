@@ -14,6 +14,7 @@ export class HyipComponent {
   tron1477: string = '../../assets/images/tronfin.svg';
   merobit: string = '../../assets/images/merobit/mero_wall1.png';
   yomigt: string = '../../assets/images/yomigt/background.jpg';
+  soon: string = "/assets/images/inv_soon.jpg"
 
   invest = true;
   bitstarsinv = false;
