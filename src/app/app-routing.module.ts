@@ -22,6 +22,7 @@ import { MirComponent } from './faucets/mir/mir.component';
 import { CamelbtcComponent } from './faucets/camelbtc/camelbtc.component';
 import { WpayzComponent } from './faucets/wpayz/wpayz.component';
 import { GotComponent } from './cloud-mining/got/got.component';
+import { BitsypoolComponent } from './faucets/bitsypool/bitsypool.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: 'full'},
@@ -56,6 +57,9 @@ const routes: Routes = [
     },
     {
       path: 'wpayz', component: WpayzComponent
+    },
+    {
+      path: 'bitsypool', component: BitsypoolComponent
     },
   ]},
   {path: 'cloud-mining', component: CloudMiningComponent, children: [

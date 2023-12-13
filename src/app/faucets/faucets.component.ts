@@ -19,7 +19,8 @@ export class FaucetsComponent {
   bmf: string = '../../assets/images/bmf3.png';
   mir: string = '../../assets/images/mir/logo.svg';
   camel: string = '/assets/images/camelbtc/logo3.png';
-  wpayz: string = '/assets/images/wpayz/mainlogo.png'
+  wpayz: string = '/assets/images/wpayz/mainlogo.png';
+  bitsypool: string = '/assets/images/bitsypool/frontlogo.svg'
 
   faucets = true;
   goHoney = false;
@@ -32,6 +33,7 @@ export class FaucetsComponent {
   goMir = false;
   goCamel = false;
   goWpayz = false;
+  goBitsy = false;
 
   constructor(private router: Router) {
 
@@ -50,6 +52,7 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         } else if (this.router.url == "/side-hustles/honeygain") {
           
@@ -64,6 +67,7 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         } else if (this.router.url == "/side-hustles/fire-faucet") {
           
@@ -78,6 +82,7 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         }
         else if (this.router.url == "/side-hustles/adbtc") {
@@ -93,6 +98,7 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         }
         else if (this.router.url == "/side-hustles/teaserfast") {
@@ -108,6 +114,7 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         }
         else if (this.router.url == "/side-hustles/swagbucks") {
@@ -123,6 +130,7 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         }
         else if (this.router.url == "/side-hustles/cointiply") {
@@ -138,6 +146,7 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         }
         else if (this.router.url == "/side-hustles/bmf") {
@@ -153,6 +162,7 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         }
         else if (this.router.url == "/side-hustles/mir") {
@@ -168,6 +178,7 @@ export class FaucetsComponent {
           this.goMir = true;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         }
         else if (this.router.url == "/side-hustles/camelbtc") {
@@ -183,6 +194,7 @@ export class FaucetsComponent {
           this.goMir = true;
           this.goCamel = false;
           this.goWpayz = false;
+          this.goBitsy = false;
 
         }
         else if (this.router.url == "/side-hustles/wpayz") {
@@ -198,6 +210,23 @@ export class FaucetsComponent {
           this.goMir = false;
           this.goCamel = false;
           this.goWpayz = true;
+          this.goBitsy = false;
+
+        }
+        else if (this.router.url == "/side-hustles/bitsypool") {
+          
+          this.faucets = false;
+          this.goHoney = false;
+          this.goFFaucet = false;
+          this.goAdbtc = false;
+          this.goTeaserFast = false;
+          this.goSwagbucks = false;
+          this.goCointiply = false;
+          this.goBmf = false;
+          this.goMir = false;
+          this.goCamel = false;
+          this.goWpayz = false;
+          this.goBitsy = true;
 
         }
       }

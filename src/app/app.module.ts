@@ -37,6 +37,7 @@ import { MirComponent } from './faucets/mir/mir.component';
 import { CamelbtcComponent } from './faucets/camelbtc/camelbtc.component';
 import { WpayzComponent } from './faucets/wpayz/wpayz.component';
 import { GotComponent } from './cloud-mining/got/got.component';
+import { BitsypoolComponent } from './faucets/bitsypool/bitsypool.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { GotComponent } from './cloud-mining/got/got.component';
     CamelbtcComponent,
     WpayzComponent,
     GotComponent,
+    BitsypoolComponent,
   ],
   imports: [
     BrowserModule,
