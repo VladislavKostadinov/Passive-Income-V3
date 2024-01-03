@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class HomePageComponent {
   
   
-profilePic: string = '../../assets/images/profile_pic.jpg';
+profilePic: string = '../../assets/images/new_welcome.webp';
 cryptoMatrix: string = '../../assets/images/crypto_matrix.jpg';
 metaMask: string = '../../assets/images/MetaMask_Fox.svg.png';
 trustWallet: string = '../../assets/images/vertical_blue.svg';

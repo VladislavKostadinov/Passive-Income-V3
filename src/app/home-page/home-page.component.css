@@ -218,6 +218,8 @@ body {
     padding: 3rem 0;
 }
 
+
+
 .title {
     color: black;
     font-family: 'TilliumLR';
@@ -314,7 +316,7 @@ body {
     color: lightsteelblue;
 }
 
-.dailyIncomeH:hover, .theGridH:hover, .introHeader:hover, .cryptoWalletsH:hover {
+.dailyIncomeH:hover, .theGridH:hover, .introHeader:hover, .cryptoWalletsH:hover, .partners_heading:hover {
     color: blueviolet;
 }
 
@@ -398,12 +400,31 @@ body {
     text-align: center;
 }
 
+.partners {
+    background-image: url('../../assets/backgrounds/office.png');
+    padding: 1rem 0;
+}
+
+.partners_heading {
+    text-align: center;
+    font-family: 'OpenSansClassic';
+    color: goldenrod;
+    margin-bottom: 2rem;
+}
+
+.partner_links {
+    display: flex;
+    margin: 2rem;
+    background: url('../../assets/backgrounds/slash_it.png');
+    flex-wrap: wrap;
+}
+
 .partner {
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 15rem;
-    margin: 0 auto;
-    margin-bottom: 1.5rem;
+    margin: 1.5rem auto;
     font-family: 'TilliumLR';
 }
+

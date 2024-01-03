@@ -15,12 +15,14 @@ export class CloudMiningComponent {
   goF2hash = false;
   goStormGain = false;
   goGot = false;
+  goBBox = false;
 
   nftFerma: string = "../../assets/images/nft_ferma_special_logo.png";
   minelab: string = "../../assets/images/minelab_logo.png";
   f2hash: string = "../../assets/images/f2hash.webp";
   stormGain: string = '../../assets/images/stormgain1.jpg';
   got: string = '/assets/images/got/BigLogo.png';
+  bbox: string = '/assets/images/black-box/bbox_wall.jpg'
 
   constructor(private snackBar: MatSnackBar, private router: Router) {
 
@@ -29,57 +31,57 @@ export class CloudMiningComponent {
         if (this.router.url == "/cloud-mining") {
           this.cloud = true;
           this.goNft = false;
-          this.goMinelab = false;
           this.goF2hash = false;
           this.goStormGain = false;
           this.goGot = false;
+          this.goBBox = false;
 
         } else if (this.router.url == "/cloud-mining/nftferma") {
           this.cloud = false;
           this.goNft = true;
-          this.goMinelab = false;
           this.goF2hash = false;
           this.goStormGain = false;
           this.goGot = false;
-
-        } else if (this.router.url == "/cloud-mining/minelab") {
-          
-          this.cloud = false;
-          this.goNft = false;
-          this.goMinelab = true;
-          this.goF2hash = false;
-          this.goStormGain = false;
-          this.goGot = false;
+          this.goBBox = false;
 
         }
         else if (this.router.url == "/cloud-mining/f2hash") {
           
           this.cloud = false;
           this.goNft = false;
-          this.goMinelab = false;
           this.goF2hash = true;
           this.goStormGain = false;
           this.goGot = false;
+          this.goBBox = false;
 
         }
         else if (this.router.url == "/cloud-mining/stormgain") {
           
           this.cloud = false;
           this.goNft = false;
-          this.goMinelab = false;
           this.goF2hash = false;
           this.goStormGain = true;
           this.goGot = false;
+          this.goBBox = false;
 
         }
         else if (this.router.url == "/cloud-mining/got") {
           
           this.cloud = false;
           this.goNft = false;
-          this.goMinelab = false;
           this.goF2hash = false;
           this.goStormGain = false;
           this.goGot = true;
+          this.goBBox = false;
+
+        } else if (this.router.url == "/cloud-mining/black-box") {
+          
+          this.cloud = false;
+          this.goNft = false;
+          this.goF2hash = false;
+          this.goStormGain = false;
+          this.goGot = false;
+          this.goBBox = true;
 
         }
       }

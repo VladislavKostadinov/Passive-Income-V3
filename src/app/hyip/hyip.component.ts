@@ -10,16 +10,13 @@ import { Router } from '@angular/router';
 export class HyipComponent {
 
   bitstars: string = '../../assets/images/bitstarsinv/wallpaper.jpg';
-  tronfin: string = '../../assets/images/tronfin.svg';
-  tron1477: string = '../../assets/images/tronfin.svg';
-  merobit: string = '../../assets/images/merobit/mero_wall1.png';
-  yomigt: string = '../../assets/images/yomigt/background.jpg';
-  soon: string = "/assets/images/inv_soon.jpg"
+  soon: string = "/assets/images/inv_soon.jpg";
+  etc_cloud_ltd: string = "/assets/images/etccloudltd/etc_cover.gif";
+  neoflojd: string = "/assets/images/neoflojd/banner.png"
 
   invest = true;
-  bitstarsinv = false;
-  merobitP = false;
-  yomigtP = false;
+  etccloudltd = false;
+  goNeoflojd = false;
 
 
   constructor(private snackBar: MatSnackBar, private router: Router) {
@@ -28,28 +25,16 @@ export class HyipComponent {
       (event: any) => {
         if (this.router.url == "/investments") {
           this.invest = true;
-          this.bitstarsinv = false;
-          this.merobitP = false;
-          this.yomigtP = false;
+          this.etccloudltd = false;
 
-        } else if (this.router.url == "/investments/bitstarsinv") {
+        } else if (this.router.url == "/investments/etccloudltd") {
           this.invest = false;
-          this.bitstarsinv = true;
-          this.merobitP = false;
-          this.yomigtP = false;
-
-        } else if (this.router.url == "/investments/merobit") {
-          
+          this.etccloudltd = true;
+          this.goNeoflojd = false;
+        } else if (this.router.url == "/investments/neoflojd") {
           this.invest = false;
-          this.bitstarsinv = false;
-          this.merobitP = true;
-          this.yomigtP = false;
-
-        } else if (this.router.url == "/investments/yomigt") {
-          this.invest = false;
-          this.bitstarsinv = false;
-          this.merobitP = false;
-          this.yomigtP = true;
+          this.etccloudltd = false;
+          this.goNeoflojd = true;
         }
         // else if (this.router.url == "/investments/tron1477") {
           

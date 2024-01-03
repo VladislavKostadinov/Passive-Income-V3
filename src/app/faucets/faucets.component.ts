@@ -19,7 +19,6 @@ export class FaucetsComponent {
   bmf: string = '../../assets/images/bmf3.png';
   mir: string = '../../assets/images/mir/logo.svg';
   camel: string = '/assets/images/camelbtc/logo3.png';
-  wpayz: string = '/assets/images/wpayz/mainlogo.png';
   bitsypool: string = '/assets/images/bitsypool/frontlogo.svg'
 
   faucets = true;
@@ -32,7 +31,6 @@ export class FaucetsComponent {
   goBmf = false;
   goMir = false;
   goCamel = false;
-  goWpayz = false;
   goBitsy = false;
 
   constructor(private router: Router) {
@@ -51,7 +49,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         } else if (this.router.url == "/side-hustles/honeygain") {
@@ -66,7 +63,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         } else if (this.router.url == "/side-hustles/fire-faucet") {
@@ -81,7 +77,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         }
@@ -97,7 +92,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         }
@@ -113,7 +107,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         }
@@ -129,7 +122,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         }
@@ -145,7 +137,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         }
@@ -161,7 +152,6 @@ export class FaucetsComponent {
           this.goBmf = true;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         }
@@ -177,7 +167,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = true;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = false;
 
         }
@@ -193,23 +182,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = true;
           this.goCamel = false;
-          this.goWpayz = false;
-          this.goBitsy = false;
-
-        }
-        else if (this.router.url == "/side-hustles/wpayz") {
-          
-          this.faucets = false;
-          this.goHoney = false;
-          this.goFFaucet = false;
-          this.goAdbtc = false;
-          this.goTeaserFast = false;
-          this.goSwagbucks = false;
-          this.goCointiply = false;
-          this.goBmf = false;
-          this.goMir = false;
-          this.goCamel = false;
-          this.goWpayz = true;
           this.goBitsy = false;
 
         }
@@ -225,7 +197,6 @@ export class FaucetsComponent {
           this.goBmf = false;
           this.goMir = false;
           this.goCamel = false;
-          this.goWpayz = false;
           this.goBitsy = true;
 
         }

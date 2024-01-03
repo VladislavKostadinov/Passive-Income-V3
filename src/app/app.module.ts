@@ -30,14 +30,13 @@ import { NftfermaComponent } from './cloud-mining/nftferma/nftferma.component';
 import { F2hashComponent } from './cloud-mining/f2hash/f2hash.component';
 import { StormgainComponent } from './cloud-mining/stormgain/stormgain.component';
 import { BitstarsinvComponent } from './hyip/bitstarsinv/bitstarsinv.component';
-import { MerobitComponent } from './hyip/merobit/merobit.component';
 import { HttpClientModule } from '@angular/common/http';
-import { YomigtComponent } from './hyip/yomigt/yomigt.component';
-import { MirComponent } from './faucets/mir/mir.component';
 import { CamelbtcComponent } from './faucets/camelbtc/camelbtc.component';
-import { WpayzComponent } from './faucets/wpayz/wpayz.component';
 import { GotComponent } from './cloud-mining/got/got.component';
 import { BitsypoolComponent } from './faucets/bitsypool/bitsypool.component';
+import { EtccloudComponent } from './hyip/etccloud/etccloud.component';
+import { BlackBoxComponent } from './cloud-mining/black-box/black-box.component';
+import { NeoflojdComponent } from './hyip/neoflojd/neoflojd.component';
 
 @NgModule({
   declarations: [
@@ -59,13 +58,12 @@ import { BitsypoolComponent } from './faucets/bitsypool/bitsypool.component';
     F2hashComponent,
     StormgainComponent,
     BitstarsinvComponent,
-    MerobitComponent,
-    YomigtComponent,
-    MirComponent,
     CamelbtcComponent,
-    WpayzComponent,
     GotComponent,
     BitsypoolComponent,
+    EtccloudComponent,
+    BlackBoxComponent,
+    NeoflojdComponent,
   ],
   imports: [
     BrowserModule,
