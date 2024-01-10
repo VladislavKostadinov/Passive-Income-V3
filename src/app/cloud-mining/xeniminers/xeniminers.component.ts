@@ -6,28 +6,29 @@ import { Router } from '@angular/router';
 import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dialogue.component';
 
 @Component({
-  selector: 'app-black-box',
-  templateUrl: './black-box.component.html',
-  styleUrls: ['./black-box.component.css']
+  selector: 'app-xeniminers',
+  templateUrl: './xeniminers.component.html',
+  styleUrls: ['./xeniminers.component.css']
 })
-export class BlackBoxComponent {
+export class XeniminersComponent {
 
-  bbox: string = '/assets/images/black-box/bbox_logo.png';
+  xeni: string = '../../../assets/images/xeniminers/xeniminers-logo.png';
 
-  reg: string = '/assets/images/black-box/MetaMask.webp';
-  miners: string = '/assets/images/black-box/cloud.png';
-  withdraw: string = '/assets/images/black-box/compound.png';
-  bonus: string = '/assets/images/telegram.png';
-  refer: string = '/assets/images/refer.webp';
+  blockchain: string = '../../../assets/images/xeniminers/blockchain.png';
+  market: string = '../../../assets/images/xeniminers/market.png';
+  reg: string = '../../../assets/images/xeniminers/reg.png';
+  mine: string = '../../../assets/images/xeniminers/mine.png';
+  withdraw: string = '../../../assets/images/xeniminers/bank.png';
+  network: string = '../../../assets/images/xeniminers/network.png';
+  refer: string = '../../../assets/images/refer.webp'
 
+  xeni_wall: string = '../../../assets/images/xeniminers/background.png';
 
-  bb_wall: string = '/assets/images/black-box/bbox_wall.jpg';
+  ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
+  halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
 
-  ratings: string = './assets/images/rating/icons8-star-filled-16.png';
-  halfRatings: string = '/assets/images/rating/icons8-star-half-empty-16.png';
-
-  arr1: string = '/assets/images/ar1.png';
-  arr2: string = '/assets/images/ar2.png';
+  arr1: string = '../../../assets/images/ar1.png';
+  arr2: string = '../../../assets/images/ar2.png';
 
   nickName: string = "";
   rating: number = 0;
@@ -67,7 +68,7 @@ export class BlackBoxComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("https://passive-income.icu/bboxUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/xeniminersUsers").subscribe(data => {
       if (data) {
         this.listOfGuests = data;
         this.listOfComments.push(data);
@@ -92,7 +93,7 @@ export class BlackBoxComponent {
             this.commentPages.push("page");
           }
         }
-        this.http.get("https://passive-income.icu/bboxRatings").subscribe(data => {
+        this.http.get("https://passive-income.icu/xeniminersRatings").subscribe(data => {
           if (data) {
             this.listOfRatings = data;
             this.listOfComments.push(data);
@@ -108,7 +109,7 @@ export class BlackBoxComponent {
             } else {
               this.ratingHalf = false;
             }
-            this.http.get("https://passive-income.icu/bboxComments").subscribe(data => {
+            this.http.get("https://passive-income.icu/xeniminersComments").subscribe(data => {
               if (data) {
                 this.listOfComments.push(data);
                 for (let el in this.listOfComments) {
@@ -163,7 +164,7 @@ export class BlackBoxComponent {
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("https://passive-income.icu/bboxPost", 
+      this.http.post<any>("https://passive-income.icu/xeniminersPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })
@@ -177,7 +178,7 @@ export class BlackBoxComponent {
       }, 3000);
     } else {
       this.snackBar.open("Server under maintenance. Try later.", "Dismiss");
-    }  
+    }
   }
 
   goPage(page:any) { 
@@ -259,4 +260,5 @@ export class BlackBoxComponent {
         }
       }  
     }
+
 }

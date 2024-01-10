@@ -16,13 +16,17 @@ export class CloudMiningComponent {
   goStormGain = false;
   goGot = false;
   goBBox = false;
+  goAlphaAi = false;
+  goXeni = false;
 
   nftFerma: string = "../../assets/images/nft_ferma_special_logo.png";
   minelab: string = "../../assets/images/minelab_logo.png";
   f2hash: string = "../../assets/images/f2hash.webp";
   stormGain: string = '../../assets/images/stormgain1.jpg';
   got: string = '/assets/images/got/BigLogo.png';
-  bbox: string = '/assets/images/black-box/bbox_wall.jpg'
+  bbox: string = '/assets/images/black-box/bbox_wall.jpg';
+  alpaai: string = '/assets/images/alphaai/banner2.webp';
+  xeni: string = '/assets/images/xeniminers/banner.png';
 
   constructor(private snackBar: MatSnackBar, private router: Router) {
 
@@ -35,6 +39,8 @@ export class CloudMiningComponent {
           this.goStormGain = false;
           this.goGot = false;
           this.goBBox = false;
+          this.goXeni = false;
+          this.goAlphaAi = false;
 
         } else if (this.router.url == "/cloud-mining/nftferma") {
           this.cloud = false;
@@ -43,6 +49,8 @@ export class CloudMiningComponent {
           this.goStormGain = false;
           this.goGot = false;
           this.goBBox = false;
+          this.goXeni = false;
+          this.goAlphaAi = false;
 
         }
         else if (this.router.url == "/cloud-mining/f2hash") {
@@ -53,6 +61,8 @@ export class CloudMiningComponent {
           this.goStormGain = false;
           this.goGot = false;
           this.goBBox = false;
+          this.goXeni = false;
+          this.goAlphaAi = false;
 
         }
         else if (this.router.url == "/cloud-mining/stormgain") {
@@ -63,6 +73,8 @@ export class CloudMiningComponent {
           this.goStormGain = true;
           this.goGot = false;
           this.goBBox = false;
+          this.goXeni = false;
+          this.goAlphaAi = false;
 
         }
         else if (this.router.url == "/cloud-mining/got") {
@@ -73,6 +85,8 @@ export class CloudMiningComponent {
           this.goStormGain = false;
           this.goGot = true;
           this.goBBox = false;
+          this.goXeni = false;
+          this.goAlphaAi = false;
 
         } else if (this.router.url == "/cloud-mining/black-box") {
           
@@ -82,6 +96,30 @@ export class CloudMiningComponent {
           this.goStormGain = false;
           this.goGot = false;
           this.goBBox = true;
+          this.goXeni = false;
+          this.goAlphaAi = false;
+
+        } else if (this.router.url == "/cloud-mining/alpha-ai") {
+          
+          this.cloud = false;
+          this.goNft = false;
+          this.goF2hash = false;
+          this.goStormGain = false;
+          this.goGot = false;
+          this.goBBox = false;
+          this.goXeni = false;
+          this.goAlphaAi = true;
+
+        } else if (this.router.url == "/cloud-mining/xeniminers") {
+          
+          this.cloud = false;
+          this.goNft = false;
+          this.goF2hash = false;
+          this.goStormGain = false;
+          this.goGot = false;
+          this.goBBox = false;
+          this.goXeni = true;
+          this.goAlphaAi = false;
 
         }
       }

@@ -14,9 +14,9 @@ export class NeoflojdComponent {
 
   neoflojd: string = '/assets/images/neoflojd/logo.png';
 
-  reg: string = '/assets/images/neoflojd/reg.jpg';
+  reg: string = '/assets/images/neoflojd/reg.webp';
   subs: string = '/assets/images/neoflojd/sub.png';
-  earn: string = '/assets/images/neoflojd/earn.webp';
+  earn: string = '/assets/images/neoflojd/earn.png';
   refer: string = '/assets/images/refer.webp';
 
   neoflojd_wall: string = '/assets/images/neoflojd/neoflojd_wall.png';

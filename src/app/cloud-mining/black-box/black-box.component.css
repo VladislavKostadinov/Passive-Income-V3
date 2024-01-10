@@ -122,6 +122,8 @@ h3 {
     padding: 1rem 2rem;
     border: 1px dashed lightgray;
     font-family: 'TilliumLR';
+    text-align: center;
+
 }
 
 .emp {
@@ -464,6 +466,10 @@ path:hover {
     width: 3rem;
 }
 
+.telegram {
+    border-radius: 2rem;
+}
+
 .referral {
     width: 2.5rem;
 }
@@ -489,8 +495,10 @@ path:hover {
 
 .blogLink {
     color: goldenrod;
+    text-decoration: none;
 }
 
 .blogLink:hover {
     color: silver;
+    text-decoration: underline;
 }

@@ -21,12 +21,13 @@
     .column1 {
         width: 60% !important;
     }
-
+    
+    
     .avRate {
         width: 75% !important;
     }
 
-    .wallpaperImg, .commentField {
+    .wallpaperImg, .commentField  {
         width: 75% !important;
     }
 
@@ -42,7 +43,7 @@
     .textInfo {
         width: 100% !important;
     }
-
+    
     .allComments {
         width: 75% !important;
     }
@@ -57,10 +58,6 @@
     }
 
     .column1 {
-        width: 75% !important;
-    }
-    
-    .avRate {
         width: 75% !important;
     }
 }
@@ -123,7 +120,6 @@ h3 {
     border: 1px dashed lightgray;
     font-family: 'TilliumLR';
     text-align: center;
-
 }
 
 .emp {
@@ -339,7 +335,7 @@ select option {
     font-size: 15px;
     font-family: 'TilliumLR';
     text-align: end;
-    width: 50%;
+    width: 35%;
     margin: 0 auto;
 }
 
@@ -487,4 +483,20 @@ path:hover {
 .gl {
     color: gold;
     display: block;
+}
+
+.blogLink {
+    color: goldenrod;
+    text-decoration: none;
+}
+.blogLink:hover {
+    color: silver;
+    text-decoration: underline;
+}
+
+.extraNote {
+    text-align: center;
+    margin-top: -2.2rem;
+    padding-bottom: 1rem;
+    color: lightcoral;
 }
