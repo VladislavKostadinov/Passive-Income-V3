@@ -22,11 +22,12 @@
         width: 60% !important;
     }
 
+    
     .avRate {
         width: 75% !important;
     }
 
-    .wallpaperImg, .commentField {
+    .wallpaperImg, .commentField  {
         width: 75% !important;
     }
 
@@ -42,7 +43,7 @@
     .textInfo {
         width: 100% !important;
     }
-
+    
     .allComments {
         width: 75% !important;
     }
@@ -68,7 +69,6 @@
 
 h2 {
     color: goldenrod;
-    margin-top: 7rem;
     text-align: center;
     font-family: 'OpenSansClassic';
 }
@@ -125,14 +125,8 @@ h3 {
     text-align: center;
 }
 
-.cStatementList {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
 .emp {
-    color: gold;
+    color: coral;
 }
 
 .column1 {
@@ -152,6 +146,7 @@ h3 {
     font-family: 'TilliumLR';
     width: 75%;
     margin: 0 auto;
+    text-align: center;
 }
 
 li {
@@ -175,6 +170,16 @@ color: coral;
     display: flex;
     margin: 0 auto;
     width: 35rem;
+}
+
+.homepagelink {
+    text-decoration: none;
+    color: gold;
+}
+
+.homepagelink:hover {
+    text-decoration: underline;
+    color: cadetblue;
 }
 
 .listCont {
@@ -232,6 +237,7 @@ color: coral;
     font-family: 'TilliumLR';
     color: lightcoral;
     margin: auto 0;
+    text-align: center;
 }
 
 
@@ -471,10 +477,6 @@ path:hover {
     width: 3rem;
 }
 
-.telegram {
-    border-radius: 2rem;
-}
-
 .referral {
     width: 2.5rem;
 }
@@ -489,14 +491,6 @@ path:hover {
     display: block;
 }
 
-.tm {
-    color: red;
-}
-
-.gl {
-    color: gold;
-    display: block;
-}
 
 .blogLink {
     color: goldenrod;
@@ -505,8 +499,4 @@ path:hover {
 
 .blogLink:hover {
     color: silver;
-}
-
-.centralizedStatement {
-    margin: 0 auto;
 }

@@ -1,4 +1,4 @@
-@media only screen and (max-width:908px) {
+/* @media only screen and (max-width:908px) {
     .faucetH   {
         margin-top: 7rem !important;
     } 
@@ -8,153 +8,151 @@
     .faucetH   {
         margin-top: 8rem !important;
     } 
-}
+} */
 
 @media only screen and (max-width: 480px) {
-    .faucetImg {
-        width: 15rem !important;
-   }
+  .faucetImg {
+    width: 15rem !important;
+  }
 }
-@media only screen and (max-width: 378px) {
+/* @media only screen and (max-width: 378px) {
     .faucetH   {
         margin-top: 10rem !important;
     } 
-}
-
-
+} */
 
 body {
-    overflow: hidden;
+  overflow: hidden;
 }
 .faucetDescript {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 3rem;
 }
 
 .faucetImg {
-    width: 25rem;
-    margin: 1rem auto;
-    border: 5px solid #555;
+  width: 25rem;
+  margin: 1rem auto;
+  border: 5px solid #555;
 }
 
 .faucetDef {
-    color: lightcoral;
-    text-align: center;
-    font-family: 'TilliumLR';
+  color: lightcoral;
+  text-align: center;
+  font-family: "TilliumLR";
 }
 
-
-.faucetH   {
-    text-align: center;
-    font-family: 'TilliumLR';
-    color: goldenrod;
-    margin-top: 6rem;
+.faucetH {
+  text-align: center;
+  font-family: "TilliumLR";
+  color: goldenrod;
 }
 
-
-
-.myFaucetsH, .sideHustlesH {
-    text-align: center;
-    font-family: 'OpenSansClassic';
-    color: goldenrod;
+.myFaucetsH,
+.sideHustlesH {
+  text-align: center;
+  font-family: "OpenSansClassic";
+  color: goldenrod;
 }
 
-.myFaucetsH:hover, .faucetH:hover, .otherIncomeH:hover, .sideHustlesH:hover {
-    color: gold;
+.myFaucetsH:hover,
+.faucetH:hover,
+.otherIncomeH:hover,
+.sideHustlesH:hover {
+  color: gold;
 }
 
 .myFaucets {
-    text-align: center;
-    font-family: 'TilliumLR';
-    color: lightcoral;
-    padding: 0 3rem;
+  text-align: center;
+  font-family: "TilliumLR";
+  color: lightcoral;
+  padding: 0 3rem;
 }
 
 .fFacet {
-    color: red;
+  color: red;
 }
 
 .otherIncomeH {
-    text-align: center;
-    font-family: 'OpenSansClassic';
-    color: goldenrod;
-    margin-top: 2rem;
+  text-align: center;
+  font-family: "OpenSansClassic";
+  color: goldenrod;
+  margin-top: 2rem;
 }
 .otherPassiveIncome {
-    text-align: center;
-    font-family: 'TilliumLR';
-    color: lightcoral;
-    padding: 0 3rem;
+  text-align: center;
+  font-family: "TilliumLR";
+  color: lightcoral;
+  padding: 0 3rem;
 }
 
 .mySideHustles {
-    background-image: url('../../assets/backgrounds/darkdenim3.png');
+  background-image: url("../../assets/backgrounds/darkdenim3.png");
 }
 
 .sideHustlesH {
-    margin-top: 2rem;
-    padding-top: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .sideHustlesCards {
-    display: flex;
-    justify-content: space-around;
-    margin: 3rem auto;
-    flex-wrap: wrap;
-    padding: 0 3rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+  padding: 0 3rem;
 }
 
 .faucetEnd {
-    color: lightcoral;
-    text-align: center;
-    font-family: 'TilliumLR';
-    margin-top: -1.5rem;
-    padding: 0 1.5rem;
+  color: lightcoral;
+  text-align: center;
+  font-family: "TilliumLR";
+  margin-top: -1.5rem;
+  padding: 0 1.5rem;
 }
 
 .honeyGainLogo {
-    width: 5rem;
+  width: 5rem;
 }
 
-.moneySMSLogo, .bmflogo {
-    width: 10rem;
+.moneySMSLogo,
+.bmflogo {
+  width: 10rem;
 }
 
 .mirLogo {
-    width: 8rem;
+  width: 8rem;
 }
 
 .swagLogo {
-    border-radius: 15% ;
+  border-radius: 15%;
 }
 
 .teaser {
-    width: 8rem;
-    border-radius: 15%;
+  width: 8rem;
+  border-radius: 15%;
 }
 
 .adbc {
-    border-radius: 15%;
+  border-radius: 15%;
 }
 
 .hustleCardInv {
-    font-size: 13px;
-    font-family: "TilliumLR";
-    padding: 0 .5rem;
-    margin: 0;
-
+  font-size: 13px;
+  font-family: "TilliumLR";
+  padding: 0 0.5rem;
+  margin: 0;
 }
 
 .faucetBtn {
-    width: 40% !important;
+  width: 40% !important;
 }
 
 .faucetBtnWrap {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* .investValue {
@@ -162,24 +160,113 @@ body {
 } */
 
 .cardRow {
-    text-decoration: underline;
-    padding-right: 0.3rem;
-    color: gold !important;
-    display: block;
+  text-decoration: underline;
+  padding-right: 0.3rem;
+  color: gold !important;
+  display: block;
 }
 
 .moneyRef {
-    font-size: 10px;
-    font-family: 'TilliumLR';
-    display: block;
+  font-size: 10px;
+  font-family: "TilliumLR";
+  display: block;
 }
 
 .walletLink {
-    margin: 0 auto;
-    font-size: 9px;
+  margin: 0 auto;
+  font-size: 9px;
 }
 
 .camelLogo {
-    width: 7rem;
+  width: 7rem;
+}
 
+.mm_app {
+  background-image: url("/assets/images/make-money/logo2.webp");
+}
+.adbtc_bg {
+  background-image: url("/assets/images/adbtc/adbtc.png");
+  background-position: center;
+}
+
+.ff_bg {
+  background-image: url("/assets/images/ffaucet/firefaucet.webp");
+  background-position: center;
+  background-size: cover;
+}
+.hg_bg {
+  background-image: url("/assets/images/honeygain/honeyGainLogo.webp");
+  background-position: center;
+  background-size: cover;
+}
+.tf_bg {
+  background-image: url("/assets/images/teaser/teaserLogo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tf_bg {
+  background-image: url("/assets/images/teaser/logo02.png");
+  background-position: center;
+  background-size: cover;
+  background-size: 10rem;
+}
+.sb_bg {
+  background-image: url("/assets/images/swagbucks/swagbucks.png");
+  background-position: center;
+  background-size: cover;
+}
+.cointy_bg {
+  background-image: url("/assets/images/cointiply/cointiply2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.camel_bg {
+  background-image: url("/assets/images/camelbtc/logo3.png");
+  background-position: center;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+.losena_bg {
+  background-image: url("/assets/images/losena/banner3.png");
+  background-position: center;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+.bitsy_bg {
+  background-image: url("/assets/images/bitsypool/frontlogo.svg");
+  background-position: center;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+.bmf_bg {
+  background-image: url("/assets/images/bmf/bmf3.png");
+  background-position: center;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.msms_bg {
+  background-image: url("/assets/images/money-sms/logo.webp");
+  background-position: center;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.titleBlack,
+.detailsBlack {
+  color: black;
+}
+
+.details,
+.detailsBlack {
+  margin-top: 15.5rem;
+}
+
+.faucetRef {
+  font-size: 11px;
+}
+
+.specialText {
+  color: gold;
 }

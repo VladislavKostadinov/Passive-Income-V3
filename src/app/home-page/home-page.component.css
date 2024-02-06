@@ -11,7 +11,7 @@ body {
 
 @media only screen and (max-width: 870px) {
     .profilePic {
-        min-width: 93%;
+        min-width: 92.5%;
         display: block;
     }
     .sectionPic {
@@ -29,13 +29,13 @@ body {
         width: auto;
   } 
 
-  .briefing {
+  /* .briefing {
     margin-top: 7rem !important;
-  }
+  } */
 
-  .pyramid-loader {
+  /* .pyramid-loader {
     margin-top: 5rem !important;
-  }
+  } */
 
   .introSection {
     margin: 2.5rem 0.5rem !important
@@ -57,6 +57,9 @@ body {
 
 
 @media only screen and (max-width: 600px) {
+    .profilePic {
+        min-width: 91%;
+    }
     .subscription {
         display: flex;
         flex-direction: column;
@@ -86,14 +89,14 @@ body {
 
 @media only screen and (max-width: 480px) {
     .briefing {
-        margin-top: 10rem !important;
+        margin-top: 2.5rem !important;
     }
     .pyramid-loader {
-        margin-top: 11rem !important;
+        margin-top: 5rem !important;
         padding: 0 2rem;
     }
     .profilePic {
-        min-width: 80%;
+        min-width: 90%;
     }
 
     .greetingsMsg {
@@ -101,15 +104,13 @@ body {
     }
 }
 @media only screen and (max-width: 400px) {
-    .briefing {
-        margin-top: 10rem !important;
-    }
+
     .pyramid-loader {
-        margin-top: 15rem !important;
+        margin-top: 6rem !important;
         padding: 0 2rem;
     }
     .profilePic {
-        min-width: 80%;
+        min-width: 85%;
     }
 
 }
@@ -125,7 +126,7 @@ body {
     display: flex;
     align-items: center;
     font-family: 'TilliumLItalic' !important;
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
 }
 
 /* .pyramid-loader {

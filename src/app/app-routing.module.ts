@@ -21,8 +21,10 @@ import { BitsypoolComponent } from './faucets/bitsypool/bitsypool.component';
 import { EtccloudComponent } from './hyip/etccloud/etccloud.component';
 import { BlackBoxComponent } from './cloud-mining/black-box/black-box.component';
 import { NeoflojdComponent } from './hyip/neoflojd/neoflojd.component';
-import { AlphaAiMiningComponent } from './cloud-mining/alpha-ai-mining/alpha-ai-mining.component';
 import { XeniminersComponent } from './cloud-mining/xeniminers/xeniminers.component';
+import { MakeMoneyComponent } from './faucets/make-money/make-money.component';
+import { LosenaComponent } from './faucets/losena/losena.component';
+import { MoneySmsComponent } from './faucets/money-sms/money-sms.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: 'full'},
@@ -55,6 +57,15 @@ const routes: Routes = [
     {
       path: 'bitsypool', component: BitsypoolComponent
     },
+    {
+      path: 'make-money', component: MakeMoneyComponent
+    },
+    {
+      path: 'losena', component: LosenaComponent
+    },
+    {
+      path: 'money-sms', component: MoneySmsComponent
+    },
   ]},
   {path: 'cloud-mining', component: CloudMiningComponent, children: [
     {
@@ -71,9 +82,6 @@ const routes: Routes = [
     },
     {
       path: 'black-box', component: BlackBoxComponent
-    },
-    {
-      path: 'alpha-ai', component: AlphaAiMiningComponent
     },
     {
       path: 'xeniminers', component: XeniminersComponent

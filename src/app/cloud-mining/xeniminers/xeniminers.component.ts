@@ -12,23 +12,24 @@ import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dial
 })
 export class XeniminersComponent {
 
-  xeni: string = '../../../assets/images/xeniminers/xeniminers-logo.png';
+  xeni: string = '/assets/images/xeniminers/xeniminers-logo.png';
 
-  blockchain: string = '../../../assets/images/xeniminers/blockchain.png';
-  market: string = '../../../assets/images/xeniminers/market.png';
-  reg: string = '../../../assets/images/xeniminers/reg.png';
-  mine: string = '../../../assets/images/xeniminers/mine.png';
-  withdraw: string = '../../../assets/images/xeniminers/bank.png';
-  network: string = '../../../assets/images/xeniminers/network.png';
-  refer: string = '../../../assets/images/refer.webp'
+  blockchain: string = '/assets/images/xeniminers/blockchain.png';
+  market: string = '/assets/images/xeniminers/market.png';
+  reg: string = '/assets/images/xeniminers/reg.png';
+  mine: string = '/assets/images/xeniminers/mine.png';
+  withdraw: string = '/assets/images/xeniminers/bank.png';
+  network: string = '/assets/images/xeniminers/network.png';
+  refer: string = '/assets/images/refer.webp'
 
-  xeni_wall: string = '../../../assets/images/xeniminers/background.png';
+  xeni_wall: string = '/assets/images/xeniminers/background.png';
+  xeni_wall2: string = '/assets/images/xeniminers/wall2.jpg';
 
-  ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
-  halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
+  ratings: string = '/assets/images/rating/icons8-star-filled-16.png';
+  halfRatings: string = '/assets/images/rating/icons8-star-half-empty-16.png';
 
-  arr1: string = '../../../assets/images/ar1.png';
-  arr2: string = '../../../assets/images/ar2.png';
+  arr1: string = '/assets/images/ar1.png';
+  arr2: string = '/assets/images/ar2.png';
 
   nickName: string = "";
   rating: number = 0;

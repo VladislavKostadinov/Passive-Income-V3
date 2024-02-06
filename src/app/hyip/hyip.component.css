@@ -1,4 +1,196 @@
-@media only screen and (max-width: 968px) {
+a {
+  text-decoration: none;
+  color: goldenrod;
+}
+
+a:hover {
+  color: gold;
+}
+
+.hyipH {
+  text-align: center;
+  font-family: "OpenSansClassic";
+  color: goldenrod;
+}
+
+.hyipH:hover,
+.iHeading:hover {
+  color: gold;
+}
+
+.hyipDef {
+  color: lightcoral;
+  text-align: center;
+  font-family: "TilliumLR";
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hyipWarning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.beWarnedHyipH {
+  text-align: center;
+  font-family: "OpenSansClassic";
+  color: red;
+}
+
+.beWarnedHyipH:hover,
+.myHyipsH:hover {
+  color: crimson;
+}
+
+.beWarnedHyip {
+  text-align: center;
+  font-family: "TilliumLR";
+  color: red;
+  padding: 0 1rem;
+  width: 75%;
+  margin: 1.5rem auto 0 auto !important;
+}
+
+.myHyipsH {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: center;
+  font-family: "OpenSansClassic";
+  color: goldenrod;
+  margin-top: 3rem;
+}
+
+.myHyips {
+  text-align: center;
+  font-family: "TilliumLR";
+  color: lightcoral;
+  padding: 0 3rem;
+}
+
+.warning {
+  color: red;
+}
+
+.underWarning {
+  text-decoration: underline;
+}
+
+.investmentWarningTitle {
+  display: flex;
+}
+
+.investmentCards {
+  margin: 3rem auto;
+  min-height: 300px;
+  background-image: url("../../assets/backgrounds/darkdenim3.png");
+}
+
+.iCardsBox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.iCard {
+  margin: 3rem 5rem;
+}
+
+.iHeading {
+  margin-top: 2rem;
+  color: goldenrod;
+  font-family: "OpenSansClassic";
+  text-align: center;
+  padding-top: 2rem;
+  margin-bottom: -1rem;
+}
+
+.sumUp {
+  color: lightcoral;
+}
+
+h3 {
+  color: goldenrod;
+  text-align: center;
+}
+
+h3:hover {
+  color: gold;
+}
+
+.iWarning {
+  text-align: center;
+  color: red;
+}
+
+.iWarning:hover {
+  color: goldenrod;
+}
+
+.innerIcardContainer {
+  display: flex;
+}
+
+.bitstarsLogo {
+  height: 11.2rem;
+}
+
+.merobitLogo {
+  height: 10.5rem;
+}
+
+.yomigtLogo {
+  height: 10.75rem;
+}
+
+h4 {
+  color: gold;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cardBtns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iBtnE,
+.iBtnR {
+  font-size: 0.7rem !important;
+}
+
+.iCardFlip {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  color: blueviolet;
+}
+
+.cardTitle:hover {
+  color: cyan;
+}
+
+.flipCardDesc {
+  font-size: 14px;
+  font-family: "TilliumLR";
+}
+
+.btnLearnSpan,
+.btnRegSpan {
+  font-size: 16px !important;
+}
+
+.commingSoonLogo {
+  width: 100%;
+}
+
+/*MEDIA QUERIES*/
+
+/* @media only screen and (max-width: 968px) {
     .hyipH   {
         margin-top: 7rem !important;
     } 
@@ -8,279 +200,88 @@
     .hyipH   {
         margin-top: 8rem !important;
     } 
-}
+} */
 
 @media only screen and (max-width: 480px) {
-     .yomigtLogo{
-        height: 10.5rem !important;
-    }
-    /*
-    .bitstarsLogo {
-        height: 10rem !important;
-    }
+  .yomigtLogo {
+    height: 10.5rem !important;
+  }
+  /*
+      .bitstarsLogo {
+          height: 10rem !important;
+      }
+  
+      .merobitLogo {
+          height:10rem !important;
+          width: 17.7rem !important;
+      } */
 
-    .merobitLogo {
-        height:10rem !important;
-        width: 17.7rem !important;
-    } */
-
-    /* .commingSoonLogo {
-        height: 9.5rem !important;
-    } */
-
-} 
+  /* .commingSoonLogo {
+          height: 9.5rem !important;
+      } */
+}
 
 @media only screen and (max-width: 460px) {
-    /* .bitstarsLogo {
-        height: 6.9rem !important;
-    }
+  /* .bitstarsLogo {
+          height: 6.9rem !important;
+      }
+  
+      .merobitLogo {
+          height: 7.8rem !important;
+          width: 12.5rem !important;
+      } */
+  .flipCardDesc {
+    font-size: 10px !important;
+  }
 
-    .merobitLogo {
-        height: 7.8rem !important;
-        width: 12.5rem !important;
-    } */
-    .flipCardDesc {
-        font-size: 10px !important;
-    }
-
-     .yomigtLogo{
-        height: 9.3rem !important;
-    }
-    /*
-
-    .commingSoonLogo {
-        height: 8.3rem !important;
-    } */
-
-    .hyipH {
-        margin-top: 9rem !important;
-    }
-
-} 
+  .yomigtLogo {
+    height: 9.3rem !important;
+  }
+  /*
+  
+      .commingSoonLogo {
+          height: 8.3rem !important;
+      } */
+  /* 
+      .hyipH {
+          margin-top: 9rem !important;
+      } */
+}
 
 @media only screen and (max-width: 420px) {
+  .yomigtLogo {
+    height: 8.5rem !important;
+  }
+  .btnLearnSpan,
+  .btnRegSpan {
+    font-size: 12px !important;
+  }
 
-    .yomigtLogo{
-        height: 8.5rem !important;
-    }
-
-    /* .commingSoonLogo {
-        height: 7.3rem !important;
-    } */
+  /* .commingSoonLogo {
+          height: 7.3rem !important;
+      } */
 }
 
 @media only screen and (max-width: 400px) {
-    .yomigtLogo{
-        height: 7.6rem !important;
-    }
-    .btnLearnMore, .btnRegSpan {
-        padding: 8px 15px !important
-    }
-/* 
-    .commingSoonLogo {
-        height: 6.3rem !important;
-    } */
+  .yomigtLogo {
+    height: 7.6rem !important;
+  }
+  .btnLearnMore,
+  .btnRegSpan {
+    padding: 8px 15px !important;
+    font-size: 12px !important;
+  }
+  /* 
+      .commingSoonLogo {
+          height: 6.3rem !important;
+      } */
 }
 @media only screen and (max-width: 378px) {
-
-    .yomigtLogo{
-        height: 7.1rem !important;
-    }
-
-    .hyipH {
-        margin-top: 10rem !important;
-    }
-}
-
-
-
-a {
-    text-decoration: none;
-    color: goldenrod;
+  .yomigtLogo {
+    height: 7.1rem !important;
   }
-  
-  a:hover {
-    color: gold;
-  }
-
-.hyipH   {
-    text-align: center;
-    font-family: 'OpenSansClassic';
-    color: goldenrod;
-    margin-top: 6rem;
-}
-
-.hyipH:hover, .iHeading:hover {
-    color: gold;
-}
-
-.hyipDef {
-    color: lightcoral;
-    text-align: center;
-    font-family: 'TilliumLR';
-    width: 80%;
-    margin: 0 auto;
-}
-
-.hyipWarning {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.beWarnedHyipH {
-    text-align: center;
-    font-family: 'OpenSansClassic';
-    color: red;
-
-}
-
-.beWarnedHyipH:hover, .myHyipsH:hover {
-    color: crimson
-}
-
-.beWarnedHyip {
-    text-align: center;
-    font-family: 'TilliumLR';
-    color: red;
-    padding: 0 1rem;
-    width: 75%;
-    margin: 1.5rem auto 0 auto !important;
-}
-
-.myHyipsH {
-    margin-left: 5rem;
-    margin-right: 5rem;
-    text-align: center;
-    font-family: 'OpenSansClassic';
-    color: goldenrod;
-    margin-top: 3rem;
-}
-
-.myHyips {
-    text-align: center;
-    font-family: 'TilliumLR';
-    color: lightcoral;
-    padding: 0 3rem;
-}
-
-.warning  {
-    color: red;
-}
-
-.underWarning {
-    text-decoration: underline;
-}
-
-.investmentWarningTitle {
-    display: flex;
-}
-
-
-.investmentCards {
-    margin: 3rem auto;
-    min-height: 300px;
-    background-image: url('../../assets/backgrounds/darkdenim3.png');
-}
-
-.iCardsBox {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.iCard {
-    margin: 3rem 5rem;
-}
-
-.iHeading {
-    margin-top: 2rem;
-    color: goldenrod;
-    font-family: 'OpenSansClassic';
-    text-align: center;
-    padding-top: 2rem;
-    margin-bottom: -1rem;
-}
-
-.sumUp {
-    color: lightcoral;
-}
-
-h3 {
-    color: goldenrod;
-    text-align: center;
-}
-
-h3:hover {
-    color: gold;
-}
-
-.iWarning {
-    text-align: center;
-    color: red;
-}
-
-.iWarning:hover {
-    color: goldenrod;
-}
-
-.innerIcardContainer {
-    display: flex;
-}
-
-.bitstarsLogo {
-    height: 11.2rem;
-}
-
-.merobitLogo {
-    height: 10.5rem;
-}
-
-.yomigtLogo{
-    height: 10.75rem;
-}
-
-h4 {
-    color: gold;
-    text-align: center;
-    margin: 0 auto;
-
-}
-
-.cardBtns {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-}
-
-.iBtnE, .iBtnR {
-    font-size: 0.7rem !important;
-}
-
-.iCardFlip {
-    display: flex;
-    flex-direction: column;
-}
-
-.cardTitle {
-    color: blueviolet;
-}
-
-.cardTitle:hover {
-    color: cyan;
-}
-
-.flipCardDesc {
-    font-size: 14px;
-    font-family: 'TilliumLR';
-}
-
-.btnLearnSpan, .btnRegSpan {
-    font-size: 16px !important;
-}
-
-.commingSoonLogo {
-    width: 100%;
+  /* 
+      .hyipH {
+          margin-top: 10rem !important;
+      } */
 }

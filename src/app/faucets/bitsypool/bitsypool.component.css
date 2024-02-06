@@ -69,7 +69,6 @@
 
 h2 {
     color: goldenrod;
-    margin-top: 7rem;
     text-align: center;
     font-family: 'OpenSansClassic';
 }
@@ -127,7 +126,7 @@ h3 {
 }
 
 .emp {
-    color: gold;
+    color: coral;
 }
 
 .column1 {
@@ -237,6 +236,7 @@ color: coral;
     font-family: 'TilliumLR';
     color: lightcoral;
     margin: auto 0;
+    text-align: center;
 }
 
 

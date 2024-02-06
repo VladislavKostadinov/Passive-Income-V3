@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlphaAiMiningComponent } from './alpha-ai-mining.component';
+import { MakeMoneyComponent } from './make-money.component';
 
-describe('AlphaAiMiningComponent', () => {
-  let component: AlphaAiMiningComponent;
-  let fixture: ComponentFixture<AlphaAiMiningComponent>;
+describe('MakeMoneyComponent', () => {
+  let component: MakeMoneyComponent;
+  let fixture: ComponentFixture<MakeMoneyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AlphaAiMiningComponent ]
+      declarations: [ MakeMoneyComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AlphaAiMiningComponent);
+    fixture = TestBed.createComponent(MakeMoneyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

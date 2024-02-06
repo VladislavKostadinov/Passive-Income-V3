@@ -6,25 +6,24 @@ import { Router } from '@angular/router';
 import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dialogue.component';
 
 @Component({
-  selector: 'app-alpha-ai-mining',
-  templateUrl: './alpha-ai-mining.component.html',
-  styleUrls: ['./alpha-ai-mining.component.css']
+  selector: 'app-losena',
+  templateUrl: './losena.component.html',
+  styleUrls: ['./losena.component.css']
 })
-export class AlphaAiMiningComponent {
+export class LosenaComponent {
 
-    
-  alpha: string = '/assets/images/alphaai/icon.png';
+  losena: string = '/assets/images/losena/banner.png';
 
-  reg: string = '/assets/images/alphaai/reg.png';
-  miners: string = '/assets/images/alphaai/deposit.png';
-  withdraw: string = '/assets/images/alphaai/wallet.png';
-  bonus: string = '/assets/images/telegram.png';
-  refer: string = '/assets/images/refer.webp';
+  reg: string = '/assets/images/losena/banner.png';
+  profile: string = '/assets/images/losena/data.png';
+  offers: string = '/assets/images/losena/advertise.png';
+  withdraw: string = '/assets/images/losena/withdraw.png';
+  refer: string = '/assets/images/refer.webp'
 
 
-  ai_wall: string = '/assets/images/alphaai/banner.png';
+  losenaWall: string = '/assets/images/losena/wallpaper.png';
 
-  ratings: string = './assets/images/rating/icons8-star-filled-16.png';
+  ratings: string = '/assets/images/rating/icons8-star-filled-16.png';
   halfRatings: string = '/assets/images/rating/icons8-star-half-empty-16.png';
 
   arr1: string = '/assets/images/ar1.png';
@@ -68,7 +67,7 @@ export class AlphaAiMiningComponent {
     private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.http.get("https://passive-income.icu/alphaaiUsers").subscribe(data => {
+    this.http.get("https://passive-income.icu/losenaUsers").subscribe(data => {
       if (data) {
         this.listOfGuests = data;
         this.listOfComments.push(data);
@@ -93,7 +92,7 @@ export class AlphaAiMiningComponent {
             this.commentPages.push("page");
           }
         }
-        this.http.get("https://passive-income.icu/alphaaiRatings").subscribe(data => {
+        this.http.get("https://passive-income.icu/losenaRatings").subscribe(data => {
           if (data) {
             this.listOfRatings = data;
             this.listOfComments.push(data);
@@ -109,7 +108,7 @@ export class AlphaAiMiningComponent {
             } else {
               this.ratingHalf = false;
             }
-            this.http.get("https://passive-income.icu/alphaaiComments").subscribe(data => {
+            this.http.get("https://passive-income.icu/losenaComments").subscribe(data => {
               if (data) {
                 this.listOfComments.push(data);
                 for (let el in this.listOfComments) {
@@ -138,7 +137,7 @@ export class AlphaAiMiningComponent {
     this.cdr.detectChanges();
  }
   goInvest() {
-    this.router.navigate(['/cloud-mining'])
+    this.router.navigate(['/side-hustles'])
   }
 
   getRating(rate: any) {
@@ -159,12 +158,13 @@ export class AlphaAiMiningComponent {
     this.guest = "";
     this.rate = 0;
     this.cmnt = "";
+
     this.guest = this.nickName == "" ? "Guest" : this.nickName;
     this.rate = this.rating;
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("https://passive-income.icu/alphaaiPost", 
+      this.http.post<any>("https://passive-income.icu/losenaPost", 
       [this.guest, this.rate, this.cmnt])
       .subscribe(data => {
       })
@@ -178,7 +178,7 @@ export class AlphaAiMiningComponent {
       }, 3000);
     } else {
       this.snackBar.open("Server under maintenance. Try later.", "Dismiss");
-    }  
+    }
   }
 
   goPage(page:any) { 
@@ -260,5 +260,6 @@ export class AlphaAiMiningComponent {
         }
       }  
     }
+
 
 }

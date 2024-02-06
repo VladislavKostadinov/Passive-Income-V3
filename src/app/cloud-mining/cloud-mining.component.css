@@ -1,8 +1,8 @@
 @media only screen and (max-width: 1000px) {
-
+/* 
     .cloudH   {
         margin-top: 7rem !important;
-    } 
+    }  */
 }
 
 @media only screen and (max-width: 850px) {
@@ -16,9 +16,9 @@
 
 
 @media only screen and (max-width: 550px) {
-    .cloudH   {
+    /* .cloudH   {
         margin-top: 9rem !important;
-    } 
+    }  */
 }
 
 @media only screen and (max-width: 480px) {
@@ -28,9 +28,9 @@
 }
 
 @media only screen and (max-width: 378px) {
-    .cloudH   {
+    /* .cloudH   {
         margin-top: 10rem !important;
-    } 
+    }  */
 }
 
 
@@ -68,7 +68,6 @@ a:hover {
     text-align: center;
     font-family: 'OpenSansClassic';
     color: goldenrod;
-    margin-top: 6rem;
 }
 
 .cloudHeader {

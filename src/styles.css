@@ -12,20 +12,98 @@
     src: url('../src/assets/fonts/OpenSans-VariableFont_wdth.ttf');
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1300px) {
   /* .scan-loader {
       height: 135px !important;
       width: 135px;
  } */
+ .skiptranslate {
+  margin-top: 7rem !important;
 }
+}
+@media only screen and (max-width: 1080px) {
+  /* .scan-loader {
+      height: 135px !important;
+      width: 135px;
+ } */
+ .skiptranslate {
+  margin-top: 8.3rem !important;
+}
+}
+@media only screen and (max-width: 968px) {
+  /* .scan-loader {
+      height: 135px !important;
+      width: 135px;
+ } */
+ .skiptranslate {
+  margin-top: 8rem !important;
+}
+}
+@media only screen and (max-width: 910px) {
+  /* .scan-loader {
+      height: 135px !important;
+      width: 135px;
+ } */
+ .skiptranslate {
+  margin-top: 8rem !important;
+}
+}
+@media only screen and (max-width: 870px) {
+  /* .scan-loader {
+      height: 135px !important;
+      width: 135px;
+ } */
+ .skiptranslate {
+  margin-top: 6.8rem !important;
+}
+}
+
+@media only screen and (max-width: 730px) {
+  .skiptranslate {
+    margin-top: 7rem !important;
+  }
+}
+@media only screen and (max-width: 683px) {
+  /* .scan-loader {
+      height: 135px !important;
+      width: 135px;
+ } */
+ .skiptranslate {
+  margin-top: 7.1rem !important;
+}
+}
+@media only screen and (max-width: 630px) {
+  /* .scan-loader {
+      height: 135px !important;
+      width: 135px;
+ } */
+ .skiptranslate {
+  margin-top: 7.6rem !important;
+}
+}
+
+
 @media only screen and (max-width: 600px) {
   /* .scan-loader {
       height: 115px !important;
       width: 115px;
  } */
  .footerInfo {
-  height: 5rem !important;
+  height: 3rem !important;
  }
+ .footerH {
+  font-size: 15px !important;
+}
+
+.skiptranslate {
+  margin-top: 7.6rem !important;
+}
+
+}
+@media only screen and (max-width: 530px) {
+  .skiptranslate {
+    margin-top: 8.5rem !important;
+  }
 }
 @media only screen and (max-width: 500px) {
   /* .scan-loader {
@@ -36,19 +114,38 @@
  .pack-container {
   width: 75% !important;
  }
-}
+
+
+
 @media only screen and (max-width: 460px) {
   .scan-loader {
       height: 4rem !important;
       width: 4rem !important;
  }
  .footerInfo {
-  height: 6rem !important;
- }
+  height: 3rem !important;
+  }
+  .footerH {
+    font-size: 12px !important;
+  }
+
 
  .card__description {
   font-size: 11px !important;
  }
+}
+
+
+@media only screen and (max-width: 435px) {
+  .skiptranslate {
+    margin-top: 9.5rem !important;
+  }
+}
+}
+@media only screen and (max-width: 420px) {
+  .skiptranslate {
+    margin-top: 8rem !important;
+  }
 }
 
 
@@ -57,7 +154,17 @@ body {
     margin: 0;
     overflow: auto;
     z-index: 10;
-    caret-color: transparent
+    caret-color: transparent;
+    top: 0;
+    position: initial !important;
+}
+
+body > .skiptranslate {
+  display: none;
+}
+
+.skiptranslate {
+  margin-top: 6.1rem;
 }
 
 p {
@@ -491,7 +598,7 @@ footer {
     display: block;
     transform-style: preserve-3d;
     transform: rotateX(-20deg);
-    margin-top: 3.5rem;
+    /* margin-top: 3.5rem; */
     height: 10rem;
   }
   

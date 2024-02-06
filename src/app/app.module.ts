@@ -37,8 +37,10 @@ import { BitsypoolComponent } from './faucets/bitsypool/bitsypool.component';
 import { EtccloudComponent } from './hyip/etccloud/etccloud.component';
 import { BlackBoxComponent } from './cloud-mining/black-box/black-box.component';
 import { NeoflojdComponent } from './hyip/neoflojd/neoflojd.component';
-import { AlphaAiMiningComponent } from './cloud-mining/alpha-ai-mining/alpha-ai-mining.component';
 import { XeniminersComponent } from './cloud-mining/xeniminers/xeniminers.component';
+import { MakeMoneyComponent } from './faucets/make-money/make-money.component';
+import { LosenaComponent } from './faucets/losena/losena.component';
+import { MoneySmsComponent } from './faucets/money-sms/money-sms.component';
 
 @NgModule({
   declarations: [
@@ -66,8 +68,10 @@ import { XeniminersComponent } from './cloud-mining/xeniminers/xeniminers.compon
     EtccloudComponent,
     BlackBoxComponent,
     NeoflojdComponent,
-    AlphaAiMiningComponent,
     XeniminersComponent,
+    MakeMoneyComponent,
+    LosenaComponent,
+    MoneySmsComponent,
   ],
   imports: [
     BrowserModule,
