@@ -41,6 +41,7 @@ import { XeniminersComponent } from './cloud-mining/xeniminers/xeniminers.compon
 import { MakeMoneyComponent } from './faucets/make-money/make-money.component';
 import { LosenaComponent } from './faucets/losena/losena.component';
 import { MoneySmsComponent } from './faucets/money-sms/money-sms.component';
+import { LegitDogeMiningComponent } from './cloud-mining/legit-doge-mining/legit-doge-mining.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { MoneySmsComponent } from './faucets/money-sms/money-sms.component';
     MakeMoneyComponent,
     LosenaComponent,
     MoneySmsComponent,
+    LegitDogeMiningComponent,
   ],
   imports: [
     BrowserModule,

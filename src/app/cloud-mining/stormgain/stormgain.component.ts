@@ -8,36 +8,36 @@ import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dial
 @Component({
   selector: 'app-stormgain',
   templateUrl: './stormgain.component.html',
-  styleUrls: ['./stormgain.component.css']
+  styleUrls: ['./stormgain.component.css'],
 })
 export class StormgainComponent {
-
   stormgain: string = '../../../assets/images/stormgain/stormgain2.png';
 
   cloud_miner: string = '../../../assets/images/stormgain/cloud.png';
   trading: string = '../../../assets/images/stormgain/trading.webp';
   staking: string = '../../../assets/images/stormgain/stake2.png';
-  refer: string = '../../../assets/images/refer.webp'
+  refer: string = '../../../assets/images/refer.webp';
 
   f2hash_wall: string = '../../../assets/images/stormgain/stormgain5.jpg';
 
   ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
-  halfRatings: string = '../../../assets/images/rating/icons8-star-half-empty-16.png';
+  halfRatings: string =
+    '../../../assets/images/rating/icons8-star-half-empty-16.png';
 
   arr1: string = '../../../assets/images/ar1.png';
   arr2: string = '../../../assets/images/ar2.png';
 
-  nickName: string = "";
+  nickName: string = '';
   rating: number = 0;
-  comment: string = "";
+  comment: string = '';
 
   listOfComments: any = [];
   listOfGuests: any = [];
   listOfRatings: any = [];
 
-  guest:any = "";
+  guest: any = '';
   rate: any = 0;
-  cmnt: any = "";
+  cmnt: any = '';
 
   numberOC = [];
 
@@ -45,7 +45,7 @@ export class StormgainComponent {
   pageListComments: any = [{}];
   numberOfComments: number = 0;
 
-  commentPages:any = [];
+  commentPages: any = [];
   currentPage: number = 1;
 
   singlePage: boolean = true;
@@ -60,167 +60,204 @@ export class StormgainComponent {
 
   maintenance: boolean = false;
 
-
-  constructor(private router: Router, private snackBar: MatSnackBar, 
-    private dialog: MatDialog, private http: HttpClient, private cdr: ChangeDetectorRef) {}
+  constructor(
+    private router: Router,
+    private snackBar: MatSnackBar,
+    private dialog: MatDialog,
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
-    this.http.get("https://passive-income.icu/stormgainUsers").subscribe(data => {
-      if (data) {
-        this.listOfGuests = data;
-        this.listOfComments.push(data);
+    this.http
+      .get('https://passive-income.icu/stormgain')
+      .subscribe((data) => {});
+    this.http.get('https://passive-income.icu/stormgainUsers').subscribe(
+      (data) => {
+        if (data) {
+          this.listOfGuests = data;
+          this.listOfComments.push(data);
 
-        for (let u in data) {
-          this.numberOfComments++;
-        }
-        if (this.numberOfComments > 3) {
-          this.singlePage = false
-        } else {
-          this.singlePage = true;
-        }
-        if (this.numberOfComments > 12) {
-          this.multiplePage = true;
-        } else {
-          this.multiplePage = false;
-        }
-        for (let i = 0; i < this.numberOfComments; i += 3) {
-          if (this.newComment) {
-            return
+          for (let u in data) {
+            this.numberOfComments++;
+          }
+          if (this.numberOfComments > 3) {
+            this.singlePage = false;
           } else {
-            this.commentPages.push("page");
+            this.singlePage = true;
           }
-        }
-        this.http.get("https://passive-income.icu/stormgainRatings").subscribe(data => {
-          if (data) {
-            this.listOfRatings = data;
-            this.listOfComments.push(data);
-            for (let r of this.listOfRatings) {
-              if (parseInt(r)) {
-                this.avarageRating += parseInt(r);
-                this.trueRatings.push("realRate")
-              }
-            }
-            this.avarageRating /= this.trueRatings.length;
-            if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
-              this.ratingHalf = true;
+          if (this.numberOfComments > 12) {
+            this.multiplePage = true;
+          } else {
+            this.multiplePage = false;
+          }
+          for (let i = 0; i < this.numberOfComments; i += 3) {
+            if (this.newComment) {
+              return;
             } else {
-              this.ratingHalf = false;
+              this.commentPages.push('page');
             }
-            this.http.get("https://passive-income.icu/stormgainComments").subscribe(data => {
-              if (data) {
-                this.listOfComments.push(data);
-                for (let el in this.listOfComments) {
-                  this.listOfComments[el] = this.listOfComments[el].reverse();
-                  for (let em in this.listOfComments[el]) {
-                    this.numberOC = this.listOfComments[el].slice(this.currentPage * 3 - 3, this.currentPage * 3);
-                  }
-                }
-              }
-            }, error => {
-              this.maintenance = true;
-            });
           }
-        }, error => {
-          this.maintenance = true;
-        });
+          this.http
+            .get('https://passive-income.icu/stormgainRatings')
+            .subscribe(
+              (data) => {
+                if (data) {
+                  this.listOfRatings = data;
+                  this.listOfComments.push(data);
+                  for (let r of this.listOfRatings) {
+                    if (parseInt(r)) {
+                      this.avarageRating += parseInt(r);
+                      this.trueRatings.push('realRate');
+                    }
+                  }
+                  this.avarageRating /= this.trueRatings.length;
+                  if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
+                    this.ratingHalf = true;
+                  } else {
+                    this.ratingHalf = false;
+                  }
+                  this.http
+                    .get('https://passive-income.icu/stormgainComments')
+                    .subscribe(
+                      (data) => {
+                        if (data) {
+                          this.listOfComments.push(data);
+                          for (let el in this.listOfComments) {
+                            this.listOfComments[el] =
+                              this.listOfComments[el].reverse();
+                            for (let em in this.listOfComments[el]) {
+                              this.numberOC = this.listOfComments[el].slice(
+                                this.currentPage * 3 - 3,
+                                this.currentPage * 3
+                              );
+                            }
+                          }
+                        }
+                      },
+                      (error) => {
+                        this.maintenance = true;
+                      }
+                    );
+                }
+              },
+              (error) => {
+                this.maintenance = true;
+              }
+            );
+        }
+      },
+      (error) => {
+        this.maintenance = true;
+        this.snackBar.open(
+          'Server under maintenance. Comments/Subscriptions temporary unavailable.',
+          'Dismiss'
+        );
       }
-    }, error => {
-      this.maintenance = true;
-      this.snackBar.open("Server under maintenance. Comments/Subscriptions temporary unavailable.", "Dismiss")
-    });
+    );
   }
 
-  ngAfterViewChecked(){
+  ngAfterViewChecked() {
     //your code to update the model
     this.cdr.detectChanges();
- }
+  }
   goInvest() {
-    this.router.navigate(['/cloud-mining'])
+    this.router.navigate(['/cloud-mining']);
   }
 
   getRating(rate: any) {
-      this.rating = rate;
+    this.rating = rate;
   }
 
   post() {
     this.newComment = true;
-    if (this.comment == "") {
-      this.snackBar.open("Comment field can not be empty!", "Okay")
+    if (this.comment == '') {
+      this.snackBar.open('Comment field can not be empty!', 'Okay');
     } else {
       this.addComment();
     }
-  
-    }
+  }
 
-  addComment () {
-    this.guest = "";
+  addComment() {
+    this.guest = '';
     this.rate = 0;
-    this.cmnt = "";
-    this.guest = this.nickName == "" ? "Guest" : this.nickName;
+    this.cmnt = '';
+    this.guest = this.nickName == '' ? 'Guest' : this.nickName;
     this.rate = this.rating;
     this.cmnt = this.comment;
 
     if (!this.maintenance) {
-      this.http.post<any>("https://passive-income.icu/stormgainPost", 
-      [this.guest, this.rate, this.cmnt])
-      .subscribe(data => {
-      })
-      this.snackBar.open("Thank you for your comment", "Dismiss");
-  
+      this.http
+        .post<any>('https://passive-income.icu/stormgainPost', [
+          this.guest,
+          this.rate,
+          this.cmnt,
+        ])
+        .subscribe((data) => {});
+      this.snackBar.open('Thank you for your comment', 'Dismiss');
+
       this.commentPages = this.commentPages / 2;
-  
+
       setTimeout(() => {
         this.snackBar.dismiss();
         location.reload();
       }, 3000);
     } else {
-      this.snackBar.open("Server under maintenance. Try later.", "Dismiss");
+      this.snackBar.open('Server under maintenance. Try later.', 'Dismiss');
     }
   }
 
-  goPage(page:any) { 
-    if  (page == this.currentPage) {
+  goPage(page: any) {
+    if (page == this.currentPage) {
       return;
     } else {
       this.currentPage = page;
       for (let el in this.listOfComments) {
         for (let em in this.listOfComments[el]) {
-          this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
+          this.numberOC = this.listOfComments[el].slice(
+            this.currentPage * 3 - 3,
+            this.currentPage * 3
+          );
         }
-      }  
+      }
     }
     for (let el in this.listOfComments) {
       for (let em in this.listOfComments[el]) {
-        this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
+        this.numberOC = this.listOfComments[el].slice(
+          this.currentPage * 3 - 3,
+          this.currentPage * 3
+        );
       }
-    }    
+    }
   }
 
   choosePage() {
     let dialogRef = this.dialog.open(MatDialogueComponent, {
       height: '240px',
-      width: '200px', data: { page: 1 } 
+      width: '200px',
+      data: { page: 1 },
     });
-    dialogRef.afterClosed().subscribe(result => { 
+    dialogRef.afterClosed().subscribe((result) => {
       if (result >= this.commentPages.length) {
-        this.currentPage = this.commentPages.length 
-      } 
-      else if (result <= 1) {
+        this.currentPage = this.commentPages.length;
+      } else if (result <= 1) {
         this.currentPage = 1;
-      }
-      else {
+      } else {
         if (result > 0) {
           this.currentPage = result;
         } else {
           this.currentPage = this.currentPage;
         }
-      } 
+      }
       for (let el in this.listOfComments) {
         for (let em in this.listOfComments[el]) {
-          this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
+          this.numberOC = this.listOfComments[el].slice(
+            this.currentPage * 3 - 3,
+            this.currentPage * 3
+          );
         }
-      }  
-    }); 
+      }
+    });
   }
 
   pageBackward() {
@@ -230,14 +267,21 @@ export class StormgainComponent {
       this.currentPage--;
       for (let el in this.listOfComments) {
         for (let em in this.listOfComments[el]) {
-          this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
-        }
-      }    }
-    for (let el in this.listOfComments) {
-        for (let em in this.listOfComments[el]) {
-          this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
+          this.numberOC = this.listOfComments[el].slice(
+            this.currentPage * 3 - 3,
+            this.currentPage * 3
+          );
         }
       }
+    }
+    for (let el in this.listOfComments) {
+      for (let em in this.listOfComments[el]) {
+        this.numberOC = this.listOfComments[el].slice(
+          this.currentPage * 3 - 3,
+          this.currentPage * 3
+        );
+      }
+    }
   }
 
   pageForward() {
@@ -247,16 +291,20 @@ export class StormgainComponent {
       this.currentPage++;
       for (let el in this.listOfComments) {
         for (let em in this.listOfComments[el]) {
-          this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
+          this.numberOC = this.listOfComments[el].slice(
+            this.currentPage * 3 - 3,
+            this.currentPage * 3
+          );
         }
-      }  
+      }
     }
-      for (let el in this.listOfComments) {
-        for (let em in this.listOfComments[el]) {
-          this.numberOC = this.listOfComments[el].slice(this.currentPage*3-3, this.currentPage*3);
-        }
-      }  
+    for (let el in this.listOfComments) {
+      for (let em in this.listOfComments[el]) {
+        this.numberOC = this.listOfComments[el].slice(
+          this.currentPage * 3 - 3,
+          this.currentPage * 3
+        );
+      }
     }
-
-
+  }
 }

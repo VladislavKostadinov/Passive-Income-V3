@@ -12,6 +12,7 @@ import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dial
 })
 export class MoneySmsComponent {
   sms: string = '/assets/images/money-sms/logo.webp';
+  sms2: string = '/assets/images/money-sms/profitsms.png';
 
   download: string = '/assets/images/money-sms/example.webp';
   register: string = '/assets/images/money-sms/register.webp';
@@ -69,6 +70,10 @@ export class MoneySmsComponent {
   ) {}
 
   ngOnInit() {
+    this.http
+      .get('https://passive-income.icu/moneySMS')
+      .subscribe((data) => {});
+
     this.http.get('https://passive-income.icu/moneySMSUsers').subscribe(
       (data) => {
         if (data) {

@@ -6,27 +6,26 @@ import { Router } from '@angular/router';
 import { MatDialogueComponent } from 'src/app/mat-dialogue/mat-dialogue/mat-dialogue.component';
 
 @Component({
-  selector: 'app-camelbtc',
-  templateUrl: './camelbtc.component.html',
-  styleUrls: ['./camelbtc.component.css'],
+  selector: 'app-legit-doge-mining',
+  templateUrl: './legit-doge-mining.component.html',
+  styleUrls: ['./legit-doge-mining.component.css'],
 })
-export class CamelbtcComponent {
-  cointiply: string = '/assets/images/camelbtc/logo1.png';
+export class LegitDogeMiningComponent {
+  doge: string = '/assets/images/legit-doge-mining/logo.png';
 
-  reg: string = '/assets/images/camelbtc/reg.jpg';
-  play: string = '/assets/images/camelbtc/food.png';
-  earn: string = '/assets/images/camelbtc/coins.png';
-  newlinks: string = '/assets/images/camelbtc/referrals.png';
-  refer: string = '/assets/images/refer.webp';
+  reg: string = '/assets/images/legit-doge-mining/logo-icon.png';
+  mine: string = '/assets/images/legit-doge-mining/miner.svg';
+  bounty: string = '/assets/images/legit-doge-mining/graph.svg';
+  withdraw: string = '/assets/images/legit-doge-mining/cooler.svg';
+  refer: string = '/assets/images/legit-doge-mining/mind.svg';
 
-  camelWall: string = '/assets/images/camelbtc/camel_wall.jpg';
+  doge_wall: string = '/assets/images/legit-doge-mining/doge.png';
 
-  ratings: string = '../../../assets/images/rating/icons8-star-filled-16.png';
-  halfRatings: string =
-    '../../../assets/images/rating/icons8-star-half-empty-16.png';
+  ratings: string = '/assets/images/rating/icons8-star-filled-16.png';
+  halfRatings: string = '/assets/images/rating/icons8-star-half-empty-16.png';
 
-  arr1: string = '../../../assets/images/ar1.png';
-  arr2: string = '../../../assets/images/ar2.png';
+  arr1: string = '/assets/images/ar1.png';
+  arr2: string = '/assets/images/ar2.png';
 
   nickName: string = '';
   rating: number = 0;
@@ -71,9 +70,9 @@ export class CamelbtcComponent {
 
   ngOnInit() {
     this.http
-      .get('https://passive-income.icu/camelbtc')
+      .get('https://passive-income.icu/legitdogemining')
       .subscribe((data) => {});
-    this.http.get('https://passive-income.icu/camelbtcUsers').subscribe(
+    this.http.get('https://passive-income.icu/legitdogeminingUsers').subscribe(
       (data) => {
         if (data) {
           this.listOfGuests = data;
@@ -99,51 +98,53 @@ export class CamelbtcComponent {
               this.commentPages.push('page');
             }
           }
-          this.http.get('https://passive-income.icu/camelbtcRatings').subscribe(
-            (data) => {
-              if (data) {
-                this.listOfRatings = data;
-                this.listOfComments.push(data);
-                for (let r of this.listOfRatings) {
-                  if (parseInt(r)) {
-                    this.avarageRating += parseInt(r);
-                    this.trueRatings.push('realRate');
+          this.http
+            .get('https://passive-income.icu/legitdogeminingRatings')
+            .subscribe(
+              (data) => {
+                if (data) {
+                  this.listOfRatings = data;
+                  this.listOfComments.push(data);
+                  for (let r of this.listOfRatings) {
+                    if (parseInt(r)) {
+                      this.avarageRating += parseInt(r);
+                      this.trueRatings.push('realRate');
+                    }
                   }
-                }
-                this.avarageRating /= this.trueRatings.length;
-                if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
-                  this.ratingHalf = true;
-                } else {
-                  this.ratingHalf = false;
-                }
-                this.http
-                  .get('https://passive-income.icu/camelbtcComments')
-                  .subscribe(
-                    (data) => {
-                      if (data) {
-                        this.listOfComments.push(data);
-                        for (let el in this.listOfComments) {
-                          this.listOfComments[el] =
-                            this.listOfComments[el].reverse();
-                          for (let em in this.listOfComments[el]) {
-                            this.numberOC = this.listOfComments[el].slice(
-                              this.currentPage * 3 - 3,
-                              this.currentPage * 3
-                            );
+                  this.avarageRating /= this.trueRatings.length;
+                  if (this.avarageRating > 0 && this.avarageRating % 1 != 0) {
+                    this.ratingHalf = true;
+                  } else {
+                    this.ratingHalf = false;
+                  }
+                  this.http
+                    .get('https://passive-income.icu/legitdogeminingComments')
+                    .subscribe(
+                      (data) => {
+                        if (data) {
+                          this.listOfComments.push(data);
+                          for (let el in this.listOfComments) {
+                            this.listOfComments[el] =
+                              this.listOfComments[el].reverse();
+                            for (let em in this.listOfComments[el]) {
+                              this.numberOC = this.listOfComments[el].slice(
+                                this.currentPage * 3 - 3,
+                                this.currentPage * 3
+                              );
+                            }
                           }
                         }
+                      },
+                      (error) => {
+                        this.maintenance = true;
                       }
-                    },
-                    (error) => {
-                      this.maintenance = true;
-                    }
-                  );
+                    );
+                }
+              },
+              (error) => {
+                this.maintenance = true;
               }
-            },
-            (error) => {
-              this.maintenance = true;
-            }
-          );
+            );
         }
       },
       (error) => {
@@ -161,7 +162,7 @@ export class CamelbtcComponent {
     this.cdr.detectChanges();
   }
   goInvest() {
-    this.router.navigate(['/side-hustles']);
+    this.router.navigate(['/cloud-mining']);
   }
 
   getRating(rate: any) {
@@ -187,7 +188,7 @@ export class CamelbtcComponent {
 
     if (!this.maintenance) {
       this.http
-        .post<any>('https://passive-income.icu/camelbtcPost', [
+        .post<any>('https://passive-income.icu/legitdogeminingPost', [
           this.guest,
           this.rate,
           this.cmnt,
